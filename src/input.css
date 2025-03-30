@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+body {
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+    font-family: "Plus Jakarta Sans", sans-serif; 
+}
+
+.hero-bg {
+  background: linear-gradient(
+      135deg,
+      rgba(179 229 252) 0%,
+      rgba(22, 121, 171, 0.5) 10%
+    ),
+    url("https://images.unsplash.com/photo-1470114716159-e389f8712fda?q=80&w=2070&auto=format&fit=crop")
+      no-repeat center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 20% 50%,
+    transparent 10%,
+    rgba(0, 0, 0, 0.1) 70%
+  );
+  z-index: 0;
+}
+
+.floating {
+  animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.btn-donate {
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.btn-explore:hover {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.wildlife-icon {
+  position: absolute;
+  opacity: 0.1;
+  z-index: 0;
+}
+/* Your existing styles... */
+
+.typing-text {
+  border-right: 2px solid #1679ab;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #1679ab;
+  }
+}
+
+.icon-1 {
+  top: 10%;
+  left: 5%;
+  font-size: 3rem;
+}
+.icon-2 {
+  bottom: 15%;
+  right: 5%;
+  font-size: 4rem;
+}
+.icon-3 {
+  top: 30%;
+  right: 10%;
+  font-size: 2.5rem;
+}
+
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+.animate-float-medium {
+  animation: float 4s ease-in-out infinite;
+  animation-delay: 1s;
+}
+.animate-float-fast {
+  animation: float 3s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.typing-animation::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.chat-bubble {
+  position: relative;
+}
+
+.chat-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-top-color: #E6F7F5;
+  border-bottom: 0;
+  margin-left: -10px;
+  margin-bottom: -15px;
+}
+
+.bg-natubot-light {
+  background-color: #E6F7F5;
+}
+
+.animate-bounce-slow {
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.typing-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.typing-animation::after {
+  content: '|';
+  position: absolute;
+  right: -8px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@config animation: {
+  'fadeIn': 'fadeIn 0.5s ease-in-out',
+  'float-slow': 'float 6s ease-in-out infinite',
+  'float-medium': 'float 5s ease-in-out infinite',
+  'float-fast': 'float 4s ease-in-out infinite',
+  'bounce': 'bounce 1s infinite',
+},
+
+keyframes: {
+  fadeIn: {
+    '0%': { opacity: '0', transform: 'translateY(10px)' },
+    '100%': { opacity: '1', transform: 'translateY(0)' },
+  },
+  float: {
+    '0%, 100%': { transform: 'translateY(0)' },
+    '50%': { transform: 'translateY(-10px)' },
+  },
+}
