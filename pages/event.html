@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Kebersihan</title>
+
+    <link rel="stylesheet" href="../src/output.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+
+    <nav
+    class="bg-gradient-to-r from-[#022c22] to-[#174903] shadow-xl sticky top-0 z-50 transition-all duration-300"
+  >
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <!-- Enhanced Logo -->
+        <div class="flex-shrink-0 flex items-center">
+          <a href="index.html" class="flex items-center group">
+            <div
+              class="bg-white/10 p-2 rounded-full mr-2 group-hover:bg-white/20 transition-all duration-300"
+            >
+              <i
+                class="fas fa-leaf text-emerald-300 text-2xl group-hover:scale-110 transition-transform"
+              ></i>
+            </div>
+            <span class="text-white font-bold text-xl tracking-wide"
+              >Natu<span class="text-emerald-300">Raya</span></span
+            >
+          </a>
+        </div>
+
+        <!-- Enhanced Menu Desktop -->
+        <div class="hidden md:flex items-center space-x-2">
+          <div class="relative group">
+            <a
+              href="#"
+              class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+            >
+              <i
+                class="fas fa-hand-holding-heart menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+              ></i>
+              Donasi
+            </a>
+            <div
+              class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+            ></div>
+          </div>
+
+          <div class="relative group">
+            <a
+              href="./natubot.html"
+              class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+            >
+              <i
+                class="fas fa-robot menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+              ></i>
+              NatuBot
+            </a>
+            <div
+              class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+            ></div>
+          </div>
+
+          <div class="relative group">
+            <a
+              href="#"
+              class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+            >
+              <i
+                class="fas fa-tree menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+              ></i>
+              Pohon Virtual
+            </a>
+            <div
+              class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+            ></div>
+          </div>
+
+          <div class="relative group">
+            <a
+              href="komunitas.html"
+              class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+            >
+              <i
+                class="fas fa-users menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+              ></i>
+              Komunitas
+            </a>
+            <div
+              class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+            ></div>
+          </div>
+
+          <div class="relative group">
+            <a
+              href="event.html"
+              class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+            >
+              <i
+                class="fas fa-calendar-alt menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+              ></i>
+              Event
+            </a>
+            <div
+              class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+            ></div>
+          </div>
+
+          <div class="relative group">
+            <a
+              href="#crowdfunding"
+              class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+            >
+              <i
+                class="fas fa-piggy-bank menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+              ></i>
+              Crowdfunding
+            </a>
+            <div
+              class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+            ></div>
+          </div>
+
+          <div class="ml-4">
+            <a
+              href="#"
+              class="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+            >
+              <i class="fas fa-user-plus mr-2"></i> Daftar
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button
+            id="mobile-menu-button"
+            class="text-white hover:text-emerald-300 focus:outline-none transition-colors duration-300"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enhanced Mobile menu -->
+    <div
+      id="mobile-menu"
+      class="md:hidden hidden bg-gradient-to-b from-[#3A9B9C] to-[#2A8B8C] pb-4 px-4 rounded-b-2xl shadow-lg"
+    >
+      <div class="space-y-2 py-2">
+        <a
+          href="#"
+          class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+        >
+          <i class="fas fa-hand-holding-heart mr-3 text-emerald-300"></i>
+          Donasi
+        </a>
+
+        <a
+        href="natubot.html"
+          class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+        >
+          <i class="fas fa-robot mr-3 text-emerald-300"></i> NatuBot
+        </a>
+
+        <a
+          href="#"
+          class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+        >
+          <i class="fas fa-tree mr-3 text-emerald-300"></i> Pohon Virtual
+        </a>
+
+        <a
+          href="komunitas.html"
+          class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+        >
+          <i class="fas fa-users mr-3 text-emerald-300"></i> Komunitas
+        </a>
+
+        <a
+          href="event.html"
+          class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+        >
+          <i class="fas fa-calendar-alt mr-3 text-emerald-300"></i> Event
+        </a>
+
+        <a
+          href="#crowdfunding"
+          class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+        >
+          <i class="fas fa-piggy-bank mr-3 text-emerald-300"></i> Crowdfunding
+        </a>
+
+        <div class="pt-2 mt-3 border-t border-white/10">
+          <a
+            href="#"
+            class="block px-4 py-3 rounded-xl text-base font-medium bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:from-emerald-400 hover:to-emerald-500 flex items-center justify-center shadow-md"
+          >
+            <i class="fas fa-user-plus mr-2"></i> Daftar
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <div class="container mx-auto px-4 py-12">
+      <h1
+        class="text-4xl font-bold text-center mb-4 text-green-800"
+        data-aos="fade-down"
+      >
+        Event Kebersihan Lingkungan
+      </h1>
+      <p
+        class="text-lg text-center text-gray-600 mb-12 max-w-2xl mx-auto"
+        data-aos="fade-down"
+        data-aos-delay="100"
+      >
+        Bergabunglah dengan kami dalam aksi nyata menjaga kebersihan lingkungan.
+        Daftar sekarang untuk berpartisipasi!
+      </p>
+
+      <!-- Event Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <!-- Event Card 1 -->
+        <div
+          class="event-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+          data-aos="fade-up"
+        >
+          <div class="relative overflow-hidden h-48">
+            <img
+              src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Bersih Pantai"
+              class="event-image w-full h-full object-cover transition-transform duration-500"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
+            >
+              <span
+                class="bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded"
+                >Baru</span
+              >
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-gray-800">
+                Bersih Pantai Serentak
+              </h3>
+              <span
+                class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                >Gratis</span
+              >
+            </div>
+            <p class="text-gray-600 mb-4">
+              Aksi bersih-bersih pantai sepanjang 5 km dengan target
+              mengumpulkan 1 ton sampah.
+            </p>
+            <div class="flex items-center text-gray-500 mb-4">
+              <i class="bx bx-calendar mr-2"></i>
+              <span>15 Juni 2024</span>
+            </div>
+            <div class="flex items-center text-gray-500 mb-6">
+              <i class="bx bx-map mr-2"></i>
+              <span>Pantai Indah, Jakarta Utara</span>
+            </div>
+            <button
+              onclick="openModal('event1')"
+              class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center"
+            >
+              <i class="bx bx-edit-alt mr-2"></i> Daftar Sekarang
+            </button>
+          </div>
+        </div>
+
+        <!-- Event Card 2 -->
+        <div
+          class="event-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="relative overflow-hidden h-48">
+            <img
+              src="https://images.unsplash.com/photo-1584473457409-cead3040d7b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Daur Ulang"
+              class="event-image w-full h-full object-cover transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-gray-800">
+                Workshop Daur Ulang
+              </h3>
+              <span
+                class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                >Rp 50.000</span
+              >
+            </div>
+            <p class="text-gray-600 mb-4">
+              Pelajari cara mendaur ulang sampah rumah tangga menjadi barang
+              bernilai.
+            </p>
+            <div class="flex items-center text-gray-500 mb-4">
+              <i class="bx bx-calendar mr-2"></i>
+              <span>22 Juni 2024</span>
+            </div>
+            <div class="flex items-center text-gray-500 mb-6">
+              <i class="bx bx-map mr-2"></i>
+              <span>Eco Center, Bandung</span>
+            </div>
+            <button
+              onclick="openModal('event2')"
+              class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center"
+            >
+              <i class="bx bx-edit-alt mr-2"></i> Daftar Sekarang
+            </button>
+          </div>
+        </div>
+
+        <!-- Event Card 3 -->
+        <div
+          class="event-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="relative overflow-hidden h-48">
+            <img
+              src="https://images.unsplash.com/photo-1503596476-1c12a8ba09a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Penanaman Pohon"
+              class="event-image w-full h-full object-cover transition-transform duration-500"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
+            >
+              <span
+                class="bg-yellow-500 text-white text-xs font-semibold px-2 py-1 rounded"
+                >Terbatas</span
+              >
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-gray-800">
+                Penanaman 1000 Pohon
+              </h3>
+              <span
+                class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                >Gratis</span
+              >
+            </div>
+            <p class="text-gray-600 mb-4">
+              Aksi penanaman pohon untuk penghijauan kawasan perkotaan.
+            </p>
+            <div class="flex items-center text-gray-500 mb-4">
+              <i class="bx bx-calendar mr-2"></i>
+              <span>30 Juni 2024</span>
+            </div>
+            <div class="flex items-center text-gray-500 mb-6">
+              <i class="bx bx-map mr-2"></i>
+              <span>Taman Kota, Surabaya</span>
+            </div>
+            <button
+              onclick="openModal('event3')"
+              class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center"
+            >
+              <i class="bx bx-edit-alt mr-2"></i> Daftar Sekarang
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials Section -->
+      <div class="mb-16" data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-center mb-8 text-green-800">
+          Apa Kata Peserta?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/women/32.jpg"
+                alt="Testimoni"
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-semibold">Diana Putri</h4>
+                <div class="flex text-yellow-400">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "Event bersih pantai sangat menyenangkan! Saya bertemu banyak
+              orang yang peduli lingkungan."
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/men/45.jpg"
+                alt="Testimoni"
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-semibold">Rizky Aditya</h4>
+                <div class="flex text-yellow-400">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star-half"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "Workshop daur ulang memberikan pengetahuan praktis yang bisa
+              langsung saya terapkan di rumah."
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Testimoni"
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-semibold">Siti Rahma</h4>
+                <div class="flex text-yellow-400">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "Aksi penanaman pohon sangat bermakna. Saya akan ikut lagi event
+              berikutnya!"
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Section -->
+      <div data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-center mb-8 text-green-800">
+          Galeri Kegiatan Sebelumnya
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <a
+            href="https://images.unsplash.com/photo-1526779259212-939e64788e3c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+            data-fancybox="gallery"
+            data-caption="Aksi Bersih Pantai 2023"
+          >
+            <img
+              class="h-40 w-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+              src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Gallery 1"
+            />
+          </a>
+          <a
+            href="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+            data-fancybox="gallery"
+            data-caption="Workshop Daur Ulang"
+          >
+            <img
+              class="h-40 w-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+              src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Gallery 2"
+            />
+          </a>
+          <a
+            href="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+            data-fancybox="gallery"
+            data-caption="Penanaman Pohon 2023"
+          >
+            <img
+              class="h-40 w-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Gallery 3"
+            />
+          </a>
+          <a
+            href="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+            data-fancybox="gallery"
+            data-caption="Komunitas Peduli Lingkungan"
+          >
+            <img
+              class="h-40 w-full object-cover rounded-lg hover:opacity-90 transition-opacity"
+              src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Gallery 4"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div
+      id="registrationModal"
+      class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 hidden"
+    >
+      <div
+        class="bg-white rounded-xl max-w-md w-full max-h-[90vh] overflow-y-auto"
+        data-aos="zoom-in"
+      >
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-xl font-bold text-gray-800" id="modalTitle">
+              Pendaftaran Event
+            </h3>
+            <button
+              onclick="closeModal()"
+              class="text-gray-500 hover:text-gray-700"
+            >
+              <i class="bx bx-x text-2xl"></i>
+            </button>
+          </div>
+          <form id="registrationForm" class="space-y-4">
+            <input type="hidden" id="eventId" />
+            <div>
+              <label
+                for="name"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Nama Lengkap</label
+              >
+              <input
+                type="text"
+                id="name"
+                class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500 transition-colors"
+                required
+              />
+            </div>
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500 transition-colors"
+                required
+              />
+            </div>
+            <div>
+              <label
+                for="phone"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Nomor Telepon</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500 transition-colors"
+                required
+              />
+            </div>
+            <div>
+              <label
+                for="address"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Alamat</label
+              >
+              <textarea
+                id="address"
+                rows="3"
+                class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500 transition-colors"
+              ></textarea>
+            </div>
+            <div>
+              <label class="inline-flex items-center">
+                <input
+                  type="checkbox"
+                  class="rounded border-gray-300 text-green-600 shadow-sm focus:border-green-300 focus:ring focus:ring-green-200 focus:ring-opacity-50"
+                  required
+                />
+                <span class="ml-2 text-sm text-gray-600"
+                  >Saya setuju dengan syarat dan ketentuan</span
+                >
+              </label>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center"
+            >
+              <i class="bx bx-send mr-2"></i> Kirim Pendaftaran
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div
+      id="successModal"
+      class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 hidden"
+    >
+      <div
+        class="bg-white rounded-xl max-w-md w-full p-6 text-center"
+        data-aos="zoom-in"
+      >
+        <div
+          class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+        >
+          <i class="bx bx-check text-green-600 text-3xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">
+          Pendaftaran Berhasil!
+        </h3>
+        <p class="text-gray-600 mb-6">
+          Terima kasih telah mendaftar. Kami telah mengirimkan detail acara ke
+          email Anda.
+        </p>
+        <button
+          onclick="closeSuccessModal()"
+          class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300"
+        >
+          Tutup
+        </button>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="../js/event.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

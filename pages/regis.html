@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naturaya - Registration</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .registration-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 100%);
+            backdrop-filter: blur(10px);
+        }
+        .form-container {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(209, 213, 219, 0.3);
+        }
+        .btn-register {
+            transition: all 0.3s ease;
+        }
+        .btn-register:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .progress-bar {
+            height: 4px;
+            background-color: #e2e8f0;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background-color: #10b981;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-green-50 to-green-100">
+    <div class="registration-container flex items-center justify-center p-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full">
+            <!-- Left side - Brand info -->
+            <div class="hidden md:flex flex-col justify-center items-center p-8" data-aos="fade-right" data-aos-duration="1000">
+                <div class="text-center">
+                    <img src="../assets/images/logo.png" alt="Naturaya Logo" class="w-32 h-32 mx-auto mb-6">
+                    <h1 class="text-4xl font-bold text-green-800 mb-4">Naturaya</h1>
+                    <p class="text-gray-600 mb-6">Join our community of nature enthusiasts.</p>
+                    <div class="bg-green-100 p-4 rounded-lg text-green-700 text-sm">
+                        "Start your journey towards a healthier lifestyle with Naturaya's premium natural products."
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right side - Registration form -->
+            <div class="form-container p-8 md:p-10" data-aos="fade-left" data-aos-duration="1000">
+                <div class="mb-6 text-center md:text-left">
+                    <h2 class="text-3xl font-bold text-gray-800">Create Account</h2>
+                    <p class="text-gray-600">Join Naturaya today</p>
+                </div>
+                
+                <div class="mb-6">
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" id="progressBar" style="width: 0%"></div>
+                    </div>
+                </div>
+                
+                <form id="registrationForm">
+                    <div class="mb-5">
+                        <label for="fullName" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" 
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                            placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="mb-5">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" 
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                            placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="mb-5">
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" 
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                            placeholder="Enter your phone number" required>
+                    </div>
+                    
+                    <div class="mb-5">
+                        <label for="password" class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+                        <input type="password" id="password" name="password" 
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                            placeholder="Create a password" required>
+                        <div class="mt-1 text-xs text-gray-500">Password must be at least 8 characters long</div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-2">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" 
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                            placeholder="Confirm your password" required>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="flex items-start">
+                            <input type="checkbox" class="w-4 h-4 mt-1 text-green-600 border-gray-300 rounded focus:ring-green-500" required>
+                            <span class="ml-2 text-sm text-gray-600">I agree to the <a href="#" class="text-green-600 hover:text-green-800">Terms of Service</a> and <a href="#" class="text-green-600 hover:text-green-800">Privacy Policy</a></span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" 
+                        class="btn-register w-full bg-green-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+                        Create Account
+                    </button>
+                    
+                    <div class="mt-8 text-center">
+                        <p class="text-gray-600">Already have an account? 
+                            <a href="login.html" class="text-green-600 font-medium hover:text-green-800 transition-colors"
+                            onclick="window.location.href='index.html'">Sign In</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Initialize AOS
+            AOS.init();
+            
+            // Update progress bar as user fills form
+            const formInputs = $('#registrationForm input[required]');
+            const totalFields = formInputs.length;
+            
+            formInputs.on('input change', function() {
+                let filledFields = 0;
+                
+                formInputs.each(function() {
+                    if ($(this).val().trim() !== '') {
+                        filledFields++;
+                    }
+                });
+                
+                const progress = (filledFields / totalFields) * 100;
+                $('#progressBar').css('width', progress + '%');
+            });
+            
+            // Password validation
+            $('#password, #confirmPassword').on('keyup', function() {
+                const password = $('#password').val();
+                const confirmPassword = $('#confirmPassword').val();
+                
+                if (password.length < 8) {
+                    $('#password').addClass('border-red-500').removeClass('border-green-500');
+                } else {
+                    $('#password').removeClass('border-red-500').addClass('border-green-500');
+                }
+                
+                if (confirmPassword && password !== confirmPassword) {
+                    $('#confirmPassword').addClass('border-red-500').removeClass('border-green-500');
+                } else if (confirmPassword) {
+                    $('#confirmPassword').removeClass('border-red-500').addClass('border-green-500');
+                }
+            });
+            
+            // Form submission
+            $("#registrationForm").on("submit", function(e) {
+                e.preventDefault();
+                
+                // Validate passwords match
+                const password = $('#password').val();
+                const confirmPassword = $('#confirmPassword').val();
+                
+                if (password !== confirmPassword) {
+                    alert("Passwords don't match!");
+                    return false;
+                }
+                
+                // Get form values
+                const fullName = $("#fullName").val();
+                const email = $("#email").val();
+                const phone = $("#phone").val();
+                
+                // Add animation to button
+                $(".btn-register").addClass("animate-pulse");
+                
+                // Simulate registration process
+                setTimeout(function() {
+                    $(".btn-register").removeClass("animate-pulse");
+                    
+                    // Here you would normally send the data to your server
+                    console.log("Registration attempt:", { fullName, email, phone, password });
+                    
+                    // For demo purposes, show success message
+                    alert("Registration successful! Welcome to Naturaya.");
+                    
+                    // Redirect to login (uncomment in production)
+                    // window.location.href = "login.html";
+                }, 1500);
+            });
+            
+            // Add subtle animation to inputs on focus
+            $("input").on("focus", function() {
+                $(this).parent().addClass("scale-105").css("transition", "all 0.3s ease");
+            }).on("blur", function() {
+                $(this).parent().removeClass("scale-105");
+            });
+        });
+    </script>
+</body>
+</html>

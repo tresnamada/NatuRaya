@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatuBot AI Page</title>
+    <link rel="stylesheet" href="../src/output.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #e0f7fa 0%, #e8f5e9 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .floating-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .floating-bg span {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.15;
+            animation: float 12s infinite linear;
+        }
+        .floating-bg span:nth-child(1) {
+            width: 180px; height: 180px; background: #81c784; left: 10vw; top: 15vh; animation-delay: 0s;
+        }
+        .floating-bg span:nth-child(2) {
+            width: 120px; height: 120px; background: #4fc3f7; left: 70vw; top: 60vh; animation-delay: 2s;
+        }
+        .floating-bg span:nth-child(3) {
+            width: 90px; height: 90px; background: #ffd54f; left: 50vw; top: 30vh; animation-delay: 4s;
+        }
+        @keyframes float {
+            0% { transform: translateY(0) scale(1);}
+            50% { transform: translateY(-30px) scale(1.1);}
+            100% { transform: translateY(0) scale(1);}
+        }
+        .mascot-img {
+            transition: transform 0.3s;
+        }
+        .mascot-img.wave {
+            animation: wave 1s ease-in-out;
+        }
+        @keyframes wave {
+            0% { transform: rotate(0deg);}
+            20% { transform: rotate(-15deg);}
+            40% { transform: rotate(15deg);}
+            60% { transform: rotate(-10deg);}
+            80% { transform: rotate(10deg);}
+            100% { transform: rotate(0deg);}
+        }
+    </style>
+</head>
+<body class="">
+    
+
+    <nav
+    class="bg-gradient-to-r from-[#022c22] to-[#174903] shadow-xl sticky top-0 z-50 transition-all duration-300"
+  >
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <!-- Enhanced Logo -->
+        <div class="flex-shrink-0 flex items-center">
+          <a href="index.html" class="flex items-center group">
+            <div
+              class="bg-white/10 p-2 rounded-full mr-2 group-hover:bg-white/20 transition-all duration-300"
+            >
+              <i
+                class="fas fa-leaf text-emerald-300 text-2xl group-hover:scale-110 transition-transform"
+              ></i>
+            </div>
+            <span class="text-white font-bold text-xl tracking-wide"
+              >Natu<span class="text-emerald-300">Raya</span></span
+            >
+          </a>
+        </div>
+
+        <!-- Enhanced Menu Desktop -->
+        <div class="hidden md:flex items-center space-x-2">
+          <div class="relative group">
+            <a
+              href="#"
+              class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+            >
+              <i
+                class="fas fa-hand-holding-heart menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+              ></i>
+              Donasi
+            </a>
+            <div
+              class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+            ></div>
+          </div>
+
+          <div class="relative group">
+            <a
+              href="./natubot.html"
+              class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+            >
+              <i
+                class="fas fa-robot menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+              ></i>
+              NatuBot
+            </a>
+            <div
+              class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+            ></div>
+          </div>
+
+          <div class="relative group">
+            <a
+              href="#"
+              class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+            >
+              <i
+                class="fas fa-tree menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+              ></i>
+              Pohon Virtual
+            </a>
+            <div
+              class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+            ></div>
+          </div>
+
+          <div class="relative group">
+            <a
+              href="komunitas.html"
+              class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+            >
+              <i
+                class="fas fa-users menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+              ></i>
+              Komunitas
+            </a>
+            <div
+              class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+            ></div>
+          </div>
+
+          <div class="relative group">
+            <a
+              href="event.html"
+              class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+            >
+              <i
+                class="fas fa-calendar-alt menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+              ></i>
+              Event
+            </a>
+            <div
+              class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+            ></div>
+          </div>
+
+          <div class="relative group">
+            <a
+              href="#crowdfunding"
+              class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+            >
+              <i
+                class="fas fa-piggy-bank menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+              ></i>
+              Crowdfunding
+            </a>
+            <div
+              class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+            ></div>
+          </div>
+
+          <div class="ml-4">
+            <a
+              href="#"
+              class="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+            >
+              <i class="fas fa-user-plus mr-2"></i> Daftar
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button
+            id="mobile-menu-button"
+            class="text-white hover:text-emerald-300 focus:outline-none transition-colors duration-300"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enhanced Mobile menu -->
+    <div
+      id="mobile-menu"
+      class="md:hidden hidden bg-gradient-to-b from-[#3A9B9C] to-[#2A8B8C] pb-4 px-4 rounded-b-2xl shadow-lg"
+    >
+      <div class="space-y-2 py-2">
+        <a
+          href="#"
+          class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+        >
+          <i class="fas fa-hand-holding-heart mr-3 text-emerald-300"></i>
+          Donasi
+        </a>
+
+        <a
+        href="natubot.html"
+          class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+        >
+          <i class="fas fa-robot mr-3 text-emerald-300"></i> NatuBot
+        </a>
+
+        <a
+          href="#"
+          class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+        >
+          <i class="fas fa-tree mr-3 text-emerald-300"></i> Pohon Virtual
+        </a>
+
+        <a
+          href="komunitas.html"
+          class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+        >
+          <i class="fas fa-users mr-3 text-emerald-300"></i> Komunitas
+        </a>
+
+        <a
+          href="event.html"
+          class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+        >
+          <i class="fas fa-calendar-alt mr-3 text-emerald-300"></i> Event
+        </a>
+
+        <a
+          href="#crowdfunding"
+          class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+        >
+          <i class="fas fa-piggy-bank mr-3 text-emerald-300"></i> Crowdfunding
+        </a>
+
+        <div class="pt-2 mt-3 border-t border-white/10">
+          <a
+            href="#"
+            class="block px-4 py-3 rounded-xl text-base font-medium bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:from-emerald-400 hover:to-emerald-500 flex items-center justify-center shadow-md"
+          >
+            <i class="fas fa-user-plus mr-2"></i> Daftar
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <!-- Animated Background -->
+    <div class="floating-bg">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-stretch justify-center min-h-screen relative z-10">
+        <!-- Mascot Section -->
+        <div class="w-full md:w-1/2 flex flex-col items-center justify-center bg-white bg-opacity-80 p-10 modern-bg" data-aos="fade-right">
+            <div class="mb-6">
+                <img src="https://cdn-icons-png.flaticon.com/512/4207/4207253.png" alt="NatuBot Mascot" class="mascot-img w-56 h-56 rounded-full shadow-lg border-4 border-green-200 cursor-pointer" id="mascot-img">
+            </div>
+            <h2 class="text-3xl font-bold text-green-700 flex items-center mb-2">
+                <i class='bx bx-leaf mr-2 text-3xl'></i> NatuBot
+            </h2>
+            <p class="text-green-600 text-lg mb-4">Sahabat Donasi & Lingkungan Anda</p>
+            <div class="flex gap-4">
+                <button id="wave-btn" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full shadow transition-all flex items-center">
+                    <i class='bx bx-hand mr-2'></i> Sapa Natu
+                </button>
+                <button id="info-btn" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full shadow transition-all flex items-center">
+                    <i class='bx bx-info-circle mr-2'></i> Info
+                </button>
+            </div>
+        </div>
+
+        <!-- Chat Section -->
+        <div class="w-full md:w-1/2 flex flex-col justify-between bg-gradient-to-br from-blue-50 to-green-50 p-10" data-aos="fade-left">
+            <div>
+                <h3 class="text-2xl font-bold text-blue-700 flex items-center mb-2">
+                    <i class='bx bx-bot mr-2 text-2xl'></i> Chat dengan NatuBot
+                </h3>
+                <p class="text-blue-500 mb-6">Tanya apa saja tentang lingkungan, donasi, atau event!</p>
+            </div>
+            <div id="chat-box" class="flex-1 bg-white bg-opacity-80 rounded-2xl shadow-inner p-6 mb-4 overflow-y-auto max-h-96 space-y-4">
+                <!-- Chat messages will appear here -->
+            </div>
+            <div class="flex items-center gap-2">
+                <input id="chat-input" type="text" placeholder="Ketik pesan Anda..." class="flex-1 px-4 py-3 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-300 transition">
+                <button id="send-btn" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full shadow transition-all flex items-center">
+                    <i class='bx bx-send text-xl'></i>
+                </button>
+            </div>
+            <div class="flex gap-2 mt-3">
+                <button class="bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-xs" onclick="quickMsg('Apa saja event yang tersedia?')">Event tersedia</button>
+                <button class="bg-green-100 hover:bg-green-200 text-green-800 px-3 py-1 rounded-full text-xs" onclick="quickMsg('Bagaimana cara daftar?')">Cara daftar</button>
+                <button class="bg-purple-100 hover:bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-xs" onclick="quickMsg('Apa manfaat ikut event?')">Manfaat</button>
+                <button class="bg-yellow-100 hover:bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-xs" onclick="quickMsg('Apa syaratnya?')">Syarat</button>
+            </div>
+            <p class="text-xs text-gray-400 italic mt-4 text-right">Powered by NatuBot AI</p>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900, once: true });
+
+        // Mascot wave effect
+        $('#wave-btn, #mascot-img').on('click', function() {
+            $('#mascot-img').addClass('wave');
+            setTimeout(() => $('#mascot-img').removeClass('wave'), 1000);
+            addBotMsg('Halo! Aku NatuBot, siap membantu kamu menjaga lingkungan 🌱');
+        });
+
+        // Mascot info
+        $('#info-btn').on('click', function() {
+            addBotMsg('Aku adalah NatuBot, maskot AI yang siap membantu kamu berdonasi dan menjaga kelestarian alam!');
+        });
+
+        // Send chat
+        $('#send-btn').on('click', sendMsg);
+        $('#chat-input').on('keypress', function(e) {
+            if (e.which === 13) sendMsg();
+        });
+
+        function sendMsg() {
+            const val = $('#chat-input').val().trim();
+            if (!val) return;
+            addUserMsg(val);
+            $('#chat-input').val('');
+            setTimeout(() => {
+                // Simulate bot reply
+                addBotMsg('Terima kasih atas pertanyaannya! NatuBot akan segera membalas 😊');
+            }, 800);
+        }
+
+        function addUserMsg(msg) {
+            $('#chat-box').append(`<div class="flex justify-end"><div class="bg-green-100 text-green-900 px-4 py-2 rounded-2xl max-w-xs">${msg}</div></div>`);
+            $('#chat-box').scrollTop($('#chat-box')[0].scrollHeight);
+        }
+        function addBotMsg(msg) {
+            $('#chat-box').append(`<div class="flex justify-start"><div class="bg-blue-100 text-blue-900 px-4 py-2 rounded-2xl max-w-xs">${msg}</div></div>`);
+            $('#chat-box').scrollTop($('#chat-box')[0].scrollHeight);
+        }
+        function quickMsg(msg) {
+            $('#chat-input').val(msg);
+            sendMsg();
+        }
+    </script>
+</body>
+</html>

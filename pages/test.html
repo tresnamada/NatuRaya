@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Donasi dan Komunitas Section</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+   
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Section Event dan Komunitas -->
+    <section class="py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-br from-green-50 to-teal-50">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header Section -->
+            <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Bergabung dalam Aksi Penyelamatan</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Bersama kita bisa melindungi satwa dan alam. Donasikan, bagikan cerita, dan jadilah bagian dari komunitas peduli lingkungan.</p>
+            </div>
+
+            <!-- Tabs -->
+            <div class="mb-12">
+                <div class="flex flex-wrap justify-center space-x-2 md:space-x-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <button id="tab-event" class="tab-btn bg-green-600 text-white px-6 py-3 rounded-full font-medium shadow-md hover:shadow-lg transition duration-300 mb-2 md:mb-0">Event Donasi</button>
+                    <button id="tab-komunitas" class="tab-btn bg-white text-green-600 px-6 py-3 rounded-full font-medium shadow-md hover:shadow-lg transition duration-300 mb-2 md:mb-0">Komunitas Peduli</button>
+                </div>
+            </div>
+
+            <!-- Event Content -->
+            <div id="content-event" class="tab-content block">
+                <!-- Featured Event -->
+                <div class="mb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden lg:flex">
+                        <div class="lg:w-2/5 relative">
+                            <img src="/api/placeholder/800/600" alt="Event Penyelamatan Orangutan" class="h-64 w-full lg:h-full object-cover">
+                            <div class="absolute top-4 left-4 bg-green-600 text-white px-4 py-1 rounded-full text-sm font-medium">URGENT</div>
+                        </div>
+                        <div class="p-6 lg:p-8 lg:w-3/5">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium mr-3">Berakhir 30 Apr 2025</div>
+                                <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Kalimantan</div>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Penyelamatan Habitat Orangutan Kalimantan</h3>
+                            <p class="text-gray-600 mb-6">Hutan tempat tinggal mereka terancam kebakaran dan deforestasi. Bantu kami menyelamatkan habitat orangutan dengan merestorasi 50 hektar kawasan hutan.</p>
+                            <div class="mb-6">
+                                <div class="relative pt-1">
+                                    <div class="flex mb-2 items-center justify-between">
+                                        <div>
+                                            <span class="text-xs font-semibold inline-block text-green-600">Terkumpul: Rp 78.500.000</span>
+                                        </div>
+                                        <div>
+                                            <span class="text-xs font-semibold inline-block text-green-600">Target: Rp 120.000.000</span>
+                                        </div>
+                                    </div>
+                                    <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-green-100">
+                                        <div style="width: 65%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <div class="flex -space-x-2">
+                                        <img src="/api/placeholder/40/40" alt="Donatur" class="h-10 w-10 rounded-full border-2 border-white">
+                                        <img src="/api/placeholder/40/40" alt="Donatur" class="h-10 w-10 rounded-full border-2 border-white">
+                                        <img src="/api/placeholder/40/40" alt="Donatur" class="h-10 w-10 rounded-full border-2 border-white">
+                                    </div>
+                                    <span class="ml-3 text-sm text-gray-500">245 Donatur</span>
+                                </div>
+                                <button class="px-6 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition duration-300 transform hover:scale-105">Donasi Sekarang</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Event Card 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                        <div class="relative">
+                            <img src="/api/placeholder/400/250" alt="Penyelamatan Penyu" class="w-full h-48 object-cover">
+                            <div class="absolute top-4 left-4 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">15 Mei 2025</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Konservasi Penyu di Pantai Sukamade</h3>
+                            <p class="text-gray-600 text-sm mb-4">Melindungi penyu dari perburuan dan bantu menjaga habitat peneluran mereka di pesisir selatan Jawa.</p>
+                            <div class="mb-4">
+                                <div class="relative pt-1">
+                                    <div class="overflow-hidden h-2 mb-1 text-xs flex rounded bg-green-100">
+                                        <div style="width: 42%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
+                                    </div>
+                                    <span class="text-xs text-gray-500">Rp 21.450.000 / Rp 50.000.000</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">87 Donatur</span>
+                                <button class="px-4 py-2 bg-green-100 text-green-600 rounded-full hover:bg-green-200 transition duration-300">Donasi</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event Card 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                        <div class="relative">
+                            <img src="/api/placeholder/400/250" alt="Perlindungan Terumbu Karang" class="w-full h-48 object-cover">
+                            <div class="absolute top-4 left-4 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">22 Mei 2025</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Pemulihan Terumbu Karang Raja Ampat</h3>
+                            <p class="text-gray-600 text-sm mb-4">Program transplantasi terumbu karang untuk mengembalikan keindahan bawah laut Papua yang rusak akibat perubahan iklim.</p>
+                            <div class="mb-4">
+                                <div class="relative pt-1">
+                                    <div class="overflow-hidden h-2 mb-1 text-xs flex rounded bg-green-100">
+                                        <div style="width: 75%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
+                                    </div>
+                                    <span class="text-xs text-gray-500">Rp 45.750.000 / Rp 60.000.000</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">123 Donatur</span>
+                                <button class="px-4 py-2 bg-green-100 text-green-600 rounded-full hover:bg-green-200 transition duration-300">Donasi</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event Card 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+                        <div class="relative">
+                            <img src="/api/placeholder/400/250" alt="Konservasi Harimau Sumatra" class="w-full h-48 object-cover">
+                            <div class="absolute top-4 left-4 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">1 Juni 2025</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Perlindungan Harimau Sumatra</h3>
+                            <p class="text-gray-600 text-sm mb-4">Membantu tim konservasi menjaga hutan dan melawan perburuan liar untuk melindungi spesies harimau yang terancam punah.</p>
+                            <div class="mb-4">
+                                <div class="relative pt-1">
+                                    <div class="overflow-hidden h-2 mb-1 text-xs flex rounded bg-green-100">
+                                        <div style="width: 28%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
+                                    </div>
+                                    <span class="text-xs text-gray-500">Rp 19.600.000 / Rp 70.000.000</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">64 Donatur</span>
+                                <button class="px-4 py-2 bg-green-100 text-green-600 rounded-full hover:bg-green-200 transition duration-300">Donasi</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event CTA -->
+                <div class="mt-12 text-center" data-aos="fade-up" data-aos-duration="800">
+                    <button class="px-8 py-3 bg-green-600 text-white rounded-full font-medium shadow-lg hover:bg-green-700 transition duration-300 transform hover:scale-105">Lihat Semua Event Donasi</button>
+                </div>
+            </div>
+
+            <!-- Komunitas Content -->
+            <div id="content-komunitas" class="tab-content hidden">
+                <!-- Community Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+                        <div class="text-green-600 text-5xl font-bold mb-2 counter" data-target="15000">0</div>
+                        <p class="text-gray-600">Pencinta Satwa & Alam</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+                        <div class="text-green-600 text-5xl font-bold mb-2 counter" data-target="8700">0</div>
+                        <p class="text-gray-600">Postingan Dibagikan</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+                        <div class="text-green-600 text-5xl font-bold mb-2 counter" data-target="1240000">0</div>
+                        <p class="text-gray-600">Poin Kontribusi</p>
+                    </div>
+                </div>
+
+                <!-- Reward System -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-12" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <h3 class="text-xl font-bold text-green-800 mb-6 text-center">Berbagi Pengalaman, Dapatkan Poin</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <div class="p-4 rounded-lg bg-green-50">
+                            <div class="bg-green-100 text-green-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                </svg>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-2">Postingan Berkualitas</h4>
+                            <p class="text-sm text-gray-600">Bagikan cerita penyelamatan atau tips peduli lingkungan, dapatkan 50 poin per postingan berkualitas</p>
+                        </div>
+                        <div class="p-4 rounded-lg bg-green-50">
+                            <div class="bg-green-100 text-green-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                                </svg>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-2">Komentar Informatif</h4>
+                            <p class="text-sm text-gray-600">Berikan komentar bermanfaat pada postingan komunitas, dapatkan 10 poin per komentar</p>
+                        </div>
+                        <div class="p-4 rounded-lg bg-green-50">
+                            <div class="bg-green-100 text-green-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                                </svg>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-2">Partisipasi Event</h4>
+                            <p class="text-sm text-gray-600">Ikuti event donasi atau relawan, dapatkan 100 poin per partisipasi event</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post Categories -->
+                <h3 class="text-xl font-bold text-green-800 mb-6 text-center" data-aos="fade-up" data-aos-duration="800">Bagikan Cerita & Pengetahuan</h3>
+                
+                <!-- Popular Posts -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <!-- Post 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                        <div class="bg-green-100 text-green-800 px-4 py-2 font-medium">Cerita Penyelamatan</div>
+                        <div class="p-6">
+                            <h4 class="font-bold text-gray-800 mb-2">Menyelamatkan Anak Burung Elang Jawa</h4>
+                            <p class="text-gray-600 text-sm mb-4">Pengalaman saya menemukan dan merawat anak elang jawa yang jatuh dari sarangnya hingga berhasil dikembalikan ke habitat alaminya.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img src="/api/placeholder/30/30" alt="Profile" class="h-8 w-8 rounded-full mr-2">
+                                    <span class="text-sm text-gray-500">Andi Wijaya</span>
+                                </div>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                    </svg>
+                                    128
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                        <div class="bg-green-100 text-green-800 px-4 py-2 font-medium">Pendidikan Satwa & Alam</div>
+                        <div class="p-6">
+                            <h4 class="font-bold text-gray-800 mb-2">Cara Mengenali Reptil yang Membutuhkan Bantuan</h4>
+                            <p class="text-gray-600 text-sm mb-4">Panduan lengkap tentang tanda-tanda reptil yang terluka atau sakit dan langkah pertolongan pertama yang aman untuk anda dan hewan tersebut.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img src="/api/placeholder/30/30" alt="Profile" class="h-8 w-8 rounded-full mr-2">
+                                    <span class="text-sm text-gray-500">Drh. Ranti</span>
+                                </div>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                    </svg>
+                                    243
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                        <div class="bg-green-100 text-green-800 px-4 py-2 font-medium">Diskusi & Tanya Jawab</div>
+                        <div class="p-6">
+                            <h4 class="font-bold text-gray-800 mb-2">Bagaimana Cara Mengedukasi Masyarakat Lokal Tentang Konservasi?</h4>
+                            <p class="text-gray-600 text-sm mb-4">Saya sedang merencanakan program edukasi konservasi di desa saya. Bagaimana cara efektif untuk mengajak masyarakat mengerti pentingnya melindungi satwa lokal?</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img src="/api/placeholder/30/30" alt="Profile" class="h-8 w-8 rounded-full mr-2">
+                                    <span class="text-sm text-gray-500">Maya Kusuma</span>
+                                </div>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                                    </svg>
+                                    32
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-green-50 p-8 rounded-xl shadow-md mb-12" data-aos="fade-up" data-aos-duration="800">
+                    <div class="flex flex-col lg:flex-row items-center">
+                        <div class="lg:w-3/5 lg:pr-6 mb-6 lg:mb-0">
+                            <h3 class="text-2xl font-bold text-green-800 mb-4">Mulai Berbagi, Kumpulkan Poin</h3>
+                            <p class="text-gray-600 mb-6">Bergabunglah dengan komunitas peduli satwa dan alam. Bagikan cerita penyelamatan, tips pelestarian lingkungan, atau tanyakan hal yang Anda ingin ketahui. Setiap kontribusi akan menghasilkan poin yang dapat ditukarkan dengan hadiah menarik!</p>
+                            <button class="px-6 py-3 bg-green-600 text-white rounded-full font-medium hover:bg-green-700 transition duration-300 transform hover:scale-105">Buat Postingan Sekarang</button>
+                        </div>
+                        <div class="lg:w-2/5">
+                            <img src="/api/placeholder/400/300" alt="Komunitas" class="rounded-lg shadow-md w-full">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Contributors -->
+                <h3 class="text-xl font-bold text-green-800 mb-6 text-center" data-aos="fade-up" data-aos-duration="800">Kontributor Teratas Minggu Ini</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <!-- Contributor 1 -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 flex items-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <img src="/api/placeholder/60/60" alt="Profile" class="h-16 w-16 rounded-full mr-4">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-gray-800">Budi Santoso</h4>
+                            <p class="text-sm text-gray-500">Relawan Penyelamat Satwa</p>
+                            <div class="flex items-center mt-2">
+                                <div class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-medium flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                    </svg>
+                                    4.5K Poin
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contributor 2 -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 flex items-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                        <img src="/api/placeholder/60/60" alt="Profile" class="h-16 w-16 rounded-full mr-4">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-gray-800">Sari Dewi</h4>
+                            <p class="text-sm text-gray-500">Pendidik Konservasi</p>
+                            <div class="flex items-center mt-2">
+                                <div class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-medium flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                    </svg>
+                                    3.8K Poin
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contributor 3 -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 flex items-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                        <img src="/api/placeholder/60/60" alt="Profile" class="h-16 w-16 rounded-full mr-4">
+                        <div class="flex-1
+                        ">
+                            <h4 class="font-bold text-gray-800">Rina Sari</h4>
+                            <p class="text-sm text-gray-500">Relawan Penyelamat Hewan</p>
+                            <div class="flex items-center mt-2">
+                              <h4 class="font-bold text-gray-800 mb-2">Bagaimana Cara Mengedukasi Masyarakat Lokal Tentang Konservasi?</h4>
+                              <p class="text-gray-600 text-sm mb-4">Saya sedang merencanakan program edukasi konservasi di desa saya. Bagaimana cara efektif untuk mengajak masyarakat mengerti pentingnya melindungi satwa lokal?</p>
+                              <div class="flex items-center justify-between">
+                                  <div class="flex items-center">
+                                      <img src="/api/placeholder/30/30" alt="Profile" class="h-8 w-8 rounded-full mr-2">
+                                      <span class="text-sm text-gray-500">Maya Kusuma</span>
+                                  </div>
+                                  <div class="flex items-center text-sm text-gray-500">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                                      </svg>
+                                      32
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <!-- Community CTA -->
+                  <div class="mt-12 text-center" data-aos="fade-up" data-aos-duration="800">
+                      <button class="px-8 py-3 bg-green-600 text-white rounded-full font-medium shadow-lg hover:bg-green-700 transition duration-300 transform hover:scale-105">Lihat Semua Postingan</button>
+                  </div>
+  
+                  <!-- Upcoming Community Events -->
+                  <h3 class="text-xl font-bold text-green-800 mb-6 text-center mt-16" data-aos="fade-up" data-aos-duration="800">Event Komunitas Mendatang</h3>
+                  
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                      <!-- Community Event 1 -->
+                      <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                          <div class="md:w-1/3 relative">
+                              <img src="/api/placeholder/300/300" alt="Workshop Konservasi" class="w-full h-48 md:h-full object-cover">
+                              <div class="absolute top-0 left-0 bg-green-600 text-white px-3 py-1 text-sm font-medium">GRATIS</div>
+                          </div>
+                          <div class="p-6 md:w-2/3">
+                              <div class="flex items-center mb-2">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                  </svg>
+                                  <span class="text-sm text-gray-600">Sabtu, 15 Juni 2025 • 09:00 - 12:00 WIB</span>
+                              </div>
+                              <h4 class="font-bold text-gray-800 mb-2">Workshop: Mengenal Satwa Dilindungi Indonesia</h4>
+                              <p class="text-gray-600 text-sm mb-4">Workshop interaktif untuk mengenal berbagai jenis satwa dilindungi di Indonesia dan cara melestarikannya. Cocok untuk semua usia.</p>
+                              <div class="flex items-center justify-between">
+                                  <div class="flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>
+                                      <span class="text-sm text-gray-600">Taman Kota, Jakarta Pusat</span>
+                                  </div>
+                                  <button class="px-4 py-2 bg-green-100 text-green-600 rounded-full hover:bg-green-200 transition duration-300">Daftar</button>
+                              </div>
+                          </div>
+                      </div>
+  
+                      <!-- Community Event 2 -->
+                      <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                          <div class="md:w-1/3 relative">
+                              <img src="/api/placeholder/300/300" alt="Penanaman Mangrove" class="w-full h-48 md:h-full object-cover">
+                              <div class="absolute top-0 left-0 bg-green-600 text-white px-3 py-1 text-sm font-medium">RELAWAN</div>
+                          </div>
+                          <div class="p-6 md:w-2/3">
+                              <div class="flex items-center mb-2">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                  </svg>
+                                  <span class="text-sm text-gray-600">Minggu, 23 Juni 2025 • 07:00 - 14:00 WIB</span>
+                              </div>
+                              <h4 class="font-bold text-gray-800 mb-2">Penanaman 1000 Pohon Mangrove</h4>
+                              <p class="text-gray-600 text-sm mb-4">Mari bergabung dalam aksi penanaman mangrove untuk melindungi ekosistem pesisir dan mencegah abrasi pantai. Transportasi dan makan siang disediakan.</p>
+                              <div class="flex items-center justify-between">
+                                  <div class="flex items-center">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>
+                                      <span class="text-sm text-gray-600">Pantai Muara Angke, Jakarta Utara</span>
+                                  </div>
+                                  <button class="px-4 py-2 bg-green-100 text-green-600 rounded-full hover:bg-green-200 transition duration-300">Daftar</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <!-- Testimonials -->
+                  <h3 class="text-xl font-bold text-green-800 mb-8 text-center" data-aos="fade-up" data-aos-duration="800">Apa Kata Mereka</h3>
+                  
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                      <!-- Testimonial 1 -->
+                      <div class="bg-white rounded-xl shadow-lg p-6 relative" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                          <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-green-100 rounded-full p-2">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                              </svg>
+                          </div>
+                          <div class="pt-6">
+                              <p class="text-gray-600 italic mb-4">"Bergabung dengan komunitas Naturaya membuka mata saya tentang pentingnya menjaga kelestarian satwa. Saya belajar banyak dan bertemu orang-orang luar biasa yang peduli dengan alam."</p>
+                              <div class="flex items-center">
+                                  <img src="/api/placeholder/50/50" alt="Profile" class="h-10 w-10 rounded-full mr-3">
+                                  <div>
+                                      <h5 class="font-bold text-gray-800">Dian Sastro</h5>
+                                      <p class="text-sm text-gray-500">Anggota Komunitas sejak 2023</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+  
+                      <!-- Testimonial 2 -->
+                      <div class="bg-white rounded-xl shadow-lg p-6 relative" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                          <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-green-100 rounded-full p-2">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                              </svg>
+                          </div>
+                          <div class="pt-6">
+                              <p class="text-gray-600 italic mb-4">"Platform donasi yang transparan dan terpercaya. Saya bisa melihat langsung dampak dari donasi yang saya berikan melalui laporan berkala dan foto-foto kegiatan di lapangan."</p>
+                              <div class="flex items-center">
+                                  <img src="/api/placeholder/50/50" alt="Profile" class="h-10 w-10 rounded-full mr-3">
+                                  <div>
+                                      <h5 class="font-bold text-gray-800">Reza Rahadian</h5>
+                                      <p class="text-sm text-gray-500">Donatur Tetap</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+  
+                      <!-- Testimonial 3 -->
+                      <div class="bg-white rounded-xl shadow-lg p-6 relative" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                          <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-green-100 rounded-full p-2">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                              </svg>
+                          </div>
+                          <div class="pt-6">
+                              <p class="text-gray-600 italic mb-4">"Sebagai guru, saya menemukan banyak materi edukasi berharga di komunitas ini untuk mengajarkan anak-anak tentang konservasi. Postingan-postingan informatif sangat membantu!"</p>
+                              <div class="flex items-center">
+                                  <img src="/api/placeholder/50/50" alt="Profile" class="h-10 w-10 rounded-full mr-3">
+                                  <div>
+                                      <h5 class="font-bold text-gray-800">Maudy Ayunda</h5>
+                                      <p class="text-sm text-gray-500">Guru Biologi</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <!-- Newsletter -->
+                  <div class="bg-green-600 rounded-xl shadow-xl p-8 text-white mb-12" data-aos="fade-up" data-aos-duration="1000">
+                      <div class="flex flex-col lg:flex-row items-center justify-between">
+                          <div class="lg:w-1/2 mb-6 lg:mb-0">
+                              <h3 class="text-2xl font-bold mb-3">Dapatkan Kabar Terbaru</h3>
+                              <p class="text-green-100">Berlangganan newsletter kami untuk mendapatkan informasi terbaru tentang event, kampanye donasi, dan tips pelestarian lingkungan.</p>
+                          </div>
+                          <div class="lg:w-1/2">
+                              <form class="flex flex-col sm:flex-row gap-3">
+                                  <input type="email" placeholder="Alamat email Anda" class="px-4 py-3 rounded-full text-gray-800 w-full focus:outline-none focus:ring-2 focus:ring-green-400">
+                                  <button type="submit" class="px-6 py-3 bg-white text-green-600 rounded-full font-medium hover:bg-green-100 transition duration-300 whitespace-nowrap">Berlangganan</button>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+      <!-- JavaScript for Tab Functionality and Counters -->
+      <script>
+          $(document).ready(function() {
+              // Initialize AOS
+              AOS.init();
+              
+              // Tab functionality
+              $('.tab-btn').click(function() {
+                  // Remove active class from all tabs
+                  $('.tab-btn').removeClass('bg-green-600 text-white').addClass('bg-white text-green-600');
+                  // Add active class to clicked tab
+                  $(this).removeClass('bg-white text-green-600').addClass('bg-green-600 text-white');
+                  
+                  // Hide all tab content
+                  $('.tab-content').hide();
+                  
+                  // Show the corresponding content
+                  const contentId = $(this).attr('id').replace('tab-', 'content-');
+                  $('#' + contentId).show();
+              });
+              
+              // Counter animation
+              function animateCounter() {
+                  $('.counter').each(function() {
+                      const $this = $(this);
+                      const target = parseInt($this.attr('data-target'));
+                      
+                      // Check if counter is in viewport
+                      const position = $this.offset().top;
+                      const windowHeight = $(window).height();
+                      const scrollTop = $(window).scrollTop();
+                      
+                      if (position < (scrollTop + windowHeight) && !$this.hasClass('counted')) {
+                          $this.addClass('counted');
+                          
+                          $({ countNum: 0 }).animate({
+                              countNum: target
+                          }, {
+                              duration: 2000,
+                              easing: 'swing',
+                              step: function() {
+                                  // Format large numbers with commas
+                                  const formattedNumber = Math.floor(this.countNum).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                                  $this.text(formattedNumber);
+                              },
+                              complete: function() {
+                                  const formattedNumber = target.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                                  $this.text(formattedNumber);
+                              }
+                          });
+                      }
+                  });
+              }
+              
+              // Run counter animation on scroll
+              $(window).scroll(function() {
+                  animateCounter();
+              });
+              
+              // Run counter animation on page load
+              animateCounter();
+          });
+      </script>
+  </body>
+  </html>

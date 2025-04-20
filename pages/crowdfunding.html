@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naturaya Crowdfunding</title>
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="../src/output.css" />
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .pricing-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .pricing-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      .best-value-badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: #10b981;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 font-sans">
+    <nav
+      class="bg-gradient-to-r from-[#022c22] to-[#174903] shadow-xl sticky top-0 z-50 transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <!-- Enhanced Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <a href="index.html" class="flex items-center group">
+              <div
+                class="bg-white/10 p-2 rounded-full mr-2 group-hover:bg-white/20 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-leaf text-emerald-300 text-2xl group-hover:scale-110 transition-transform"
+                ></i>
+              </div>
+              <span class="text-white font-bold text-xl tracking-wide"
+                >Natu<span class="text-emerald-300">Raya</span></span
+              >
+            </a>
+          </div>
+
+          <!-- Enhanced Menu Desktop -->
+          <div class="hidden md:flex items-center space-x-2">
+            <div class="relative group">
+              <a
+                href="#"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+              >
+                <i
+                  class="fas fa-hand-holding-heart menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Donasi
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="./natubot.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+              >
+                <i
+                  class="fas fa-robot menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                NatuBot
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="#"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+              >
+                <i
+                  class="fas fa-tree menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Pohon Virtual
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="komunitas.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+              >
+                <i
+                  class="fas fa-users menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Komunitas
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="event.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+              >
+                <i
+                  class="fas fa-calendar-alt menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Event
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="crowdfunding.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+              >
+                <i
+                  class="fas fa-piggy-bank menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Crowdfunding
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+            </div>
+
+            <div class="ml-4">
+              <a
+                href="login.html"
+                class="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              >
+                <i class="fas fa-user-plus mr-2"></i> Daftar
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="text-white hover:text-emerald-300 focus:outline-none transition-colors duration-300"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enhanced Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-gradient-to-b from-[#3A9B9C] to-[#2A8B8C] pb-4 px-4 rounded-b-2xl shadow-lg"
+      >
+        <div class="space-y-2 py-2">
+          <a
+            href="#"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+          >
+            <i class="fas fa-hand-holding-heart mr-3 text-emerald-300"></i>
+            Donasi
+          </a>
+
+          <a
+            href="natubot.html"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+          >
+            <i class="fas fa-robot mr-3 text-emerald-300"></i> NatuBot
+          </a>
+
+          <a
+            href="#"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+          >
+            <i class="fas fa-tree mr-3 text-emerald-300"></i> Pohon Virtual
+          </a>
+
+          <a
+            href="komunitas.html"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+          >
+            <i class="fas fa-users mr-3 text-emerald-300"></i> Komunitas
+          </a>
+
+          <a
+            href="event.html"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+          >
+            <i class="fas fa-calendar-alt mr-3 text-emerald-300"></i> Event
+          </a>
+
+          <a
+            href="crowdfunding.html"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+          >
+            <i class="fas fa-piggy-bank mr-3 text-emerald-300"></i> Crowdfunding
+          </a>
+
+          <div class="pt-2 mt-3 border-t border-white/10">
+            <a
+              href="#"
+              class="block px-4 py-3 rounded-xl text-base font-medium bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:from-emerald-400 hover:to-emerald-500 flex items-center justify-center shadow-md"
+            >
+              <i class="fas fa-user-plus mr-2"></i> Daftar
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="py-20 modern-bg text-white">
+      <div
+        class="container mx-auto px-6 text-center"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <h1
+          class="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-green-200 to-emerald-800 animate-pulse"
+        >
+          🌱 Bersama Wujudkan Masa Depan Yang Lebih Hijau
+        </h1>
+        <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">
+          Bergabunglah dengan komunitas pendukung kami dan bantu kami
+          menciptakan masa depan yang lebih berkelanjutan melalui pertanian
+          organik dan praktik ramah lingkungan.
+        </p>
+        <a
+          href="#pricing"
+          class="bg-white text-green-600 hover:bg-gray-100 hover:scale-105 hover:shadow-lg py-3 px-8 rounded-full text-lg font-semibold transition-all duration-300 transform inline-block animate-pulse hover:animate-none"
+          >Jadi Anggota</a
+        >
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-white" id="pricing">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 mt-12">
+        <!-- Tier 1 -->
+        <div
+          class="bg-white/90 rounded-2xl shadow-xl p-8 flex flex-col items-center border-2 border-emerald-200 hover:scale-105 transition-transform duration-300"
+        >
+          <div class="bg-emerald-100 p-4 rounded-full mb-4">
+            <i class="fas fa-seedling text-emerald-600 text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-emerald-700 mb-2">Member Hijau</h3>
+          <p class="text-gray-600 mb-4 text-center">
+            Dukungan awal untuk NatuRaya. Cocok untuk kamu yang ingin mulai
+            berkontribusi.
+          </p>
+          <div class="text-2xl font-bold text-emerald-600 mb-2">Rp 50.000</div>
+          <button
+            onclick="showPaymentModal('Hijau', 50000)"
+            class="membership-btn bg-gradient-to-r from-emerald-500 to-green-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:from-emerald-600 hover:to-green-700 transition-all"
+          >
+            Pilih
+          </button>
+        </div>
+
+        <!-- Tier 2 -->
+        <div
+          class="bg-white/90 rounded-2xl shadow-2xl p-8 flex flex-col items-center border-4 border-emerald-400 scale-105"
+        >
+          <div class="bg-emerald-200 p-4 rounded-full mb-4">
+            <i class="fas fa-leaf text-emerald-700 text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-emerald-800 mb-2">
+            Member Premium
+          </h3>
+          <p class="text-gray-700 mb-4 text-center">
+            Dukungan lebih besar dan akses ke fitur premium serta badge
+            eksklusif.
+          </p>
+          <div class="text-2xl font-bold text-emerald-700 mb-2">Rp 150.000</div>
+          <button
+            onclick="showPaymentModal('Premium', 150000)"
+            class="membership-btn bg-gradient-to-r from-emerald-600 to-green-700 text-white px-6 py-2 rounded-full font-semibold shadow hover:from-emerald-700 hover:to-green-800 transition-all"
+          >
+            Pilih
+          </button>
+        </div>
+
+        <!-- Tier 3 -->
+        <div
+          class="bg-white/90 rounded-2xl shadow-xl p-8 flex flex-col items-center border-2 border-emerald-200 hover:scale-105 transition-transform duration-300"
+        >
+          <div class="bg-emerald-100 p-4 rounded-full mb-4">
+            <i class="fas fa-tree text-emerald-600 text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-emerald-700 mb-2">
+            Member Guardian
+          </h3>
+          <p class="text-gray-600 mb-4 text-center">
+            Dukungan utama untuk masa depan NatuRaya. Nama Anda akan tampil di
+            halaman supporter!
+          </p>
+          <div class="text-2xl font-bold text-emerald-600 mb-2">Rp 500.000</div>
+          <button
+            onclick="showPaymentModal('Guardian', 500000)"
+            class="membership-btn bg-gradient-to-r from-emerald-500 to-green-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:from-emerald-600 hover:to-green-700 transition-all"
+          >
+            Pilih
+          </button>
+        </div>
+      </div>
+
+      <script></script>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">
+          Apa Kata Pendukung Kami
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-50 p-8 rounded-lg shadow-md"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/women/32.jpg"
+                alt="Testimonial"
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-semibold">Sarah Johnson</h4>
+                <p class="text-gray-500 text-sm">Anggota Tahunan</p>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "Menjadi pendukung tahunan Naturaya sangat bermanfaat. Sampel
+              produk triwulanan saja sudah sepadan, dan saya senang bisa
+              berkontribusi pada praktik pertanian berkelanjutan."
+            </p>
+            <div class="text-yellow-400 mt-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div
+            class="bg-gray-50 p-8 rounded-lg shadow-md"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/men/45.jpg"
+                alt="Testimonial"
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-semibold">Michael Chen</h4>
+                <p class="text-gray-500 text-sm">Anggota Bulanan</p>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "Saya mulai dengan paket bulanan untuk mencoba, tapi pasti akan
+              beralih ke tahunan. Webinarnya sangat informatif, dan diskon
+              produknya sudah menghemat uang saya."
+            </p>
+            <div class="text-yellow-400 mt-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+          <div
+            class="bg-gray-50 p-8 rounded-lg shadow-md"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Testimonial"
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-semibold">Emily Rodriguez</h4>
+                <p class="text-gray-500 text-sm">Anggota Tahunan</p>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "Kotak hadiah tahunannya sangat menyenangkan! Saya suka semua
+              konten eksklusif dan merasa terhubung dengan komunitas yang peduli
+              pertanian berkelanjutan seperti saya."
+            </p>
+            <div class="text-yellow-400 mt-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">
+          Pertanyaan yang Sering Diajukan
+        </h2>
+        <div class="max-w-3xl mx-auto space-y-6">
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <button
+              class="faq-toggle w-full px-6 py-4 text-left font-semibold flex justify-between items-center"
+            >
+              <span>Bagaimana kontribusi saya digunakan?</span>
+              <i class="fas fa-plus text-green-600 transition-transform"></i>
+            </button>
+            <div class="faq-content hidden px-6 py-4 border-t border-gray-100">
+              <p class="text-gray-600">
+                Kontribusi Anda langsung mendukung inisiatif pertanian
+                berkelanjutan kami, program pendidikan komunitas, dan
+                pengembangan produk organik baru. Kami memberikan laporan
+                triwulanan rinci kepada semua anggota yang menunjukkan tepatnya
+                bagaimana dana dialokasikan.
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <button
+              class="faq-toggle w-full px-6 py-4 text-left font-semibold flex justify-between items-center"
+            >
+              <span>Bisakah saya membatalkan keanggotaan kapan saja?</span>
+              <i class="fas fa-plus text-green-600 transition-transform"></i>
+            </button>
+            <div class="faq-content hidden px-6 py-4 border-t border-gray-100">
+              <p class="text-gray-600">
+                Ya, keanggotaan bulanan dapat dibatalkan kapan saja. Keanggotaan
+                tahunan dapat dibatalkan, tetapi tidak dapat dikembalikan
+                setelah dibeli. Anda akan terus menerima manfaat hingga akhir
+                periode pembayaran Anda.
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <button
+              class="faq-toggle w-full px-6 py-4 text-left font-semibold flex justify-between items-center"
+            >
+              <span>Apa yang termasuk dalam kotak hadiah tahunan?</span>
+              <i class="fas fa-plus text-green-600 transition-transform"></i>
+            </button>
+            <div class="faq-content hidden px-6 py-4 border-t border-gray-100">
+              <p class="text-gray-600">
+                Kotak hadiah tahunan berisi pilihan produk organik premium kami,
+                barang-barang hidup berkelanjutan, dan merchandise eksklusif
+                Naturaya. Isinya bervariasi setiap tahun tetapi selalu bernilai
+                lebih dari Rp1.500.000.
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <button
+              class="faq-toggle w-full px-6 py-4 text-left font-semibold flex justify-between items-center"
+            >
+              <span>Bagaimana cara mengakses konten eksklusif anggota?</span>
+              <i class="fas fa-plus text-green-600 transition-transform"></i>
+            </button>
+            <div class="faq-content hidden px-6 py-4 border-t border-gray-100">
+              <p class="text-gray-600">
+                Setelah mendaftar, Anda akan menerima kredensial login ke portal
+                anggota kami di mana Anda dapat mengakses semua konten
+                eksklusif, rekaman webinar, dan penawaran khusus. Kami juga
+                mengirim tautan langsung ke konten baru dalam buletin bulanan
+                kami.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div
+      id="payment-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+    >
+      <div
+        class="bg-white rounded-lg p-8 max-w-md w-full max-h-90vh overflow-y-auto"
+      >
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-2xl font-bold" id="modal-title">
+            Lengkapi Keanggotaan Anda
+          </h3>
+          <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+            <i class="fas fa-times text-xl"></i>
+          </button>
+        </div>
+        <form id="payment-form" class="space-y-6">
+          <div>
+            <h4 class="font-semibold mb-2">Paket Terpilih:</h4>
+            <p id="selected-plan" class="text-green-600 font-medium"></p>
+          </div>
+          <div>
+            <label for="name" class="block text-gray-700 mb-2"
+              >Nama Lengkap</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              required
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-gray-700 mb-2"
+              >Alamat Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              required
+            />
+          </div>
+          <div>
+            <label for="card" class="block text-gray-700 mb-2"
+              >Nomor Kartu</label
+            >
+            <input
+              type="text"
+              id="card"
+              name="card"
+              placeholder="1234 5678 9012 3456"
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              required
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label for="expiry" class="block text-gray-700 mb-2"
+                >Tanggal Kadaluarsa</label
+              >
+              <input
+                type="text"
+                id="expiry"
+                name="expiry"
+                placeholder="MM/YY"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                required
+              />
+            </div>
+            <div>
+              <label for="cvv" class="block text-gray-700 mb-2">CVV</label>
+              <input
+                type="text"
+                id="cvv"
+                name="cvv"
+                placeholder="123"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                required
+              />
+            </div>
+          </div>
+          <div class="pt-4">
+            <button
+              type="submit"
+              class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition duration-300"
+            >
+              Selesaikan Pembayaran
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div
+      id="success-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+    >
+      <div class="bg-white rounded-lg p-8 max-w-md w-full text-center">
+        <div class="text-green-500 text-6xl mb-4">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Pembayaran Berhasil!</h3>
+        <p class="text-gray-600 mb-6">
+          Terima kasih telah mendukung Naturaya. Anda akan menerima email
+          konfirmasi segera dengan detail tentang keanggotaan Anda.
+        </p>
+        <button
+          id="close-success"
+          class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition duration-300"
+        >
+          Tutup
+        </button>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <section
+      class="py-20 modern-bg text-white"
+    >
+      <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-6 animate-bounce bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-emerald-600">
+          Siap Membuat Perbedaan?
+        </h2>
+        <p class="text-xl mb-10 max-w-3xl mx-auto transform hover:scale-105 transition-all duration-300 hover:text-emerald-300">
+          Bergabunglah dengan komunitas kami hari ini dan jadilah bagian dari
+          gerakan pertanian berkelanjutan. Bersama, kita bisa menciptakan planet
+          yang lebih sehat untuk generasi mendatang.
+        </p>
+        <a
+          href="#pricing"
+          class="bg-white text-green-600 hover:bg-gray-100 py-3 px-8 rounded-full text-lg font-semibold transition duration-300 inline-block"
+          >Jadi Anggota Sekarang</a
+        >
+      </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script>
+      $(document).ready(function () {
+        // Initialize AOS
+        AOS.init();
+
+        // Mobile menu toggle
+        $("#menu-toggle").click(function () {
+          $("#mobile-menu").toggleClass("hidden");
+        });
+
+        // FAQ toggles
+        $(".faq-toggle").click(function () {
+          $(this).find("i").toggleClass("transform rotate-45");
+          $(this).next(".faq-content").slideToggle(200);
+        });
+
+        // Smooth scroll to sections
+        $('a[href^="#"]').on("click", function (e) {
+          e.preventDefault();
+          $("html, body").animate(
+            {
+              scrollTop: $($(this).attr("href")).offset().top - 100,
+            },
+            500
+          );
+        });
+
+        // Plan selection
+        $(".select-plan").click(function () {
+          const plan = $(this).data("plan");
+          const price = $(this).data("price");
+          const planText =
+            plan === "monthly"
+              ? `Pendukung Bulanan - Rp${price.toLocaleString("id-ID")}/bulan`
+              : `Pendukung Tahunan - Rp${price.toLocaleString("id-ID")}/tahun`;
+
+          $("#selected-plan").text(planText);
+          $("#payment-modal").removeClass("hidden");
+        });
+
+        // Close modal
+        $("#close-modal").click(function () {
+          $("#payment-modal").addClass("hidden");
+        });
+
+        // Close success modal
+        $("#close-success").click(function () {
+          $("#success-modal").addClass("hidden");
+        });
+
+        // Form submission
+        $("#payment-form").submit(function (e) {
+          e.preventDefault();
+
+          // Basic form validation
+          const name = $("#name").val().trim();
+          const email = $("#email").val().trim();
+          const card = $("#card").val().trim();
+          const expiry = $("#expiry").val().trim();
+          const cvv = $("#cvv").val().trim();
+
+          // Simple validation
+          if (!name || !email || !card || !expiry || !cvv) {
+            alert("Harap isi semua bidang");
+            return;
+          }
+
+          // Email validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            alert("Harap masukkan alamat email yang valid");
+            return;
+          }
+
+          // Card number validation (simple check for 16 digits)
+          const cardRegex = /^[0-9]{16}$/;
+          if (!cardRegex.test(card.replace(/\s/g, ""))) {
+            alert("Harap masukkan nomor kartu 16 digit yang valid");
+            return;
+          }
+
+          // Expiry date validation (MM/YY format)
+          const expiryRegex = /^(0[1-9]|1[0-2])\/([0-9]{2})$/;
+          if (!expiryRegex.test(expiry)) {
+            alert("Harap masukkan tanggal kadaluarsa yang valid (MM/YY)");
+            return;
+          }
+
+          // CVV validation (3 or 4 digits)
+          const cvvRegex = /^[0-9]{3,4}$/;
+          if (!cvvRegex.test(cvv)) {
+            alert("Harap masukkan CVV yang valid (3 atau 4 digit)");
+            return;
+          }
+
+          // Simulate payment processing
+          $("#payment-modal").addClass("hidden");
+
+          // Show loading indicator (optional)
+          $("body").append(
+            '<div id="loading" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"><div class="text-white text-xl">Memproses pembayaran...</div></div>'
+          );
+
+          // Simulate API call with timeout
+          setTimeout(function () {
+            // Remove loading indicator
+            $("#loading").remove();
+
+            // Show success modal
+            $("#success-modal").removeClass("hidden");
+
+            // Reset form
+            $("#payment-form")[0].reset();
+          }, 2000);
+        });
+
+        // Card number formatting (add spaces every 4 digits)
+        $("#card").on("input", function () {
+          let value = $(this)
+            .val()
+            .replace(/\s+/g, "")
+            .replace(/[^0-9]/gi, "");
+          let formattedValue = "";
+
+          for (let i = 0; i < value.length; i++) {
+            if (i > 0 && i % 4 === 0) {
+              formattedValue += " ";
+            }
+            formattedValue += value[i];
+          }
+
+          $(this).val(formattedValue);
+        });
+
+        // Expiry date formatting (add / after 2 digits)
+        $("#expiry").on("input", function () {
+          let value = $(this).val().replace(/\D/g, "");
+
+          if (value.length > 2) {
+            value = value.substring(0, 2) + "/" + value.substring(2, 4);
+          }
+
+          $(this).val(value);
+        });
+
+        // Limit CVV to 3-4 digits
+        $("#cvv").on("input", function () {
+          let value = $(this).val().replace(/\D/g, "");
+          $(this).val(value.substring(0, 4));
+        });
+      });
+
+      function showPaymentModal(membershipType, price) {
+        // Update modal content with membership details
+        document.getElementById(
+          "modal-title"
+        ).textContent = `Pembayaran Member ${membershipType}`;
+        document.getElementById(
+          "selected-plan"
+        ).textContent = `Member ${membershipType} - Rp${price.toLocaleString(
+          "id-ID"
+        )}`;
+
+        // Show payment modal
+        document.getElementById("payment-modal").classList.remove("hidden");
+
+        // Add event listener for form submission
+        document.getElementById("payment-form").onsubmit = function (e) {
+          e.preventDefault();
+          processPayment(membershipType, price);
+        };
+      }
+
+      function processPayment(membershipType, price) {
+        // Get form data
+        const formData = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          card: document.getElementById("card").value,
+          expiry: document.getElementById("expiry").value,
+          cvv: document.getElementById("cvv").value,
+        };
+
+        // Validate form data
+        if (!validatePaymentForm(formData)) {
+          return;
+        }
+
+        // Hide payment modal
+        document.getElementById("payment-modal").classList.add("hidden");
+
+        // Show loading state
+        const loadingDiv = document.createElement("div");
+        loadingDiv.id = "loading";
+        loadingDiv.className =
+          "fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50";
+        loadingDiv.innerHTML =
+          '<div class="text-white text-xl">Memproses pembayaran...</div>';
+        document.body.appendChild(loadingDiv);
+
+        // Simulate payment processing
+        setTimeout(() => {
+          // Remove loading state
+          document.getElementById("loading").remove();
+
+          // Show success modal
+          document.getElementById("success-modal").classList.remove("hidden");
+
+          // Reset form
+          document.getElementById("payment-form").reset();
+        }, 2000);
+      }
+
+      function validatePaymentForm(formData) {
+        // Basic validation
+        if (
+          !formData.name ||
+          !formData.email ||
+          !formData.card ||
+          !formData.expiry ||
+          !formData.cvv
+        ) {
+          alert("Harap isi semua bidang");
+          return false;
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+          alert("Harap masukkan alamat email yang valid");
+          return false;
+        }
+
+        // Card number validation
+        const cardRegex = /^[0-9]{16}$/;
+        if (!cardRegex.test(formData.card.replace(/\s/g, ""))) {
+          alert("Harap masukkan nomor kartu 16 digit yang valid");
+          return false;
+        }
+
+        // Expiry date validation
+        const expiryRegex = /^(0[1-9]|1[0-2])\/([0-9]{2})$/;
+        if (!expiryRegex.test(formData.expiry)) {
+          alert("Harap masukkan tanggal kadaluarsa yang valid (MM/YY)");
+          return false;
+        }
+
+        // CVV validation
+        const cvvRegex = /^[0-9]{3,4}$/;
+        if (!cvvRegex.test(formData.cvv)) {
+          alert("Harap masukkan CVV yang valid (3 atau 4 digit)");
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </body>
+</html>
