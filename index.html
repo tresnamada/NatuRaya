@@ -8,12 +8,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="../src/output.css" />
   </head>
-  <body class="">
+  <body class="scroll-smooth">
     <nav
       class="bg-gradient-to-r from-[#022c22] to-[#174903] shadow-xl sticky top-0 z-50 transition-all duration-300"
     >
@@ -39,7 +40,7 @@
           <div class="hidden md:flex items-center space-x-2">
             <div class="relative group">
               <a
-                href="#"
+                href="./pages/donasi.html"
                 class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
               >
                 <i
@@ -54,7 +55,7 @@
 
             <div class="relative group">
               <a
-                href="./natubot.html"
+                href="./pages/natubot.html"
                 class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
               >
                 <i
@@ -168,7 +169,7 @@
       >
         <div class="space-y-2 py-2">
           <a
-            href="#"
+            href="./pages/donasi.html"
             class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
           >
             <i class="fas fa-hand-holding-heart mr-3 text-emerald-300"></i>
@@ -283,7 +284,7 @@
           class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-6"
         >
           <a
-            href="#donate"
+            href="./pages/donasi.html"
             class="bg-white text-[#1679AB] px-6 py-3 rounded-full text-lg font-medium hover:scale-105 transition-transform flex items-center gap-2 shadow-md"
           >
             <i class="fas fa-heart animate-pulse"></i> Donasi Sekarang
@@ -296,67 +297,59 @@
           </a>
         </div>
 
-        <!-- Donator & Rating -->
-        <div
-          class="flex items-center gap-4 mt-8 justify-center md:justify-start"
-        >
-          <div class="flex -space-x-3">
-            <img
-              src="https://randomuser.me/api/portraits/women/44.jpg"
-              class="w-10 h-10 rounded-full border-2 border-white hover:scale-110 transition"
-              title="Sarah - Donatur sejak 2020"
-            />
-            <img
-              src="https://randomuser.me/api/portraits/men/32.jpg"
-              class="w-10 h-10 rounded-full border-2 border-white hover:scale-110 transition"
-              title="Ahmad - Donatur sejak 2021"
-            />
-            <img
-              src="https://randomuser.me/api/portraits/women/68.jpg"
-              class="w-10 h-10 rounded-full border-2 border-white hover:scale-110 transition"
-              title="Dewi - Donatur sejak 2019"
-            />
-          </div>
-          <div>
-            <div class="flex items-center text-yellow-300 text-sm">
-              <i class="fas fa-star mr-1"></i>
-              <i class="fas fa-star mr-1"></i>
-              <i class="fas fa-star mr-1"></i>
-              <i class="fas fa-star mr-1"></i>
-              <i class="fas fa-star mr-1"></i>
-            </div>
-            <p class="text-sm text-white/70 counter mt-1">
-              1,200+ Donatur Bergabung
-            </p>
-          </div>
-        </div>
+
       </div>
 
       <!-- Hero Image + Bubble -->
       <div
-        class="relative z-10 flex justify-center md:justify-end"
-        data-aos="fade-left"
-        data-aos-duration="800"
-      >
-        <div class="relative">
-          <img
-            src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-            alt="Wildlife Conservation"
-            class="rounded-2xl shadow-xl border-4 border-white/20 w-72 h-72 md:w-96 md:h-96 object-cover hover:brightness-110 transition-all duration-300 cursor-pointer"
-            id="hero-image"
-          />
-
-          <div
-            class="absolute -bottom-6 -right-6 bg-white text-[#1679AB] px-4 py-2 rounded-xl shadow-lg w-60 speech-bubble"
-          >
-            <p
-              id="typing-text"
-              class="font-semibold text-sm leading-relaxed"
-            ></p>
-            <div class="speech-bubble-arrow"></div>
+      class="relative z-10 flex justify-center md:justify-end"
+      data-aos="fade-left"
+      data-aos-duration="800"
+    >
+      <div class="relative">
+        <!-- Swiper container -->
+        <div class="swiper hero-swiper w-72 h-72 md:w-96 md:h-96 rounded-2xl shadow-xl overflow-hidden">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Wildlife Conservation"
+                class="w-full h-full object-cover hover:brightness-110 transition-all duration-300"
+              />
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1504173010664-32509aeebb62?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Forest Conservation"
+                class="w-full h-full object-cover hover:brightness-110 transition-all duration-300"
+              />
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1552083375-1447ce886485?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Ocean Conservation"
+                class="w-full h-full object-cover hover:brightness-110 transition-all duration-300"
+              />
+            </div>
           </div>
+          <!-- Add pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div
+          class="absolute -bottom-6 -right-6 bg-white text-[#1679AB] px-4 py-2 rounded-xl shadow-lg w-60 speech-bubble"
+        >
+          <p
+            id="typing-text"
+            class="font-semibold text-sm leading-relaxed"
+          ></p>
+          <div class="speech-bubble-arrow"></div>
         </div>
       </div>
+    </div>
 
       <!-- Scroll Indicator -->
       <div
@@ -369,6 +362,7 @@
 
     <section
       class="bg-gradient-to-r to-[#064e3b] from-[#022c22] py-16 px-6 md:px-12 lg:px-24 relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] before:opacity-5 before:animate-pulse"
+      id="explore"
     >
       <div
         class="max-w-6xl mx-auto pt-20"
@@ -413,34 +407,42 @@
             <div class="relative w-full max-w-md mx-auto">
               <!-- Placeholder for tree asset -->
               <div
-                class="relative h-[400px] w-[400px] bg-gradient-to-b from-emerald-100/20 to-transparent rounded-full flex items-center justify-center"
+                class="relative h-[400px] w-[400px] rounded-full flex items-center justify-center"
               >
                 <div class="text-center text-emerald-600">
-                  <!-- Replace this div with your tree asset -->
-                  <i class="fas fa-tree text-8xl animate-pulse"></i>
-                  <p class="mt-4 font-medium">Your Virtual Tree Asset Here</p>
+                  <img 
+                    src="./img/Bibit[1].png" 
+                    alt="Tree"
+                    class="animate-sway transform-origin-bottom hover:animate-sway-stronger transition-all duration-300"
+                    style="animation: sway 3s ease-in-out infinite;"
+                  >
                 </div>
               </div>
 
-              <!-- Tree Stats -->
-              <div
-                class="absolute bottom-0 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-emerald-100 w-full max-w-sm"
-              >
-                <div class="flex justify-around">
-                  <div class="text-center">
-                    <p class="text-emerald-600 font-bold text-2xl">5</p>
-                    <p class="text-sm text-gray-600">Trees Planted</p>
-                  </div>
-                  <div class="text-center">
-                    <p class="text-emerald-600 font-bold text-2xl">Level 2</p>
-                    <p class="text-sm text-gray-600">Tree Guardian</p>
-                  </div>
-                  <div class="text-center">
-                    <p class="text-emerald-600 font-bold text-2xl">80%</p>
-                    <p class="text-sm text-gray-600">Growth</p>
-                  </div>
-                </div>
-              </div>
+              <style>
+                @keyframes sway {
+                  0%, 100% {
+                    transform: rotate(0deg);
+                  }
+                  50% {
+                    transform: rotate(5deg);
+                  }
+                }
+
+                .animate-sway {
+                  animation: sway 3s ease-in-out infinite;
+                }
+
+                .animate-sway-stronger {
+                  animation: sway 2s ease-in-out infinite;
+                  transform: rotate(-3deg) scale(1.05);
+                }
+
+                .transform-origin-bottom {
+                  transform-origin: bottom center;
+                }
+              </style>
+
             </div>
           </div>
 
@@ -517,56 +519,17 @@
                 </div>
               </div>
 
-              <button
+              <a
+              href="./pages/pohon.html"
                 class="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg flex items-center justify-center gap-3 group"
               >
                 <i class="fas fa-seedling group-hover:animate-bounce"></i>
                 Mulai Tanam Pohon Virtualmu
-              </button>
+              </a>
             </div>
           </div>
         </div>
 
-        <style>
-          @keyframes falling {
-            0% {
-              transform: translateY(-10%) rotate(0deg);
-              opacity: 1;
-            }
-            100% {
-              transform: translateY(100vh) rotate(360deg);
-              opacity: 0;
-            }
-          }
-
-          .falling-leaf {
-            position: absolute;
-            animation: falling linear forwards;
-            color: #34d399;
-          }
-        </style>
-
-        <script>
-          // Create falling leaves animation
-          function createLeaf() {
-            const leaf = document.createElement("i");
-            leaf.className = "fas fa-leaf falling-leaf";
-            leaf.style.left = Math.random() * 100 + "%";
-            leaf.style.animationDuration = Math.random() * 3 + 2 + "s";
-            leaf.style.opacity = Math.random();
-            leaf.style.fontSize = Math.random() * 10 + 10 + "px";
-
-            document.getElementById("leaves-container").appendChild(leaf);
-
-            // Remove leaf after animation
-            leaf.addEventListener("animationend", () => {
-              leaf.remove();
-            });
-          }
-
-          // Create leaves periodically
-          setInterval(createLeaf, 300);
-        </script>
       </div>
     </section>
 
@@ -661,7 +624,7 @@
                 class="relative rounded-full overflow-hidden border-8 border-white/20 shadow-2xl transform hover:scale-105 transition-all duration-500"
               >
                 <img
-                  src="../assets/ai-avatar.png"
+                  src="./img/maskot[1].png"
                   alt="NatuBot AI"
                   class="w-80 h-80 object-cover"
                 />
@@ -765,7 +728,7 @@
                   <i
                     class="fas fa-robot text-xl group-hover:animate-bounce"
                   ></i>
-                  <span class="text-lg">Mulai Chat dengan NatuBot</span>
+                  <a class="text-lg" href="./pages/natubot.html">Mulai Chat dengan NatuBot</s>
                 </div>
               </button>
             </div>
@@ -812,137 +775,81 @@
           <!-- Tabs -->
           <div class="mb-12">
               <div class="flex flex-wrap justify-center space-x-2 md:space-x-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-                  <button id="tab-event" class="tab-btn bg-green-600 text-white px-6 py-3 rounded-full font-medium shadow-md hover:shadow-lg transition duration-300 mb-2 md:mb-0">Event Donasi</button>
-                  <button id="tab-komunitas" class="tab-btn bg-white text-green-600 px-6 py-3 rounded-full font-medium shadow-md hover:shadow-lg transition duration-300 mb-2 md:mb-0">Komunitas Peduli</button>
+                  <a id="tab-event" class="tab-btn bg-green-600 text-white px-6 py-3 rounded-full font-medium shadow-md hover:shadow-lg transition duration-300 mb-2 md:mb-0">Event Donasi</a>
+                  <a id="tab-komunitas" class="tab-btn bg-white text-green-600 px-6 py-3 rounded-full font-medium shadow-md hover:shadow-lg transition duration-300 mb-2 md:mb-0">Komunitas Peduli</a>
               </div>
           </div>
 
           <!-- Event Content -->
-          <div id="content-event" class="tab-content block">
-              <!-- Featured Event -->
-              <div class="mb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                  <div class="bg-white rounded-xl shadow-xl overflow-hidden lg:flex">
-                      <div class="lg:w-2/5 relative">
-                          <img src="/api/placeholder/800/600" alt="Event Penyelamatan Orangutan" class="h-64 w-full lg:h-full object-cover">
-                          <div class="absolute top-4 left-4 bg-green-600 text-white px-4 py-1 rounded-full text-sm font-medium">URGENT</div>
-                      </div>
-                      <div class="p-6 lg:p-8 lg:w-3/5">
-                          <div class="flex items-center mb-4">
-                              <div class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium mr-3">Berakhir 30 Apr 2025</div>
-                              <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Kalimantan</div>
-                          </div>
-                          <h3 class="text-2xl font-bold text-gray-800 mb-3">Penyelamatan Habitat Orangutan Kalimantan</h3>
-                          <p class="text-gray-600 mb-6">Hutan tempat tinggal mereka terancam kebakaran dan deforestasi. Bantu kami menyelamatkan habitat orangutan dengan merestorasi 50 hektar kawasan hutan.</p>
-                          <div class="mb-6">
-                              <div class="relative pt-1">
-                                  <div class="flex mb-2 items-center justify-between">
-                                      <div>
-                                          <span class="text-xs font-semibold inline-block text-green-600">Terkumpul: Rp 78.500.000</span>
-                                      </div>
-                                      <div>
-                                          <span class="text-xs font-semibold inline-block text-green-600">Target: Rp 120.000.000</span>
-                                      </div>
-                                  </div>
-                                  <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-green-100">
-                                      <div style="width: 65%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="flex items-center justify-between">
-                              <div class="flex items-center">
-                                  <div class="flex -space-x-2">
-                                      <img src="/api/placeholder/40/40" alt="Donatur" class="h-10 w-10 rounded-full border-2 border-white">
-                                      <img src="/api/placeholder/40/40" alt="Donatur" class="h-10 w-10 rounded-full border-2 border-white">
-                                      <img src="/api/placeholder/40/40" alt="Donatur" class="h-10 w-10 rounded-full border-2 border-white">
-                                  </div>
-                                  <span class="ml-3 text-sm text-gray-500">245 Donatur</span>
-                              </div>
-                              <button class="px-6 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition duration-300 transform hover:scale-105">Donasi Sekarang</button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+<div id="content-event" class="tab-content block">
+    <!-- Featured Event -->
+    <div class="mb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      
+    </div>
 
-              <!-- Event Cards -->
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  <!-- Event Card 1 -->
-                  <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
-                      <div class="relative">
-                          <img src="/api/placeholder/400/250" alt="Penyelamatan Penyu" class="w-full h-48 object-cover">
-                          <div class="absolute top-4 left-4 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">15 Mei 2025</div>
-                      </div>
-                      <div class="p-6">
-                          <h3 class="text-xl font-bold text-gray-800 mb-2">Konservasi Penyu di Pantai Sukamade</h3>
-                          <p class="text-gray-600 text-sm mb-4">Melindungi penyu dari perburuan dan bantu menjaga habitat peneluran mereka di pesisir selatan Jawa.</p>
-                          <div class="mb-4">
-                              <div class="relative pt-1">
-                                  <div class="overflow-hidden h-2 mb-1 text-xs flex rounded bg-green-100">
-                                      <div style="width: 42%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
-                                  </div>
-                                  <span class="text-xs text-gray-500">Rp 21.450.000 / Rp 50.000.000</span>
-                              </div>
-                          </div>
-                          <div class="flex justify-between items-center">
-                              <span class="text-sm text-gray-500">87 Donatur</span>
-                              <button class="px-4 py-2 bg-green-100 text-green-600 rounded-full hover:bg-green-200 transition duration-300">Donasi</button>
-                          </div>
-                      </div>
-                  </div>
+    <!-- Event Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Event Card 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+            <div class="relative">
+                <img src="./img/Bersih Pantai Serentak.jpeg" alt="Penyelamatan Penyu" class="w-full h-48 object-cover">
+                <div class="absolute top-4 left-4 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">15 Mei 2025</div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Bersih Pantai Serentak</h3>
+                <p class="text-gray-600 text-sm mb-4">Aksi bersih-bersih pantai sepanjang 5 km dengan target mengumpulkan 1 ton sampah.</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-500">87 Pendaftar</span>
+                    <a href="./pages/event.html" class="px-4 py-2 bg-green-100 text-green-600 rounded-full hover:bg-green-200 transition duration-300">Daftar</a>
+                </div>
+            </div>
+        </div>
 
-                  <!-- Event Card 2 -->
-                  <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
-                      <div class="relative">
-                          <img src="/api/placeholder/400/250" alt="Perlindungan Terumbu Karang" class="w-full h-48 object-cover">
-                          <div class="absolute top-4 left-4 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">22 Mei 2025</div>
-                      </div>
-                      <div class="p-6">
-                          <h3 class="text-xl font-bold text-gray-800 mb-2">Pemulihan Terumbu Karang Raja Ampat</h3>
-                          <p class="text-gray-600 text-sm mb-4">Program transplantasi terumbu karang untuk mengembalikan keindahan bawah laut Papua yang rusak akibat perubahan iklim.</p>
-                          <div class="mb-4">
-                              <div class="relative pt-1">
-                                  <div class="overflow-hidden h-2 mb-1 text-xs flex rounded bg-green-100">
-                                      <div style="width: 75%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
-                                  </div>
-                                  <span class="text-xs text-gray-500">Rp 45.750.000 / Rp 60.000.000</span>
-                              </div>
-                          </div>
-                          <div class="flex justify-between items-center">
-                              <span class="text-sm text-gray-500">123 Donatur</span>
-                              <button class="px-4 py-2 bg-green-100 text-green-600 rounded-full hover:bg-green-200 transition duration-300">Donasi</button>
-                          </div>
-                      </div>
-                  </div>
+        <!-- Event Card 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+            <div class="relative">
+                <img src="./img/Workshop Daur Ulang.jpeg" alt="Perlindungan Terumbu Karang" class="w-full h-48 object-cover">
+                <div class="absolute top-4 left-4 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">22 Juni 2024</div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Workshop Daur Ulang
+                </h3>
+                <p class="text-gray-600 text-sm mb-4">Pelajari cara mendaur ulang sampah rumah tangga menjadi barang bernilai.</p>
+                <div class="mb-4">
+                    
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-500">123 Pendaftar</span>
+                    <a href="./pages/event.html" class="px-4 py-2 bg-green-100 text-green-600 rounded-full hover:bg-green-200 transition duration-300">Daftar</a>
+                </div>
+            </div>
+        </div>
 
-                  <!-- Event Card 3 -->
-                  <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
-                      <div class="relative">
-                          <img src="/api/placeholder/400/250" alt="Konservasi Harimau Sumatra" class="w-full h-48 object-cover">
-                          <div class="absolute top-4 left-4 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">1 Juni 2025</div>
-                      </div>
-                      <div class="p-6">
-                          <h3 class="text-xl font-bold text-gray-800 mb-2">Perlindungan Harimau Sumatra</h3>
-                          <p class="text-gray-600 text-sm mb-4">Membantu tim konservasi menjaga hutan dan melawan perburuan liar untuk melindungi spesies harimau yang terancam punah.</p>
-                          <div class="mb-4">
-                              <div class="relative pt-1">
-                                  <div class="overflow-hidden h-2 mb-1 text-xs flex rounded bg-green-100">
-                                      <div style="width: 28%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
-                                  </div>
-                                  <span class="text-xs text-gray-500">Rp 19.600.000 / Rp 70.000.000</span>
-                              </div>
-                          </div>
-                          <div class="flex justify-between items-center">
-                              <span class="text-sm text-gray-500">64 Donatur</span>
-                              <button class="px-4 py-2 bg-green-100 text-green-600 rounded-full hover:bg-green-200 transition duration-300">Donasi</button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+        <!-- Event Card 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+            <div class="relative">
+                <img src="./img/Penanaman 1000 Pohon.jpeg" alt="Konservasi Harimau Sumatra" class="w-full h-48 object-cover">
+                <div class="absolute top-4 left-4 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">30 Juni 2024</div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Penanaman 1000 Pohon</h3>
+                <p class="text-gray-600 text-sm mb-4">Aksi penanaman pohon untuk penghijauan kawasan perkotaan.</p>
+                <div class="mb-4">
+                   
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-500">64 Pendaftar</span>
+                    <a href="./pages/event.html" class="px-4 py-2 bg-green-100 text-green-600 rounded-full hover:bg-green-200 transition duration-300">Daftar</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-              <!-- Event CTA -->
-              <div class="mt-12 text-center" data-aos="fade-up" data-aos-duration="800">
-                  <button class="px-8 py-3 bg-green-600 text-white rounded-full font-medium shadow-lg hover:bg-green-700 transition duration-300 transform hover:scale-105">Lihat Semua Event Donasi</button>
-              </div>
-          </div>
+    <!-- Event CTA -->
+    <div class="mt-12 text-center" data-aos="fade-up" data-aos-duration="800">
+        <a href="./pages/event.html" class="px-8 py-3 bg-green-600 text-white rounded-full font-medium shadow-lg hover:bg-green-700 transition duration-300 transform hover:scale-105">Lihat Semua Event Donasi</a>
+    </div>
+</div>
 
           <!-- Komunitas Content -->
           <div id="content-komunitas" class="tab-content hidden">
@@ -1010,7 +917,7 @@
                           <a href="komunitas.html" class="px-6 py-3 bg-green-600 text-white rounded-full font-medium hover:bg-green-700 transition duration-300 transform hover:scale-105">Buat Postingan Sekarang</a>
                       </div>
                       <div class="lg:w-2/5">
-                          <img src="/api/placeholder/400/300" alt="Komunitas" class="rounded-lg shadow-md w-full">
+                          <img src="./img/Komunitas.jpeg" alt="Komunitas" class="rounded-lg shadow-md w-full w-40 h-40 overflow-hidden">
                       </div>
                   </div>
               </div>
@@ -1035,7 +942,7 @@
         class="absolute top-1/2 left-1/2 w-48 h-48 bg-emerald-300 rounded-full mix-blend-multiply filter blur-2xl opacity-15 animate-blob animation-delay-4000"
       ></div>
 
-      <div class="relative z-10 w-full max-w-5xl mx-auto">
+      <div class="relative z-10 w-full max-w-5xl mx-auto" data-aos="fade-down" data-aos-delay="200">
         <!-- Header -->
         <div class="text-center mb-12">
           <div
@@ -1076,11 +983,13 @@
             <div class="text-2xl font-bold text-emerald-600 mb-2">
               Rp 50.000
             </div>
-            <button
+            <a 
+            href="./pages/crowdfunding.html"
+        
               class="bg-gradient-to-r from-emerald-500 to-green-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:from-emerald-600 hover:to-green-700 transition-all"
             >
               Pilih
-            </button>
+            </a>
           </div>
           <!-- Tier 2 -->
           <div
@@ -1099,11 +1008,12 @@
             <div class="text-2xl font-bold text-emerald-700 mb-2">
               Rp 150.000
             </div>
-            <button
+            <a
+            href="./pages/crowdfunding.html"
               class="bg-gradient-to-r from-emerald-600 to-green-700 text-white px-6 py-2 rounded-full font-semibold shadow hover:from-emerald-700 hover:to-green-800 transition-all"
             >
               Pilih
-            </button>
+            </a>
           </div>
           <!-- Tier 3 -->
           <div
@@ -1122,11 +1032,12 @@
             <div class="text-2xl font-bold text-emerald-600 mb-2">
               Rp 500.000
             </div>
-            <button
+            <a
+            href="./pages/crowdfunding.html"
               class="bg-gradient-to-r from-emerald-500 to-green-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:from-emerald-600 hover:to-green-700 transition-all"
             >
               Pilih
-            </button>
+            </a>
           </div>
         </div>
 
@@ -1190,7 +1101,10 @@
             class="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-3 mx-auto"
           >
             <i class="fas fa-user-plus animate-bounce"></i>
-            Jadi Member & Dukung NatuRaya Sekarang!
+            <a
+            href="../pages/crowdfunding.html">
+              Jadi Member & Dukung NatuRaya Sekarang!
+            </a> 
           </button>
           <p class="text-sm text-gray-200 mt-4">
             Kontribusi Anda sangat berarti untuk masa depan bumi 🌏
@@ -1454,9 +1368,71 @@
         </div>
       </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="../js/script.js"></script>
     <script>
+          // <!-- Swiper JS -->
+ 
+    
+      // Initialize hero swiper
+      const heroSwiper = new Swiper('.hero-swiper', {
+        // Optional parameters
+        loop: true,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        // Pagination
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+      
+      // Typing effect for the speech bubble
+      const typingText = document.getElementById('typing-text');
+      const messages = [
+        "Setiap donasi membantu melindungi satwa liar! 🦁",
+        "Mari bersama menjaga kelestarian alam! 🌳",
+        "Satu langkah kecil, dampak besar untuk bumi! 🌏"
+      ];
+      
+      let messageIndex = 0;
+      
+      function typeWriter(text, i, fnCallback) {
+        if (i < text.length) {
+          typingText.innerHTML = text.substring(0, i+1) + '<span class="cursor">|</span>';
+          setTimeout(function() {
+            typeWriter(text, i + 1, fnCallback)
+          }, 100);
+        } else if (typeof fnCallback == 'function') {
+          setTimeout(fnCallback, 700);
+        }
+      }
+      
+      function startTextAnimation(i) {
+        if (i < messages.length) {
+          typeWriter(messages[i], 0, function() {
+            setTimeout(function() {
+              typingText.innerHTML = '';
+              startTextAnimation(i + 1);
+            }, 3000);
+          });
+        } else {
+          messageIndex = 0;
+          startTextAnimation(messageIndex);
+        }
+      }
+      
+      // Start the typing animation when the page loads
+      window.onload = function() {
+        startTextAnimation(0);
+      };
+  
       document.addEventListener("DOMContentLoaded", function () {
         // Tab switching functionality
         const tabHeaders = document.querySelectorAll(".tab-header");
@@ -1648,6 +1624,26 @@
               // Run counter animation on page load
               animateCounter();
           });
+
+           // Create falling leaves animation
+           function createLeaf() {
+            const leaf = document.createElement("i");
+            leaf.className = "fas fa-leaf falling-leaf";
+            leaf.style.left = Math.random() * 100 + "%";
+            leaf.style.animationDuration = Math.random() * 3 + 2 + "s";
+            leaf.style.opacity = Math.random();
+            leaf.style.fontSize = Math.random() * 10 + 10 + "px";
+
+            document.getElementById("leaves-container").appendChild(leaf);
+
+            // Remove leaf after animation
+            leaf.addEventListener("animationend", () => {
+              leaf.remove();
+            });
+          }
+
+          // Create leaves periodically
+          setInterval(createLeaf, 300);
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

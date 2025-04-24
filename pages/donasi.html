@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Donasi</title>
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="../src/output.css" />
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- AOS Animation -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Boxicons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Owl Carousel -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <style>
+       .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background-color: #d1d5db;
+      left: 9px;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background-color: #4f46e5;
+      left: 0;
+      margin-top: 2px;
+    }
+
+      .donation-card {
+        transition: transform 0.3s ease;
+      }
+      .donation-card:hover {
+        transform: translateY(-10px);
+      }
+      .owl-carousel .owl-stage-outer {
+        padding: 20px 0;
+      }
+      .active-card {
+        border: 3px solid #4f46e5;
+        transform: translateY(-10px);
+      }
+      #paymentForm {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+      }
+      #paymentForm.show {
+        max-height: 1000px;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <nav
+      class="bg-gradient-to-r from-[#022c22] to-[#174903] shadow-xl sticky top-0 z-50 transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <!-- Enhanced Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <a
+              href="../index.html"
+              class="flex items-center group active:scale-95 transition-transform"
+            >
+              <div
+                class="bg-white/10 p-2 rounded-full mr-2 group-hover:bg-white/20 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-leaf text-emerald-300 text-2xl group-hover:scale-110 transition-transform"
+                ></i>
+              </div>
+              <span class="text-white font-bold text-xl tracking-wide"
+                >Natu<span class="text-emerald-300">Raya</span></span
+              >
+            </a>
+          </div>
+
+          <!-- Enhanced Menu Desktop -->
+          <div class="hidden md:flex items-center space-x-2">
+            <div class="relative group">
+              <a
+                href="donasi.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center active:bg-white/20 active:scale-95"
+              >
+                <i
+                  class="fas fa-hand-holding-heart menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Donasi
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100 group-active:opacity-100 group-active:left-0 group-active:right-0"
+              ></div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="natubot.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center active:bg-white/20 active:scale-95"
+              >
+                <i
+                  class="fas fa-robot menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                NatuBot
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100 group-active:opacity-100 group-active:left-0 group-active:right-0"
+              ></div>
+            </div>
+
+            <!-- Other menu items with similar active effects -->
+            <div class="relative group">
+              <a
+                href="#"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center active:bg-white/20 active:scale-95"
+              >
+                <i
+                  class="fas fa-tree menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Pohon Virtual
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100 group-active:opacity-100 group-active:left-0 group-active:right-0"
+              ></div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="komunitas.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center active:bg-white/20 active:scale-95"
+              >
+                <i
+                  class="fas fa-users menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Komunitas
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100 group-active:opacity-100 group-active:left-0 group-active:right-0"
+              ></div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="event.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center active:bg-white/20 active:scale-95"
+              >
+                <i
+                  class="fas fa-calendar-alt menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Event
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100 group-active:opacity-100 group-active:left-0 group-active:right-0"
+              ></div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="crowdfunding.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center active:bg-white/20 active:scale-95"
+              >
+                <i
+                  class="fas fa-piggy-bank menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Crowdfunding
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100 group-active:opacity-100 group-active:left-0 group-active:right-0"
+              ></div>
+            </div>
+
+            <div class="ml-4">
+              <a
+                href="login.html"
+                class="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:scale-95 active:shadow-inner active:from-emerald-600 active:to-emerald-700"
+              >
+                <i class="fas fa-user-plus mr-2"></i> Daftar
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile menu button with animation -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="text-white hover:text-emerald-300 focus:outline-none transition-colors duration-300 active:scale-90 active:rotate-180 transition-transform"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enhanced Mobile menu with animations -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-gradient-to-b from-[#3A9B9C] to-[#2A8B8C] pb-4 px-4 rounded-b-2xl shadow-lg"
+      >
+        <div class="space-y-2 py-2">
+          <a
+            href="donasi.html"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300 active:bg-white/20 active:scale-98 active:translate-x-1"
+          >
+            <i class="fas fa-hand-holding-heart mr-3 text-emerald-300"></i>
+            Donasi
+          </a>
+
+          <a
+            href="natubot.html"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300 active:bg-white/20 active:scale-98 active:translate-x-1"
+          >
+            <i class="fas fa-robot mr-3 text-emerald-300"></i> NatuBot
+          </a>
+
+          <!-- Other mobile menu items with similar active effects -->
+          <a
+            href="#"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300 active:bg-white/20 active:scale-98 active:translate-x-1"
+          >
+            <i class="fas fa-tree mr-3 text-emerald-300"></i> Pohon Virtual
+          </a>
+
+          <a
+            href="komunitas.html"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300 active:bg-white/20 active:scale-98 active:translate-x-1"
+          >
+            <i class="fas fa-users mr-3 text-emerald-300"></i> Komunitas
+          </a>
+
+          <a
+            href="event.html"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300 active:bg-white/20 active:scale-98 active:translate-x-1"
+          >
+            <i class="fas fa-calendar-alt mr-3 text-emerald-300"></i> Event
+          </a>
+
+          <a
+            href="crowdfunding.html"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300 active:bg-white/20 active:scale-98 active:translate-x-1"
+          >
+            <i class="fas fa-piggy-bank mr-3 text-emerald-300"></i> Crowdfunding
+          </a>
+
+          <div class="pt-2 mt-3 border-t border-white/10">
+            <a
+              href="login.html"
+              class="block px-4 py-3 rounded-xl text-base font-medium bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:from-emerald-400 hover:to-emerald-500 flex items-center justify-center shadow-md active:scale-95 active:shadow-inner active:from-emerald-600 active:to-emerald-700 transition-all duration-300"
+            >
+              <i class="fas fa-user-plus mr-2"></i> Daftar
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+ <main class="container mx-auto py-8 px-4">
+    <section class="mb-10">
+      <h2
+        class="text-2xl md:text-6xl font-semibold mb-6 text-center animate-pulse bg-gradient-to-r from-green-900 to-blue-800 bg-clip-text text-transparent">
+        Program Donasi
+      </h2>
+      <p class="text-center text-gray-600 mb-8 relative group">
+        <span class="inline-block hover:transform hover:scale-105 transition-transform duration-300">
+          Geser ke kanan atau kiri untuk melihat lebih banyak program donasi
+        </span>
+        <span class="absolute -right-8 top-1/2 transform -translate-y-1/2 animate-bounce hidden md:inline-block">
+          <i class="bx bx-right-arrow-alt text-2xl text-green-500"></i>
+        </span>
+        <span class="absolute -left-8 top-1/2 transform -translate-y-1/2 animate-bounce hidden md:inline-block">
+          <i class="bx bx-left-arrow-alt text-2xl text-green-500"></i>
+        </span>
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="donationCards">
+        <!-- Perawatan Hutan Sumatra -->
+        <div class="donation-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer" data-id="1">
+          <img src="/api/placeholder/800/400" alt="Perawatan Hutan Sumatra" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold">Perawatan Hutan di Sumatra</h3>
+              <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Aktif</span>
+            </div>
+            
+            <div class="flex items-center text-sm text-gray-500 mb-3">
+              <i class="bx bx-calendar mr-1"></i>
+              <span>Dimulai: 10 Januari 2025</span>
+            </div>
+            
+            <p class="text-gray-600 mb-3">
+              Bantu kami menanam kembali dan merawat hutan hujan Sumatra yang rusak akibat kebakaran.
+            </p>
+            
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 mb-4">
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <i class="bx bx-alarm text-yellow-500"></i>
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm text-yellow-700">
+                    <span class="font-medium">Urgensi:</span> Kami membutuhkan Rp1.750.000 lagi untuk membeli 1000 bibit pohon endemik Sumatra.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-3 mb-3">
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-green-600 h-2.5 rounded-full" style="width: 65%"></div>
+              </div>
+              <div class="flex justify-between text-sm mt-1">
+                <span>Rp 3.250.000</span>
+                <span>dari Rp 5.000.000</span>
+              </div>
+            </div>
+            
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-green-600 font-semibold">Dikelola: Naturaya Foundation</span>
+              <button class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+                Donasi Sekarang
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Konservasi Badak Jawa -->
+        <div class="donation-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer" data-id="2">
+          <img src="/api/placeholder/800/400" alt="Konservasi Badak Jawa" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold">Konservasi Badak Jawa</h3>
+              <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Aktif</span>
+            </div>
+            
+            <div class="flex items-center text-sm text-gray-500 mb-3">
+              <i class="bx bx-calendar mr-1"></i>
+              <span>Dimulai: 5 Februari 2025</span>
+            </div>
+            
+            <p class="text-gray-600 mb-3">
+              Dukung upaya perlindungan dan perawatan badak Jawa yang terancam punah.
+            </p>
+            
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 mb-4">
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <i class="bx bx-alarm text-yellow-500"></i>
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm text-yellow-700">
+                    <span class="font-medium">Urgensi:</span> Kami membutuhkan Rp1.200.000 lagi untuk perawatan medis 3 anak badak yang baru lahir.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-3 mb-3">
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-green-600 h-2.5 rounded-full" style="width: 70%"></div>
+              </div>
+              <div class="flex justify-between text-sm mt-1">
+                <span>Rp 2.800.000</span>
+                <span>dari Rp 4.000.000</span>
+              </div>
+            </div>
+            
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-green-600 font-semibold">Dikelola: Wildlife Conservation</span>
+              <button class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+                Donasi Sekarang
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Restorasi Hutan Mangrove -->
+        <div class="donation-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer" data-id="3">
+          <img src="/api/placeholder/800/400" alt="Restorasi Mangrove" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold">Restorasi Hutan Mangrove</h3>
+              <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Aktif</span>
+            </div>
+            
+            <div class="flex items-center text-sm text-gray-500 mb-3">
+              <i class="bx bx-calendar mr-1"></i>
+              <span>Dimulai: 20 Maret 2025</span>
+            </div>
+            
+            <p class="text-gray-600 mb-3">
+              Bantu menanam kembali hutan mangrove untuk melindungi pesisir dan habitat laut.
+            </p>
+            
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 mb-4">
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <i class="bx bx-alarm text-yellow-500"></i>
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm text-yellow-700">
+                    <span class="font-medium">Urgensi:</span> Kami membutuhkan Rp2.200.000 lagi untuk restorasi 5 hektar mangrove di pesisir utara Jawa.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-3 mb-3">
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-green-600 h-2.5 rounded-full" style="width: 45%"></div>
+              </div>
+              <div class="flex justify-between text-sm mt-1">
+                <span>Rp 1.800.000</span>
+                <span>dari Rp 4.000.000</span>
+              </div>
+            </div>
+            
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-green-600 font-semibold">Dikelola: Coastal Care Indonesia</span>
+              <button class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+                Donasi Sekarang
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <!-- Detail Donasi Section -->
+    <section id="donationDetail" class="hidden bg-white rounded-lg shadow-lg p-8 mb-10">
+      <button id="backButton" class="flex items-center text-indigo-600 mb-6 hover:text-indigo-800 transition-colors">
+        <i class="bx bx-arrow-back mr-2"></i> Kembali ke Program Donasi
+      </button>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2">
+          <img id="detailImage" src="/api/placeholder/800/400" alt="Detail Program" class="w-full h-64 object-cover rounded-lg mb-6" />
+          
+          <div class="flex justify-between items-center mb-4">
+            <h2 id="detailTitle" class="text-3xl font-bold">Konservasi Badak Jawa</h2>
+            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Aktif</span>
+          </div>
+          
+          <div class="flex items-center text-sm text-gray-500 mb-6">
+            <div class="flex items-center mr-4">
+              <i class="bx bx-calendar mr-1"></i>
+              <span>Dimulai: 5 Februari 2025</span>
+            </div>
+            <div class="flex items-center">
+              <i class="bx bx-user-check mr-1"></i>
+              <span id="detailOrganizer">Dikelola: Wildlife Conservation</span>
+            </div>
+          </div>
+          
+          <div class="mb-6">
+            <h3 class="text-xl font-semibold mb-3">Tentang Program</h3>
+            <p class="text-gray-700 mb-4">
+              Badak Jawa (Rhinoceros sondaicus) adalah salah satu mamalia yang paling terancam punah di dunia. Populasinya saat ini diperkirakan kurang dari 80 individu, yang hanya ditemukan di Taman Nasional Ujung Kulon, Jawa Barat.
+            </p>
+            <p class="text-gray-700 mb-4">
+              Program konservasi ini bertujuan untuk meningkatkan perlindungan habitat, melakukan pemantauan populasi, dan memberikan perawatan medis untuk badak-badak yang sakit atau terluka. Selain itu, kami juga melakukan edukasi masyarakat sekitar untuk mengurangi ancaman perburuan dan konflik manusia-satwa.
+            </p>
+          </div>
+          
+          <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-3">Dampak Donasi Anda</h3>
+            <div class="bg-green-50 p-4 rounded-lg">
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <i class="bx bx-check-circle text-green-600 mr-2 mt-1"></i>
+                  <span>Perlindungan habitat alami badak Jawa</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="bx bx-check-circle text-green-600 mr-2 mt-1"></i>
+                  <span>Perawatan medis dan nutrisi untuk badak yang sedang dirawat</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="bx bx-check-circle text-green-600 mr-2 mt-1"></i>
+                  <span>Kegiatan pemantauan dan penelitian populasi badak</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="bx bx-check-circle text-green-600 mr-2 mt-1"></i>
+                  <span>Program edukasi masyarakat sekitar kawasan konservasi</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-4">Perkembangan Program</h3>
+            <div class="relative pl-7">
+              <div class="timeline-item relative pl-6 pb-6">
+                <div class="timeline-dot"></div>
+                <h4 class="font-semibold mb-1">15 Februari 2025</h4>
+                <p class="text-gray-700">Pembangunan pos pemantauan baru telah selesai dilaksanakan</p>
+                <img src="/api/placeholder/400/200" alt="Update Pos Pemantauan" class="mt-2 rounded-lg w-full md:w-2/3 h-40 object-cover" />
+              </div>
+              <div class="timeline-item relative pl-6 pb-6">
+                <div class="timeline-dot"></div>
+                <h4 class="font-semibold mb-1">2 Maret 2025</h4>
+                <p class="text-gray-700">Tim medis berhasil merawat badak betina yang terluka akibat jerat</p>
+                <img src="/api/placeholder/400/200" alt="Update Perawatan Badak" class="mt-2 rounded-lg w-full md:w-2/3 h-40 object-cover" />
+              </div>
+              <div class="timeline-item relative pl-6">
+                <div class="timeline-dot"></div>
+                <h4 class="font-semibold mb-1">18 April 2025</h4>
+                <p class="text-gray-700">Kelahiran anak badak baru! Program pemantauan ibu dan anak badak sedang berlangsung</p>
+                <img src="/api/placeholder/400/200" alt="Update Anak Badak" class="mt-2 rounded-lg w-full md:w-2/3 h-40 object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <div class="bg-indigo-50 p-6 rounded-lg mb-6">
+            <h3 class="text-xl font-semibold mb-4">Progress Donasi</h3>
+            <div class="mb-4">
+              <div class="w-full bg-gray-200 rounded-full h-3">
+                <div id="detailProgressBar" class="bg-indigo-600 h-3 rounded-full" style="width: 70%"></div>
+              </div>
+              <div class="flex justify-between text-sm mt-2">
+                <span id="detailCurrentAmount">Rp 2.800.000</span>
+                <span id="detailTargetAmount">dari Rp 4.000.000</span>
+              </div>
+            </div>
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3">
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <i class="bx bx-alarm text-yellow-500"></i>
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm text-yellow-700">
+                    <span class="font-medium">Urgensi:</span> Kami membutuhkan Rp1.200.000 lagi untuk perawatan medis 3 anak badak yang baru lahir.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white border border-gray-200 rounded-lg mb-6">
+            <div class="p-4 border-b">
+              <h3 class="text-lg font-semibold">Pilihan Donasi</h3>
+            </div>
+            
+            <div id="donationOptions" class="divide-y">
+              <div class="p-4 hover:bg-gray-50 cursor-pointer">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-semibold">Makanan Badak</h4>
+                  <span class="text-lg font-semibold text-indigo-600">Rp 50.000</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">Memberikan makanan untuk 1 badak selama seminggu</p>
+                <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg w-full hover:bg-indigo-700 transition-colors">
+                  Pilih
+                </button>
+              </div>
+              
+              <div class="p-4 hover:bg-gray-50 cursor-pointer">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-semibold">Perawatan Medis</h4>
+                  <span class="text-lg font-semibold text-indigo-600">Rp 150.000</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">Membantu perawatan medis dasar untuk badak yang sakit</p>
+                <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg w-full hover:bg-indigo-700 transition-colors">
+                  Pilih
+                </button>
+              </div>
+              
+              <div class="p-4 hover:bg-gray-50 cursor-pointer">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-semibold">Pemantauan Habitat</h4>
+                  <span class="text-lg font-semibold text-indigo-600">Rp 200.000</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">Mendukung kegiatan patroli dan pemantauan selama sebulan</p>
+                <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg w-full hover:bg-indigo-700 transition-colors">
+                  Pilih
+                </button>
+              </div>
+              
+              <div class="p-4 hover:bg-gray-50 cursor-pointer">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-semibold">Custom Donasi</h4>
+                  <span class="text-lg font-semibold text-indigo-600"><i class="bx bx-edit"></i></span>
+                </div>
+                <p class="text-gray-600 text-sm mb-2">Tentukan jumlah donasi sesuai keinginan Anda</p>
+                <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg w-full hover:bg-indigo-700 transition-colors">
+                  Pilih
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white border border-gray-200 rounded-lg">
+            <div class="p-4 border-b">
+              <h3 class="text-lg font-semibold">Hall of Heroes</h3>
+            </div>
+            <div class="p-4 divide-y">
+              <div class="py-3 flex items-center justify-between">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-800 font-semibold mr-3">1</div>
+                  <span>Ahmad S.</span>
+                </div>
+                <span class="font-semibold">Rp 500.000</span>
+              </div>
+              <div class="py-3 flex items-center justify-between">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-800 font-semibold mr-3">2</div>
+                  <span>Budi P.</span>
+                </div>
+                <span class="font-semibold">Rp 350.000</span>
+              </div>
+              <div class="py-3 flex items-center justify-between">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-800 font-semibold mr-3">3</div>
+                  <span>Anonim</span>
+                </div>
+                <span class="font-semibold">Rp 250.000</span>
+              </div>
+              <div class="py-3 flex items-center justify-between">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-800 font-semibold mr-3">4</div>
+                  <span>Dewi K.</span>
+                </div>
+                <span class="font-semibold">Rp 200.000</span>
+              </div>
+              <div class="py-3 flex items-center justify-between">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-800 font-semibold mr-3">5</div>
+                  <span>Eko S.</span>
+                </div>
+                <span class="font-semibold">Rp 150.000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Payment Form Section -->
+    <section id="paymentSection" class="hidden bg-white rounded-lg shadow-lg p-8 mb-10">
+      <button id="backToDetail" class="flex items-center text-indigo-600 mb-6 hover:text-indigo-800 transition-colors">
+        <i class="bx bx-arrow-back mr-2"></i> Kembali ke Detail Program
+      </button>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2">
+          <h2 class="text-2xl font-bold mb-6">Formulir Donasi</h2>
+          
+          <div id="selectedDonationInfo" class="flex items-center p-4 bg-indigo-50 rounded-lg border border-indigo-200 mb-6">
+            <img id="selectedDonationImage" src="/api/placeholder/400/320" alt="Program Terpilih" class="w-20 h-20 object-cover rounded" />
+            <div class="ml-4">
+              <h4 id="selectedDonationTitle" class="text-lg font-semibold">Konservasi Badak Jawa</h4>
+              <p id="selectedDonationOption" class="text-indigo-600 font-medium">Perawatan Medis - Rp150.000</p>
+            </div>
+          </div>
+          
+          <form id="donationForm" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-gray-700 mb-2" for="name">Nama Lengkap</label>
+                <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required />
+              </div>
+              <div>
+                <label class="block text-gray-700 mb-2" for="email">Email</label>
+                <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 mb-2" for="phone">Nomor Telepon</label>
+              <input type="tel" id="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required />
+            </div>
+
+            <div id="customAmountContainer" class="hidden">
+              <label class="block text-gray-700 mb-2" for="amount">Jumlah Donasi (Rp)</label>
+              <input type="number" id="amount" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" min="10000" placeholder="Minimal Rp 10.000" required />
+            </div>
+
+            <div>
+              <label class="block text-gray-700 mb-2">Metode Pembayaran</label>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="border rounded-lg p-4 cursor-pointer hover:bg-gray-50 text-center payment-method" data-method="transfer">
+                  <i class="bx bx-credit-card text-3xl text-indigo-600"></i>
+                  <p class="mt-2">Transfer Bank</p>
+                </div>
+                <div class="border rounded-lg p-4 cursor-pointer hover:bg-gray-50 text-center payment-method" data-method="ewallet">
+                  <i class="bx bx-wallet text-3xl text-indigo-600"></i>
+                  <p class="mt-2">E-Wallet</p>
+                </div>
+                <div class="border rounded-lg p-4 cursor-pointer hover:bg-gray-50 text-center payment-method" data-method="qris">
+                  <i class="bx bx-qr text-3xl text-indigo-600"></i>
+                  <p class="mt-2">QRIS</p>
+                </div>
+                <div class="border rounded-lg p-4 cursor-pointer hover:bg-gray-50 text-center payment-method" data-method="cc">
+                  <i class="bx bx-credit-card-front text-3xl text-indigo-600"></i>
+                  <p class="mt-2">Kartu Kredit</p>
+                </div>
+              </div>
+              <input type="hidden" id="paymentMethod" required />
+            </div>
+
+            <div>
+              <label class="block text-gray-700 mb-2" for="message">Pesan Dukungan (Opsional)</label>
+              <textarea id="message" rows="3" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Tulis pesan dukungan Anda di sini..."></textarea>
+            </div>
+
+            <div class="flex items-center">
+              <input type="checkbox" id="anonymous" class="mr-2" />
+              <label for="anonymous">Donasi sebagai Anonim</label>
+            </div>
+
+            <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
+              Donasi Sekarang
+            </button>
+          </form>
+        </div>
+
+        <div class="bg-indigo-50 rounded-lg p-6">
+          <h3 class="text-xl font-semibold mb-4">Ringkasan Donasi</h3>
+          <p id="donationSummary" class="text-gray-700 mb-4">
+            Nama: <span id="summaryName"></span><br />
+            Email: <span id="summaryEmail"></span><br />
+            Nomor Telepon: <span id="summaryPhone"></span><br />
+            Jumlah Donasi: <span id="summaryAmount"></span><br />
+            Metode Pembayaran: <span id="summaryPaymentMethod"></span><br />
+            Pesan: <span id="summaryMessage"></span><br />
+            Anonim: <span id="summaryAnonymous"></span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <script src=../js/script.js></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+  // Data program donasi
+  const donationPrograms = {
+    1: {
+      id: 1,
+      title: "Perawatan Hutan di Sumatra",
+      image: "/api/placeholder/800/400",
+      status: "Aktif",
+      startDate: "10 Januari 2025",
+      organizer: "Naturaya Foundation",
+      description: "Bantu kami menanam kembali dan merawat hutan hujan Sumatra yang rusak akibat kebakaran.",
+      urgency: "Kami membutuhkan Rp1.750.000 lagi untuk membeli 1000 bibit pohon endemik Sumatra.",
+      currentAmount: 3250000,
+      targetAmount: 5000000,
+      progress: 65,
+      about: `
+        <p class="text-gray-700 mb-4">
+          Hutan Sumatra adalah salah satu ekosistem paling kaya di dunia, namun mengalami kerusakan parah akibat kebakaran hutan dan pembalakan liar. Program ini bertujuan untuk memulihkan 50 hektar hutan yang rusak di wilayah Aceh dan Jambi.
+        </p>
+        <p class="text-gray-700 mb-4">
+          Kami bekerja sama dengan masyarakat lokal untuk menanam kembali pohon-pohon endemik seperti Meranti, Damar, dan Kruing. Selain itu, kami juga membangun sistem pemantauan dan pencegahan kebakaran hutan.
+        </p>
+      `,
+      impact: [
+        "Penanaman 1000 bibit pohon endemik Sumatra",
+        "Pemulihan 5 hektar lahan hutan yang rusak",
+        "Pelatihan masyarakat lokal tentang konservasi hutan",
+        "Pembangunan pos pemantauan kebakaran hutan"
+      ],
+      updates: [
+        {
+          date: "15 Januari 2025",
+          text: "Penyiapan lahan untuk penanaman tahap pertama telah selesai",
+          image: "/api/placeholder/400/200"
+        },
+        {
+          date: "28 Februari 2025",
+          text: "500 bibit pohon Meranti telah ditanam di wilayah Aceh",
+          image: "/api/placeholder/400/200"
+        },
+        {
+          date: "10 April 2025",
+          text: "Pelatihan pertama untuk masyarakat lokal tentang pencegahan kebakaran hutan",
+          image: "/api/placeholder/400/200"
+        }
+      ],
+      options: [
+        {
+          name: "Bibit Pohon",
+          amount: 50000,
+          description: "Membeli 10 bibit pohon endemik Sumatra"
+        },
+        {
+          name: "Alat Penanaman",
+          amount: 100000,
+          description: "Menyediakan alat penanaman untuk satu tim"
+        },
+        {
+          name: "Pemeliharaan",
+          amount: 150000,
+          description: "Biaya pemeliharaan 1 hektar hutan selama sebulan"
+        }
+      ],
+      donors: [
+        { name: "Rina W.", amount: 750000 },
+        { name: "Anonim", amount: 500000 },
+        { name: "Fajar S.", amount: 300000 },
+        { name: "Gita M.", amount: 250000 },
+        { name: "Hendra K.", amount: 200000 }
+      ]
+    },
+    2: {
+      id: 2,
+      title: "Konservasi Badak Jawa",
+      image: "/api/placeholder/800/400",
+      status: "Aktif",
+      startDate: "5 Februari 2025",
+      organizer: "Wildlife Conservation",
+      description: "Dukung upaya perlindungan dan perawatan badak Jawa yang terancam punah.",
+      urgency: "Kami membutuhkan Rp1.200.000 lagi untuk perawatan medis 3 anak badak yang baru lahir.",
+      currentAmount: 2800000,
+      targetAmount: 4000000,
+      progress: 70,
+      about: `
+        <p class="text-gray-700 mb-4">
+          Badak Jawa (Rhinoceros sondaicus) adalah salah satu mamalia yang paling terancam punah di dunia. Populasinya saat ini diperkirakan kurang dari 80 individu, yang hanya ditemukan di Taman Nasional Ujung Kulon, Jawa Barat.
+        </p>
+        <p class="text-gray-700 mb-4">
+          Program konservasi ini bertujuan untuk meningkatkan perlindungan habitat, melakukan pemantauan populasi, dan memberikan perawatan medis untuk badak-badak yang sakit atau terluka. Selain itu, kami juga melakukan edukasi masyarakat sekitar untuk mengurangi ancaman perburuan dan konflik manusia-satwa.
+        </p>
+      `,
+      impact: [
+        "Perlindungan habitat alami badak Jawa",
+        "Perawatan medis dan nutrisi untuk badak yang sedang dirawat",
+        "Kegiatan pemantauan dan penelitian populasi badak",
+        "Program edukasi masyarakat sekitar kawasan konservasi"
+      ],
+      updates: [
+        {
+          date: "15 Februari 2025",
+          text: "Pembangunan pos pemantauan baru telah selesai dilaksanakan",
+          image: "/api/placeholder/400/200"
+        },
+        {
+          date: "2 Maret 2025",
+          text: "Tim medis berhasil merawat badak betina yang terluka akibat jerat",
+          image: "/api/placeholder/400/200"
+        },
+        {
+          date: "18 April 2025",
+          text: "Kelahiran anak badak baru! Program pemantauan ibu dan anak badak sedang berlangsung",
+          image: "/api/placeholder/400/200"
+        }
+      ],
+      options: [
+        {
+          name: "Makanan Badak",
+          amount: 50000,
+          description: "Memberikan makanan untuk 1 badak selama seminggu"
+        },
+        {
+          name: "Perawatan Medis",
+          amount: 150000,
+          description: "Membantu perawatan medis dasar untuk badak yang sakit"
+        },
+        {
+          name: "Pemantauan Habitat",
+          amount: 200000,
+          description: "Mendukung kegiatan patroli dan pemantauan selama sebulan"
+        }
+      ],
+      donors: [
+        { name: "Ahmad S.", amount: 500000 },
+        { name: "Budi P.", amount: 350000 },
+        { name: "Anonim", amount: 250000 },
+        { name: "Dewi K.", amount: 200000 },
+        { name: "Eko S.", amount: 150000 }
+      ]
+    },
+    3: {
+      id: 3,
+      title: "Restorasi Hutan Mangrove",
+      image: "/api/placeholder/800/400",
+      status: "Aktif",
+      startDate: "20 Maret 2025",
+      organizer: "Coastal Care Indonesia",
+      description: "Bantu menanam kembali hutan mangrove untuk melindungi pesisir dan habitat laut.",
+      urgency: "Kami membutuhkan Rp2.200.000 lagi untuk restorasi 5 hektar mangrove di pesisir utara Jawa.",
+      currentAmount: 1800000,
+      targetAmount: 4000000,
+      progress: 45,
+      about: `
+        <p class="text-gray-700 mb-4">
+          Hutan mangrove di pesisir utara Jawa telah mengalami kerusakan parah akibat alih fungsi lahan dan polusi. Padahal, ekosistem mangrove sangat penting sebagai pelindung pantai dari abrasi dan tempat berkembang biak berbagai biota laut.
+        </p>
+        <p class="text-gray-700 mb-4">
+          Program restorasi ini fokus pada penanaman kembali mangrove di daerah-daerah kritis di Demak, Semarang, dan Pekalongan. Kami melibatkan kelompok masyarakat pesisir dalam setiap tahap program untuk memastikan keberlanjutannya.
+        </p>
+      `,
+      impact: [
+        "Penanaman 10.000 bibit mangrove di pesisir utara Jawa",
+        "Pelatihan masyarakat lokal tentang pengelolaan mangrove",
+        "Pembangunan sistem pemantauan pertumbuhan mangrove",
+        "Peningkatan kualitas air dan ekosistem perairan"
+      ],
+      updates: [
+        {
+          date: "25 Maret 2025",
+          text: "Penyiapan lahan untuk penanaman mangrove di Demak",
+          image: "/api/placeholder/400/200"
+        },
+        {
+          date: "5 April 2025",
+          text: "2000 bibit mangrove telah ditanam di wilayah Semarang",
+          image: "/api/placeholder/400/200"
+        },
+        {
+          date: "15 April 2025",
+          text: "Pelatihan pertama untuk kelompok masyarakat pengelola mangrove",
+          image: "/api/placeholder/400/200"
+        }
+      ],
+      options: [
+        {
+          name: "Bibit Mangrove",
+          amount: 25000,
+          description: "Membeli 10 bibit mangrove untuk ditanam"
+        },
+        {
+          name: "Alat Penanaman",
+          amount: 75000,
+          description: "Menyediakan alat penanaman untuk relawan"
+        },
+        {
+          name: "Pemeliharaan",
+          amount: 125000,
+          description: "Biaya pemeliharaan 0.5 hektar mangrove selama sebulan"
+        }
+      ],
+      donors: [
+        { name: "Indra L.", amount: 600000 },
+        { name: "Kartika P.", amount: 400000 },
+        { name: "Anonim", amount: 300000 },
+        { name: "Maya S.", amount: 200000 },
+        { name: "Nugroho W.", amount: 150000 }
+      ]
+    }
+  };
+
+  // DOM Elements
+  const donationCardsSection = document.getElementById('donationCards');
+  const donationDetailSection = document.getElementById('donationDetail');
+  const paymentSection = document.getElementById('paymentSection');
+  const backButton = document.getElementById('backButton');
+  const backToDetail = document.getElementById('backToDetail');
+  const donationForm = document.getElementById('donationForm');
+  const customAmountContainer = document.getElementById('customAmountContainer');
+  const amountInput = document.getElementById('amount');
+  const paymentMethodInput = document.getElementById('paymentMethod');
+  const paymentMethods = document.querySelectorAll('.payment-method');
+  const donationOptions = document.querySelectorAll('#donationOptions > div');
+
+  // State
+  let currentProgramId = null;
+  let selectedDonationOption = null;
+
+  // Initialize
+  setupEventListeners();
+
+  function setupEventListeners() {
+    // Card click event
+    document.querySelectorAll('.donation-card').forEach(card => {
+      card.addEventListener('click', function() {
+        const programId = parseInt(this.getAttribute('data-id'));
+        showDonationDetail(programId);
+      });
+    });
+
+    // Back button events
+    backButton.addEventListener('click', showDonationCards);
+    backToDetail.addEventListener('click', showDonationDetailFromPayment);
+
+    // Payment method selection
+    paymentMethods.forEach(method => {
+      method.addEventListener('click', function() {
+        paymentMethods.forEach(m => m.classList.remove('border-indigo-500', 'bg-indigo-50'));
+        this.classList.add('border-indigo-500', 'bg-indigo-50');
+        paymentMethodInput.value = this.getAttribute('data-method');
+      });
+    });
+
+    // Donation form submission
+    donationForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      showPaymentSummary();
+    });
+
+    // Donation option selection
+    donationOptions.forEach(option => {
+      option.addEventListener('click', function() {
+        donationOptions.forEach(o => {
+          o.querySelector('button').classList.remove('bg-indigo-600');
+          o.querySelector('button').classList.add('bg-indigo-600');
+        });
+        
+        const button = this.querySelector('button');
+        button.classList.remove('bg-indigo-600');
+        button.classList.add('bg-indigo-700');
+        
+        // For custom donation option
+        if (this.querySelector('i.bx-edit')) {
+          customAmountContainer.classList.remove('hidden');
+          selectedDonationOption = {
+            name: "Custom Donasi",
+            amount: 0,
+            description: "Jumlah donasi sesuai keinginan Anda"
+          };
+        } else {
+          customAmountContainer.classList.add('hidden');
+          const title = this.querySelector('h4').textContent;
+          const amountText = this.querySelector('span.text-indigo-600').textContent;
+          const amount = parseInt(amountText.replace(/\D/g, ''));
+          const description = this.querySelector('p.text-gray-600').textContent;
+          
+          selectedDonationOption = {
+            name: title,
+            amount: amount,
+            description: description
+          };
+        }
+      });
+    });
+  }
+
+  function showDonationCards() {
+    donationDetailSection.classList.add('hidden');
+    paymentSection.classList.add('hidden');
+    donationCardsSection.parentElement.classList.remove('hidden');
+  }
+
+  function showDonationDetail(programId) {
+    currentProgramId = programId;
+    const program = donationPrograms[programId];
+    
+    if (!program) return;
+    
+    // Update detail section
+    document.getElementById('detailImage').src = program.image;
+    document.getElementById('detailTitle').textContent = program.title;
+    document.getElementById('detailOrganizer').textContent = `Dikelola: ${program.organizer}`;
+    document.getElementById('detailProgressBar').style.width = `${program.progress}%`;
+    document.getElementById('detailCurrentAmount').textContent = formatCurrency(program.currentAmount);
+    document.getElementById('detailTargetAmount').textContent = `dari ${formatCurrency(program.targetAmount)}`;
+    
+    // Update about section
+    document.querySelector('#donationDetail .mb-6 p').innerHTML = program.about;
+    
+    // Update impact section
+    const impactList = document.querySelector('#donationDetail .bg-green-50 ul');
+    impactList.innerHTML = '';
+    program.impact.forEach(impact => {
+      const li = document.createElement('li');
+      li.className = 'flex items-start';
+      li.innerHTML = `
+        <i class="bx bx-check-circle text-green-600 mr-2 mt-1"></i>
+        <span>${impact}</span>
+      `;
+      impactList.appendChild(li);
+    });
+    
+    // Update timeline
+    const timeline = document.querySelector('#donationDetail .relative.pl-7');
+    timeline.innerHTML = '';
+    program.updates.forEach(update => {
+      const item = document.createElement('div');
+      item.className = 'timeline-item relative pl-6 pb-6';
+      item.innerHTML = `
+        <div class="timeline-dot"></div>
+        <h4 class="font-semibold mb-1">${update.date}</h4>
+        <p class="text-gray-700">${update.text}</p>
+        <img src="${update.image}" alt="Update" class="mt-2 rounded-lg w-full md:w-2/3 h-40 object-cover" />
+      `;
+      timeline.appendChild(item);
+    });
+    
+    // Update donation options
+    const optionsContainer = document.getElementById('donationOptions');
+    optionsContainer.innerHTML = '';
+    
+    program.options.forEach(option => {
+      const optionElement = document.createElement('div');
+      optionElement.className = 'p-4 hover:bg-gray-50 cursor-pointer';
+      optionElement.innerHTML = `
+        <div class="flex justify-between items-center mb-2">
+          <h4 class="font-semibold">${option.name}</h4>
+          <span class="text-lg font-semibold text-indigo-600">${formatCurrency(option.amount)}</span>
+        </div>
+        <p class="text-gray-600 text-sm mb-2">${option.description}</p>
+        <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg w-full hover:bg-indigo-700 transition-colors">
+          Pilih
+        </button>
+      `;
+      optionsContainer.appendChild(optionElement);
+    });
+    
+    // Add custom donation option
+    const customOption = document.createElement('div');
+    customOption.className = 'p-4 hover:bg-gray-50 cursor-pointer';
+    customOption.innerHTML = `
+      <div class="flex justify-between items-center mb-2">
+        <h4 class="font-semibold">Custom Donasi</h4>
+        <span class="text-lg font-semibold text-indigo-600"><i class="bx bx-edit"></i></span>
+      </div>
+      <p class="text-gray-600 text-sm mb-2">Tentukan jumlah donasi sesuai keinginan Anda</p>
+      <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg w-full hover:bg-indigo-700 transition-colors">
+        Pilih
+      </button>
+    `;
+    optionsContainer.appendChild(customOption);
+    
+    // Update donors list
+    const donorsList = document.querySelector('#donationDetail .divide-y');
+    donorsList.innerHTML = '';
+    program.donors.forEach((donor, index) => {
+      const donorElement = document.createElement('div');
+      donorElement.className = 'py-3 flex items-center justify-between';
+      donorElement.innerHTML = `
+        <div class="flex items-center">
+          <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-800 font-semibold mr-3">${index + 1}</div>
+          <span>${donor.name}</span>
+        </div>
+        <span class="font-semibold">${formatCurrency(donor.amount)}</span>
+      `;
+      donorsList.appendChild(donorElement);
+    });
+    
+    // Add event listeners to new options
+    document.querySelectorAll('#donationOptions > div').forEach(option => {
+      option.addEventListener('click', function() {
+        document.querySelectorAll('#donationOptions > div').forEach(o => {
+          o.querySelector('button').classList.remove('bg-indigo-700');
+          o.querySelector('button').classList.add('bg-indigo-600');
+        });
+        
+        const button = this.querySelector('button');
+        button.classList.remove('bg-indigo-600');
+        button.classList.add('bg-indigo-700');
+        
+        // For custom donation option
+        if (this.querySelector('i.bx-edit')) {
+          customAmountContainer.classList.remove('hidden');
+          selectedDonationOption = {
+            name: "Custom Donasi",
+            amount: 0,
+            description: "Jumlah donasi sesuai keinginan Anda"
+          };
+        } else {
+          customAmountContainer.classList.add('hidden');
+          const title = this.querySelector('h4').textContent;
+          const amountText = this.querySelector('span.text-indigo-600').textContent;
+          const amount = parseInt(amountText.replace(/\D/g, ''));
+          const description = this.querySelector('p.text-gray-600').textContent;
+          
+          selectedDonationOption = {
+            name: title,
+            amount: amount,
+            description: description
+          };
+        }
+      });
+    });
+    
+    // Show detail section
+    donationCardsSection.parentElement.classList.add('hidden');
+    paymentSection.classList.add('hidden');
+    donationDetailSection.classList.remove('hidden');
+  }
+
+  function showDonationDetailFromPayment() {
+    paymentSection.classList.add('hidden');
+    donationDetailSection.classList.remove('hidden');
+  }
+
+  function showPaymentForm() {
+    if (!currentProgramId || !selectedDonationOption) return;
+    
+    const program = donationPrograms[currentProgramId];
+    
+    // Update selected donation info
+    document.getElementById('selectedDonationImage').src = program.image;
+    document.getElementById('selectedDonationTitle').textContent = program.title;
+    
+    if (selectedDonationOption.name === "Custom Donasi") {
+      document.getElementById('selectedDonationOption').textContent = "Custom Donasi";
+    } else {
+      document.getElementById('selectedDonationOption').textContent = 
+        `${selectedDonationOption.name} - ${formatCurrency(selectedDonationOption.amount)}`;
+    }
+    
+    // Show payment section
+    donationDetailSection.classList.add('hidden');
+    paymentSection.classList.remove('hidden');
+    
+    // Reset form
+    donationForm.reset();
+    customAmountContainer.classList.add('hidden');
+    paymentMethods.forEach(m => m.classList.remove('border-indigo-500', 'bg-indigo-50'));
+    paymentMethodInput.value = '';
+  }
+
+  function showPaymentSummary() {
+    if (!donationForm.checkValidity()) {
+      donationForm.reportValidity();
+      return;
+    }
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const paymentMethod = document.getElementById('paymentMethod').value;
+    const message = document.getElementById('message').value;
+    const isAnonymous = document.getElementById('anonymous').checked;
+    
+    let amount;
+    if (selectedDonationOption.name === "Custom Donasi") {
+      amount = parseInt(document.getElementById('amount').value);
+    } else {
+      amount = selectedDonationOption.amount;
+    }
+    
+    // Update summary
+    document.getElementById('summaryName').textContent = isAnonymous ? 'Anonim' : name;
+    document.getElementById('summaryEmail').textContent = email;
+    document.getElementById('summaryPhone').textContent = phone;
+    document.getElementById('summaryAmount').textContent = formatCurrency(amount);
+    document.getElementById('summaryPaymentMethod').textContent = getPaymentMethodName(paymentMethod);
+    document.getElementById('summaryMessage').textContent = message || '-';
+    document.getElementById('summaryAnonymous').textContent = isAnonymous ? 'Ya' : 'Tidak';
+    
+    // Here you would typically send the data to your backend
+    console.log('Donation submitted:', {
+      programId: currentProgramId,
+      name: isAnonymous ? 'Anonim' : name,
+      email,
+      phone,
+      amount,
+      paymentMethod,
+      message,
+      isAnonymous
+    });
+    
+    // Show success message (in a real app, you might redirect to a success page)
+    alert('Terima kasih atas donasi Anda! Kami telah mengirimkan email konfirmasi.');
+    
+    // Reset and go back to cards
+    showDonationCards();
+  }
+
+  function formatCurrency(amount) {
+    return 'Rp ' + amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  }
+
+  function getPaymentMethodName(method) {
+    switch(method) {
+      case 'transfer': return 'Transfer Bank';
+      case 'ewallet': return 'E-Wallet';
+      case 'qris': return 'QRIS';
+      case 'cc': return 'Kartu Kredit';
+      default: return '-';
+    }
+  }
+
+  // Add click event for "Donasi Sekarang" buttons in cards
+  document.querySelectorAll('.donation-card button').forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const card = this.closest('.donation-card');
+      const programId = parseInt(card.getAttribute('data-id'));
+      const program = donationPrograms[programId];
+      
+      if (program) {
+        currentProgramId = programId;
+        selectedDonationOption = {
+          name: "Donasi Umum",
+          amount: 0,
+          description: "Donasi untuk program ini"
+        };
+        showPaymentForm();
+      }
+    });
+  });
+
+  // Add click event for "Donasi Sekarang" button in detail
+  document.querySelector('#donationDetail button').addEventListener('click', function(e) {
+    e.preventDefault();
+    const programId = currentProgramId;
+    const program = donationPrograms[programId];
+    
+    if (program) {
+      selectedDonationOption = {
+        name: "Donasi Umum",
+        amount: 0,
+        description: "Donasi untuk program ini"
+      };
+      showPaymentForm();
+    }
+  });
+});
+    </script>
+  </body>
+</html>
