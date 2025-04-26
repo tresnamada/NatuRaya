@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowTogether - Gamifikasi Donasi</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
+    <style>
+        .tree-container {
+            position: relative;
+            height: 500px;
+        }
+        .tree-base {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .tree-stage {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.8s ease;
+        }
+        .badge {
+            position: absolute;
+            transition: all 0.5s ease;
+        }
+        .progress-circular {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: conic-gradient(#4CAF50 var(--progress), #e0e0e0 0deg);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .progress-circular::before {
+            content: '';
+            position: absolute;
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            background: white;
+        }
+        .reward-item {
+            transition: transform 0.3s ease;
+        }
+        .reward-item:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <nav class="bg-green-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold">GrowTogether</div>
+            <div class="flex items-center space-x-4">
+                <span class="bg-green-700 px-3 py-1 rounded-full flex items-center">
+                    <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm0-2a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span id="user-points">850</span> poin
+                </span>
+                <span class="text-sm">Hi, Donatur!</span>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container mx-auto px-4 py-8">
+        <!-- Tree Section -->
+        <section class="mb-16 relative">
+            <div class="absolute top-0 right-0 bg-green-100 px-4 py-2 rounded-lg shadow-md text-green-800 flex items-center" data-aos="fade-left">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9z" clip-rule="evenodd"></path>
+                </svg>
+                Pohonmu tumbuh setiap kali kamu berdonasi atau aktif di platform
+            </div>
+            
+            <h1 class="text-3xl font-bold text-center mb-8 text-green-800" data-aos="fade-up">Pohon Impakmu</h1>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-2/3 bg-white rounded-xl shadow-lg p-6" data-aos="fade-right">
+                    <div class="tree-container">
+                        <svg class="tree-base" width="100" height="50" viewBox="0 0 100 50">
+                            <ellipse cx="50" cy="25" rx="40" ry="15" fill="#8B4513" />
+                        </svg>
+                        
+                        <svg class="tree-stage" id="tree-stage-1" width="200" height="300" viewBox="0 0 200 300" style="opacity: 1;">
+                            <rect x="90" y="200" width="20" height="100" fill="#8B4513" />
+                            <path d="M100 50 L60 150 L140 150 Z" fill="#4CAF50" />
+                            <path d="M100 100 L40 200 L160 200 Z" fill="#4CAF50" />
+                        </svg>
+                        
+                        <svg class="tree-stage" id="tree-stage-2" width="240" height="350" viewBox="0 0 240 350" style="opacity: 0;">
+                            <rect x="110" y="220" width="25" height="130" fill="#8B4513" />
+                            <path d="M120 20 L60 120 L180 120 Z" fill="#2E7D32" />
+                            <path d="M120 80 L40 180 L200 180 Z" fill="#2E7D32" />
+                            <path d="M120 140 L20 240 L220 240 Z" fill="#2E7D32" />
+                        </svg>
+                        
+                        <svg class="tree-stage" id="tree-stage-3" width="280" height="400" viewBox="0 0 280 400" style="opacity: 0;">
+                            <rect x="130" y="240" width="30" height="160" fill="#8B4513" />
+                            <circle cx="140" cy="100" r="80" fill="#1B5E20" />
+                            <circle cx="180" cy="150" r="60" fill="#1B5E20" />
+                            <circle cx="100" cy="150" r="60" fill="#1B5E20" />
+                            <circle cx="140" cy="190" r="70" fill="#1B5E20" />
+                        </svg>
+                        
+                        <div class="badge" style="top: 10%; left: 30%;" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        
+                        <div class="badge" style="top: 40%; left: 65%;" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="bg-yellow-500 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/3 space-y-6" data-aos="fade-left">
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h2 class="text-xl font-bold mb-4 text-green-800">Status Pohonmu</h2>
+                        <div class="flex justify-center mb-4">
+                            <div class="progress-circular" style="--progress: 212deg;">
+                                <div class="text-center relative z-10">
+                                    <span class="text-2xl font-bold text-green-600">59%</span>
+                                    <div class="text-sm text-gray-600">Level 1</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                <span>Level 1</span>
+                                <span>Level 2</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div class="h-2 bg-green-500 rounded-full" style="width: 59%;"></div>
+                            </div>
+                            <div class="text-right text-xs text-gray-500 mt-1">850/1500 poin</div>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center p-2 border-l-4 border-green-500 bg-green-50">
+                                <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm">Donasi: +450 poin</span>
+                            </div>
+                            <div class="flex items-center p-2 border-l-4 border-blue-500 bg-blue-50">
+                                <svg class="w-5 h-5 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm">Posting: +200 poin</span>
+                            </div>
+                            <div class="flex items-center p-2 border-l-4 border-purple-500 bg-purple-50">
+                                <svg class="w-5 h-5 mr-2 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm">Komentar & Pertanyaan: +200 poin</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h2 class="text-xl font-bold mb-3 text-green-800">Aksi Cepat</h2>
+                        <div class="space-y-2">
+                            <button class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition flex items-center justify-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                </svg>
+                                Donasi Sekarang
+                            </button>
+                            <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition flex items-center justify-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                                </svg>
+                                Buat Postingan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Impact Recap -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 text-center text-green-800" data-aos="fade-up">Dampak Donasi Kamu</h2>
+            
+            <div class="owl-carousel impact-carousel">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <img src="/api/placeholder/600/300" alt="Dampak Donasi" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Kesehatan</span>
+                            <span class="text-xs text-gray-500 ml-auto">2 hari yang lalu</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">5 Anak Mendapat Vaksin</h3>
+                        <p class="text-gray-600 mb-4">Berkat donasi Anda dan 20 donatur lainnya, 5 anak di desa terpencil telah mendapatkan vaksin dasar lengkap.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Donasi Anda: Rp100.000</span>
+                            <a href="#" class="text-blue-500 font-medium text-sm hover:text-blue-700">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img src="/api/placeholder/600/300" alt="Dampak Donasi" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Pendidikan</span>
+                            <span class="text-xs text-gray-500 ml-auto">1 minggu yang lalu</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">10 Buku untuk Perpustakaan Desa</h3>
+                        <p class="text-gray-600 mb-4">Donasi Anda membantu menyediakan 10 buku baru untuk perpustakaan desa yang melayani 3 sekolah dasar.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Donasi Anda: Rp200.000</span>
+                            <a href="#" class="text-blue-500 font-medium text-sm hover:text-blue-700">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <img src="/api/placeholder/600/300" alt="Dampak Donasi" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Lingkungan</span>
+                            <span class="text-xs text-gray-500 ml-auto">2 minggu yang lalu</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">3 Pohon Ditanam di Hutan Kota</h3>
+                        <p class="text-gray-600 mb-4">Partisipasi Anda dalam program reboisasi telah membantu menanam 3 pohon jati di hutan kota yang sedang dikembangkan.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Donasi Anda: Rp150.000</span>
+                            <a href="#" class="text-blue-500 font-medium text-sm hover:text-blue-700">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-green-50 border border-green-200 rounded-lg p-6 mt-6" data-aos="fade-up">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-bold text-green-800 mb-2">Donasi Lagi untuk Dampak Lebih Besar!</h3>
+                        <p class="text-gray-700 mb-4">Dengan berdonasi sekali lagi, Anda bisa membantu 2 anak lainnya mendapatkan vaksin dasar lengkap untuk masa depan yang lebih sehat.</p>
+                        <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition">
+                            Donasi Sekarang
+                        </button>
+                    </div>
+                    <div class="md:w-1/3 flex justify-center mt-4 md:mt-0">
+                        <div class="relative">
+                            <svg class="w-32 h-32" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="#E5E7EB" stroke-width="8" />
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="#4CAF50" stroke-width="8" stroke-dasharray="283" stroke-dashoffset="141" />
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center flex-col">
+                                <span class="text-2xl font-bold text-green-800">50%</span>
+                                <span class="text-xs text-gray-500">dari target</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Rewards Section -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 text-center text-green-800" data-aos="fade-up">Tukarkan Poin Pohonmu</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden reward-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative">
+                        <img src="/api/placeholder/400/200" alt="Reward Item" class="w-full h-48 object-cover">
+                        <div class="absolute top-3 right-3 bg-yellow-500 text-white text-sm font-bold px-3 py-1 rounded-full">
+                            2000 poin
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-2">Sertifikat Pohon Asli</h3>
+                        <p class="text-gray-600 mb-4">Dapatkan sertifikat kepemilikan pohon asli yang ditanam atas nama Anda di Taman Nasional.</p>
+                        <button class="w-full bg-gray-200 text-gray-500 font-bold py-2 px-4 rounded-lg">
+                            Kumpulkan 1150 poin lagi
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden reward-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative">
+                        <img src="/api/placeholder/400/200" alt="Reward Item" class="w-full h-48 object-cover">
+                        <div class="absolute top-3 right-3 bg-yellow-500 text-white text-sm font-bold px-3 py-1 rounded-full">
+                            1000 poin
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-2">Eco-Friendly T-Shirt</h3>
+                        <p class="text-gray-600 mb-4">Kaos eksklusif dari bahan daur ulang dengan desain khusus untuk para donatur aktif.</p>
+                        <button class="w-full bg-gray-200 text-gray-500 font-bold py-2 px-4 rounded-lg">
+                            Kumpulkan 150 poin lagi
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden reward-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative">
+                        <img src="/api/placeholder/400/200" alt="Reward Item" class="w-full h-48 object-cover">
+                        <div class="absolute top-3 right-3 bg-green-500 text-white text-sm font-bold px-3 py-1 rounded-full">
+                            500 poin
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-2">Voucher Belanja Ramah Lingkungan</h3>
+                        <p class="text-gray-600 mb-4">Voucher belanja senilai Rp50.000 di toko produk ramah lingkungan pilihan.</p>
+                        <button class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            Tukarkan Sekarang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Achievement Section -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 text-center text-green-800" data-aos="fade-up">Pencapaianmu</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-16 h-16 mb-3 bg-green-100 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold">Donatur Pertama</h3>
+                    <p class="text-gray-600 text-sm">Melakukan donasi pertama</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-16 h-16 mb-3 bg-purple-100 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold">Komentator Aktif</h3>
+                    <p class="text-gray-600 text-sm">Memberikan 5+ komentar</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center opacity-50" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-16 h-16 mb-3 bg-gray-100 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold">Donasi Konsisten</h3>
+                    <p class="text-gray-600 text-sm">Donasi 3 bulan berturut-turut</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center opacity-50" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="w-16 h-16 mb-3 bg-gray-100 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                        </svg>

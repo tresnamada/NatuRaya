@@ -333,6 +333,23 @@
   }
 }
 
+.nav-link {
+  @apply relative text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center hover:bg-white/10;
+}
+.nav-link::after {
+  content: "";
+  @apply absolute left-4 right-4 bottom-1 h-0.5 bg-emerald-300 opacity-0 transition-all duration-300;
+}
+.nav-link:hover::after, .nav-link.active::after {
+  @apply left-3 right-3 opacity-100;
+}
+.nav-link.active {
+  @apply text-emerald-300 font-bold;
+}
+.mobile-nav-link {
+  @apply block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300;
+}
+
 .falling-leaf {
   position: absolute;
   animation: falling linear forwards;
