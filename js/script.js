@@ -1,60 +1,43 @@
-
-
-// Mobile menu toggle
-const mobileMenuButton = document.getElementById("mobile-menu-button");
-const mobileMenu = document.getElementById("mobile-menu");
-
-mobileMenuButton.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
-});
-
-// Mobile dropdown toggles
-const setupMobileDropdown = (buttonId, dropdownId) => {
-  const button = document.getElementById(buttonId);
-  const dropdown = document.getElementById(dropdownId);
-  const icon = button.querySelector(".fa-chevron-down");
-
-  button.addEventListener("click", () => {
-    dropdown.classList.toggle("hidden");
-    icon.classList.toggle("transform");
-    icon.classList.toggle("rotate-180");
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuItems = document.getElementById('mobile-menu-items');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  let isMenuOpen = false;
+  
+  mobileMenuButton.addEventListener('click', function() {
+    isMenuOpen = !isMenuOpen;
+    
+    if (isMenuOpen) {
+      // Open menu
+      mobileMenu.classList.remove('hidden');
+      
+      // Add small delay to ensure the transition works properly
+      setTimeout(() => {
+        mobileMenu.style.maxHeight = '500px'; // Adjust this value as needed
+        hamburgerIcon.classList.add('rotate-90');
+        
+        // Add small delay for the contents to appear after the container expands
+        setTimeout(() => {
+          mobileMenuItems.classList.remove('opacity-0', 'translate-y-4');
+        }, 150);
+      }, 10);
+    } else {
+      // Close menu
+      mobileMenuItems.classList.add('opacity-0', 'translate-y-4');
+      hamburgerIcon.classList.remove('rotate-90');
+      
+      // Wait for the content to fade out before collapsing the container
+      setTimeout(() => {
+        mobileMenu.style.maxHeight = '0';
+        
+        // Hide the menu completely after the transition
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+        }, 500); // Match the duration in CSS
+      }, 150);
+    }
   });
-};
-
-setupMobileDropdown("ai-mobile-button", "ai-mobile-dropdown");
-setupMobileDropdown("pohon-mobile-button", "pohon-mobile-dropdown");
-setupMobileDropdown("komunitas-mobile-button", "komunitas-mobile-dropdown");
-setupMobileDropdown("event-mobile-button", "event-mobile-dropdown");
-
-// Desktop dropdown hover effects
-const dropdownGroups = document.querySelectorAll(".group");
-
-dropdownGroups.forEach((group) => {
-  const dropdown = group.querySelector(".navbar-dropdown");
-
-  if (dropdown) {
-    group.addEventListener("mouseenter", () => {
-      dropdown.classList.add("active");
-    });
-
-    group.addEventListener("mouseleave", () => {
-      dropdown.classList.remove("active");
-    });
-  }
-});
-
-// Scroll effect for navbar
-window.addEventListener("scroll", () => {
-  const nav = document.querySelector("nav");
-  if (window.scrollY > 10) {
-    nav.classList.add("shadow-4xl");
-    nav.classList.add("bg-emerald-900");
-    nav.classList.remove("bg-emerald-800");
-  } else {
-    nav.classList.remove("shadow-xl");
-    nav.classList.remove("bg-emerald-900");
-    nav.classList.add("bg-[#48A6A7]");
-  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
