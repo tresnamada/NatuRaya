@@ -202,3 +202,42 @@ $(document).ready(function() {
     setInterval(createLeaves, 15000);
     setTimeout(createLeaves, 2000);
 });
+
+
+
+// Add this to your existing JavaScript
+$(document).ready(function() {
+    // History modal functionality
+    $('#view-history').on('click', function() {
+        $('#history-modal').removeClass('hidden');
+        setTimeout(() => {
+            $('#modal-content').removeClass('scale-95 opacity-0').addClass('scale-100 opacity-100');
+        }, 50);
+    });
+    
+    $('#close-history').on('click', function() {
+        $('#modal-content').removeClass('scale-100 opacity-100').addClass('scale-95 opacity-0');
+        setTimeout(() => {
+            $('#history-modal').addClass('hidden');
+        }, 300);
+    });
+    
+    // Close modal when clicking outside
+    $('#history-modal').on('click', function(e) {
+        if (e.target === this) {
+            $('#close-history').click();
+        }
+    });
+    
+    // Prevent scrolling when modal is open
+    $('#history-modal').on('show', function() {
+        $('body').addClass('overflow-hidden');
+    }).on('hide', function() {
+        $('body').removeClass('overflow-hidden');
+    });
+    
+    // Add animation to history items
+    $('.history-item').each(function(index) {
+        $(this).css('animation-delay', (index * 0.1) + 's');
+    });
+});

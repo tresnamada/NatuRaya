@@ -1,569 +1,772 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Komunitas Peduli Satwa & Alam</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%);
-        }
-        .post-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        .category-active {
-            border-bottom: 3px solid #38b2ac;
-            font-weight: 600;
-        }
-        .progress-ring__circle {
-            transition: stroke-dashoffset 0.5s;
-            transform: rotate(-90deg);
-            transform-origin: 50% 50%;
-        }
+      .gradient-bg {
+        background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%);
+      }
+      .post-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+      .category-active {
+        border-bottom: 3px solid #38b2ac;
+        font-weight: 600;
+      }
+      .progress-ring__circle {
+        transition: stroke-dashoffset 0.5s;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+      }
     </style>
-</head>
-<body class="gradient-bg min-h-screen">
-   
-  <nav
-  class="bg-gradient-to-r from-[#022c22] to-[#174903] shadow-xl sticky top-0 z-50 transition-all duration-300"
->
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="flex justify-between items-center h-16">
-      <!-- Enhanced Logo -->
-      <div class="flex-shrink-0 flex items-center">
-        <a href="../index.html" class="flex items-center group">
-          <div
-            class="bg-white/10 p-2 rounded-full mr-2 group-hover:bg-white/20 transition-all duration-300"
-          >
-            <i
-              class="fas fa-leaf text-emerald-300 text-2xl group-hover:scale-110 transition-transform"
-            ></i>
+  </head>
+  <body class="gradient-bg min-h-screen">
+    <nav
+      class="bg-gradient-to-r from-[#022c22] to-[#174903] shadow-xl sticky top-0 z-50 transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <!-- Enhanced Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <a href="../index.html" class="flex items-center group">
+              <div
+                class="bg-white/10 p-2 rounded-full mr-2 group-hover:bg-white/20 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-leaf text-emerald-300 text-2xl group-hover:scale-110 transition-transform"
+                ></i>
+              </div>
+              <span class="text-white font-bold text-xl tracking-wide"
+                >Natu<span class="text-emerald-300">Raya</span></span
+              >
+            </a>
           </div>
-          <span class="text-white font-bold text-xl tracking-wide"
-            >Natu<span class="text-emerald-300">Raya</span></span
-          >
-        </a>
+
+          <!-- Enhanced Menu Desktop -->
+          <div class="hidden md:flex items-center space-x-2">
+            <div class="relative group">
+              <a
+                href="./donasi.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+              >
+                <i
+                  class="fas fa-hand-holding-heart menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Donasi
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="./natubot.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+              >
+                <i
+                  class="fas fa-robot menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                NatuBot
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="pohon.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+              >
+                <i
+                  class="fas fa-tree menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Pohon Virtual
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="./komunitas.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+              >
+                <i
+                  class="fas fa-users menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Komunitas
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="./event.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+              >
+                <i
+                  class="fas fa-calendar-alt menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Event
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="./crowdfunding.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+              >
+                <i
+                  class="fas fa-piggy-bank menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Crowdfunding
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+            </div>
+
+            <div class="ml-4">
+              <a
+                href="./login.html"
+                class="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              >
+                <i class="fas fa-user-plus mr-2"></i> Daftar
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="text-white hover:text-emerald-300 focus:outline-none transition-colors duration-300"
+            >
+              <svg
+                id="hamburger-icon"
+                class="h-6 w-6 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
 
-      <!-- Enhanced Menu Desktop -->
-      <div class="hidden md:flex items-center space-x-2">
-        <div class="relative group">
+      <!-- Enhanced Mobile menu with animation -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-gradient-to-b from-[#3A9B9C] to-[#2A8B8C] pb-4 px-4 rounded-b-2xl shadow-lg overflow-hidden max-h-0 transition-all duration-500 ease-in-out"
+      >
+        <div
+          class="space-y-2 py-2 opacity-0 translate-y-4 transition-all duration-500 ease-in-out"
+          id="mobile-menu-items"
+        >
           <a
             href="./donasi.html"
-            class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
           >
-            <i
-              class="fas fa-hand-holding-heart menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
-            ></i>
+            <i class="fas fa-hand-holding-heart mr-3 text-emerald-300"></i>
             Donasi
           </a>
-          <div
-            class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
-          ></div>
-        </div>
 
-        <div class="relative group">
           <a
             href="./natubot.html"
-            class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
           >
-            <i
-              class="fas fa-robot menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
-            ></i>
-            NatuBot
+            <i class="fas fa-robot mr-3 text-emerald-300"></i> NatuBot
           </a>
-          <div
-            class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
-          ></div>
-        </div>
 
-        <div class="relative group">
           <a
             href="pohon.html"
-            class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
           >
-            <i
-              class="fas fa-tree menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
-            ></i>
-            Pohon Virtual
+            <i class="fas fa-tree mr-3 text-emerald-300"></i> Pohon Virtual
           </a>
-          <div
-            class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
-          ></div>
-        </div>
 
-        <div class="relative group">
           <a
             href="./komunitas.html"
-            class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
           >
-            <i
-              class="fas fa-users menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
-            ></i>
-            Komunitas
+            <i class="fas fa-users mr-3 text-emerald-300"></i> Komunitas
           </a>
-          <div
-            class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
-          ></div>
-        </div>
 
-        <div class="relative group">
           <a
             href="./event.html"
-            class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
           >
-            <i
-              class="fas fa-calendar-alt menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
-            ></i>
-            Event
+            <i class="fas fa-calendar-alt mr-3 text-emerald-300"></i> Event
           </a>
-          <div
-            class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
-          ></div>
-        </div>
 
-        <div class="relative group">
           <a
             href="./crowdfunding.html"
-            class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
           >
-            <i
-              class="fas fa-piggy-bank menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
-            ></i>
-            Crowdfunding
+            <i class="fas fa-piggy-bank mr-3 text-emerald-300"></i> Crowdfunding
           </a>
-          <div
-            class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
-          ></div>
-        </div>
 
-        <div class="ml-4">
-          <a
-            href="./login.html"
-            class="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
-          >
-            <i class="fas fa-user-plus mr-2"></i> Daftar
-          </a>
+          <div class="pt-2 mt-3 border-t border-white/10">
+            <a
+              href="./login.html"
+              class="block px-4 py-3 rounded-xl text-base font-medium bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:from-emerald-400 hover:to-emerald-500 flex items-center justify-center shadow-md"
+            >
+              <i class="fas fa-user-plus mr-2"></i> Daftar
+            </a>
+          </div>
         </div>
       </div>
-
-      <!-- Mobile menu button -->
-      <div class="md:hidden flex items-center">
-        <button
-          id="mobile-menu-button"
-          class="text-white hover:text-emerald-300 focus:outline-none transition-colors duration-300"
-        >
-          <svg
-            id="hamburger-icon"
-            class="h-6 w-6 transition-transform duration-300"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Enhanced Mobile menu with animation -->
-  <div
-    id="mobile-menu"
-    class="md:hidden hidden bg-gradient-to-b from-[#3A9B9C] to-[#2A8B8C] pb-4 px-4 rounded-b-2xl shadow-lg overflow-hidden max-h-0 transition-all duration-500 ease-in-out"
-  >
-    <div class="space-y-2 py-2 opacity-0 translate-y-4 transition-all duration-500 ease-in-out" id="mobile-menu-items">
-      <a
-        href="./donasi.html"
-        class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
-      >
-        <i class="fas fa-hand-holding-heart mr-3 text-emerald-300"></i>
-        Donasi
-      </a>
-
-      <a
-      href="./natubot.html"
-        class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
-      >
-        <i class="fas fa-robot mr-3 text-emerald-300"></i> NatuBot
-      </a>
-
-      <a
-        href="pohon.html"
-        class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
-      >
-        <i class="fas fa-tree mr-3 text-emerald-300"></i> Pohon Virtual
-      </a>
-
-      <a
-        href="./komunitas.html"
-        class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
-      >
-        <i class="fas fa-users mr-3 text-emerald-300"></i> Komunitas
-      </a>
-
-      <a
-        href="./event.html"
-        class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
-      >
-        <i class="fas fa-calendar-alt mr-3 text-emerald-300"></i> Event
-      </a>
-
-      <a
-        href="./crowdfunding.html"
-        class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
-      >
-        <i class="fas fa-piggy-bank mr-3 text-emerald-300"></i> Crowdfunding
-      </a>
-
-      <div class="pt-2 mt-3 border-t border-white/10">
-        <a
-          href="./login.html"
-          class="block px-4 py-3 rounded-xl text-base font-medium bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:from-emerald-400 hover:to-emerald-500 flex items-center justify-center shadow-md"
-        >
-          <i class="fas fa-user-plus mr-2"></i> Daftar
-        </a>
-      </div>
-    </div>
-  </div>
-</nav>
-
+    </nav>
 
     <div class="container mx-auto px-4 py-8">
-        <!-- Header Komunitas -->
-        <header class="text-center mb-12" data-aos="fade-down">
-            <h1 class="text-4xl font-bold text-teal-800 mb-4">Komunitas Peduli Satwa & Alam</h1>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                Bergabunglah dengan komunitas kami untuk berbagi cerita, pengetahuan, dan pengalaman tentang penyelamatan satwa dan pelestarian alam. Dapatkan poin untuk setiap kontribusi berharga Anda!
+      <!-- Header Komunitas -->
+      <header class="text-center mb-12" data-aos="fade-down">
+        <h1 class="text-4xl font-bold text-teal-800 mb-4">
+          Komunitas Peduli Satwa & Alam
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Bergabunglah dengan komunitas kami untuk berbagi cerita, pengetahuan,
+          dan pengalaman tentang penyelamatan satwa dan pelestarian alam.
+          Dapatkan poin untuk setiap kontribusi berharga Anda!
+        </p>
+      </header>
+
+      <!-- Info Poin Pengguna -->
+      <div
+        class="bg-white rounded-xl shadow-md p-6 mb-8 flex flex-col md:flex-row items-center justify-between"
+        data-aos="fade-up"
+      >
+        <div class="flex items-center mb-4 md:mb-0">
+          <div class="relative w-16 h-16 mr-4">
+            <svg class="progress-ring w-16 h-16" viewBox="0 0 36 36">
+              <circle
+                class="progress-ring__circle stroke-teal-100"
+                stroke-width="3"
+                fill="transparent"
+                r="16"
+                cx="18"
+                cy="18"
+              ></circle>
+              <circle
+                class="progress-ring__circle stroke-teal-500"
+                stroke-width="3"
+                stroke-dasharray="100 100"
+                fill="transparent"
+                r="16"
+                cx="18"
+                cy="18"
+              ></circle>
+            </svg>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="text-teal-700 font-bold text-lg">0</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-700">Poin Anda</h3>
+            <p class="text-sm text-gray-500">
+              Berkontribusilah untuk mendapatkan lebih banyak poin
             </p>
-        </header>
-
-        <!-- Info Poin Pengguna -->
-        <div class="bg-white rounded-xl shadow-md p-6 mb-8 flex flex-col md:flex-row items-center justify-between" data-aos="fade-up">
-            <div class="flex items-center mb-4 md:mb-0">
-                <div class="relative w-16 h-16 mr-4">
-                    <svg class="progress-ring w-16 h-16" viewBox="0 0 36 36">
-                        <circle class="progress-ring__circle stroke-teal-100" stroke-width="3" fill="transparent" r="16" cx="18" cy="18"></circle>
-                        <circle class="progress-ring__circle stroke-teal-500" stroke-width="3" stroke-dasharray="100 100" fill="transparent" r="16" cx="18" cy="18"></circle>
-                    </svg>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <span class="text-teal-700 font-bold text-lg">0</span>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-gray-700">Poin Anda</h3>
-                    <p class="text-sm text-gray-500">Berkontribusilah untuk mendapatkan lebih banyak poin</p>
-                </div>
-            </div>
-            <div class="grid grid-cols-3 gap-4 text-center">
-                <div>
-                    <div class="text-teal-600 font-bold text-xl">+10</div>
-                    <div class="text-xs text-gray-500">Postingan</div>
-                </div>
-                <div>
-                    <div class="text-teal-600 font-bold text-xl">+5</div>
-                    <div class="text-xs text-gray-500">Komentar</div>
-                </div>
-                <div>
-                    <div class="text-teal-600 font-bold text-xl">+15</div>
-                    <div class="text-xs text-gray-500">Event</div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="grid grid-cols-3 gap-4 text-center">
+          <div>
+            <div class="text-teal-600 font-bold text-xl">+10</div>
+            <div class="text-xs text-gray-500">Postingan</div>
+          </div>
+          <div>
+            <div class="text-teal-600 font-bold text-xl">+5</div>
+            <div class="text-xs text-gray-500">Komentar</div>
+          </div>
+          <div>
+            <div class="text-teal-600 font-bold text-xl">+15</div>
+            <div class="text-xs text-gray-500">Event</div>
+          </div>
+        </div>
+      </div>
 
-        <!-- Form Buat Postingan -->
-        <div class="bg-white rounded-xl shadow-md p-6 mb-8" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="text-xl font-semibold text-teal-800 mb-4">Bagikan Pengalamanmu</h2>
-            <form id="postForm">
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-medium mb-2" for="postCategory">Kategori</label>
-                    <select id="postCategory" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">
-                        <option value="">Pilih Kategori</option>
-                        <option value="Cerita Penyelamatan">Cerita Penyelamatan</option>
-                        <option value="Pendidikan Satwa & Alam">Pendidikan Satwa & Alam</option>
-                        <option value="Diskusi & Tanya Jawab">Diskusi & Tanya Jawab</option>
-                    </select>
+      <!-- Form Buat Postingan -->
+      <div
+        class="bg-white rounded-xl shadow-md p-6 mb-8"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <h2 class="text-xl font-semibold text-teal-800 mb-4">
+          Bagikan Pengalamanmu
+        </h2>
+        <form id="postForm">
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-medium mb-2"
+              for="postCategory"
+              >Kategori</label
+            >
+            <select
+              id="postCategory"
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+            >
+              <option value="">Pilih Kategori</option>
+              <option value="Cerita Penyelamatan">Cerita Penyelamatan</option>
+              <option value="Pendidikan Satwa & Alam">
+                Pendidikan Satwa & Alam
+              </option>
+              <option value="Diskusi & Tanya Jawab">
+                Diskusi & Tanya Jawab
+              </option>
+            </select>
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-medium mb-2"
+              for="postTitle"
+              >Judul</label
+            >
+            <input
+              type="text"
+              id="postTitle"
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+              placeholder="Judul postingan Anda"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-medium mb-2"
+              for="postContent"
+              >Isi Postingan</label
+            >
+            <textarea
+              id="postContent"
+              rows="4"
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+              placeholder="Tulis pengalaman atau pengetahuan Anda..."
+            ></textarea>
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-medium mb-2"
+              >Unggah Gambar</label
+            >
+            <div class="flex items-center justify-center w-full">
+              <label
+                for="postImage"
+                class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
+              >
+                <div
+                  class="flex flex-col items-center justify-center pt-5 pb-6"
+                >
+                  <i
+                    class="fas fa-cloud-upload-alt text-gray-400 text-3xl mb-2"
+                  ></i>
+                  <p class="mb-2 text-sm text-gray-500">
+                    <span class="font-semibold">Klik untuk mengunggah</span>
+                    atau drag & drop
+                  </p>
+                  <p class="text-xs text-gray-500">PNG, JPG (MAX. 2MB)</p>
                 </div>
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-medium mb-2" for="postTitle">Judul</label>
-                    <input type="text" id="postTitle" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500" placeholder="Judul postingan Anda">
+                <input
+                  id="postImage"
+                  type="file"
+                  class="hidden"
+                  accept="image/*"
+                />
+              </label>
+            </div>
+          </div>
+          <div class="flex justify-end">
+            <button
+              type="submit"
+              class="px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+            >
+              <i class="fas fa-paper-plane mr-2"></i>Publikasikan
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Filter Kategori -->
+      <div
+        class="flex overflow-x-auto mb-6 pb-2 scrollbar-hide"
+        data-aos="fade-up"
+        data-aos-delay="150"
+      >
+        <div class="flex space-x-4">
+          <button
+            class="category-filter px-4 py-2 whitespace-nowrap rounded-t-lg category-active"
+            data-category="all"
+          >
+            Semua Kategori
+          </button>
+          <button
+            class="category-filter px-4 py-2 whitespace-nowrap rounded-t-lg"
+            data-category="Cerita Penyelamatan"
+          >
+            Cerita Penyelamatan
+          </button>
+          <button
+            class="category-filter px-4 py-2 whitespace-nowrap rounded-t-lg"
+            data-category="Pendidikan Satwa & Alam"
+          >
+            Pendidikan Satwa & Alam
+          </button>
+          <button
+            class="category-filter px-4 py-2 whitespace-nowrap rounded-t-lg"
+            data-category="Diskusi & Tanya Jawab"
+          >
+            Diskusi & Tanya Jawab
+          </button>
+        </div>
+      </div>
+
+      <!-- Daftar Postingan -->
+      <div id="postsContainer" class="grid grid-cols-1 gap-6 mb-12">
+        <!-- Contoh Postingan 1 -->
+        <div
+          class="post-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300"
+          data-aos="fade-up"
+          data-category="Cerita Penyelamatan"
+        >
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-3"
+              >
+                <i class="fas fa-user text-teal-600"></i>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800">Relawan_Joko</h4>
+                <span class="text-xs text-gray-500">2 hari yang lalu</span>
+              </div>
+              <span
+                class="ml-auto bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full"
+                >Cerita Penyelamatan</span
+              >
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Penyelamatan Kucing Terjebak di Pohon Tinggi
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Hari ini kami berhasil menyelamatkan seekor kucing yang terjebak
+              di pohon selama 3 hari. Dengan peralatan sederhana dan kerja tim,
+              akhirnya kucing tersebut bisa turun dengan selamat dan kembali ke
+              pemiliknya...
+            </p>
+            <img
+              src="https://source.unsplash.com/random/600x400/?cat,rescue"
+              alt="Gambar penyelamatan"
+              class="w-full h-64 object-cover rounded-lg mb-4"
+            />
+            <div class="flex items-center justify-between text-gray-500">
+              <div class="flex space-x-4">
+                <button class="post-like flex items-center hover:text-teal-600">
+                  <i class="far fa-heart mr-1"></i> <span>24</span>
+                </button>
+                <button
+                  class="post-comment flex items-center hover:text-teal-600"
+                >
+                  <i class="far fa-comment mr-1"></i> <span>8</span>
+                </button>
+                <button
+                  class="post-share flex items-center hover:text-teal-600"
+                >
+                  <i class="fas fa-share mr-1"></i>
+                </button>
+              </div>
+              <div class="flex items-center text-teal-600">
+                <i class="fas fa-star mr-1"></i>
+                <span>+10 Poin</span>
+              </div>
+            </div>
+          </div>
+          <!-- Komentar -->
+          <div class="bg-gray-50 px-6 py-4 border-t">
+            <div class="mb-4">
+              <div class="flex items-start mb-3">
+                <div
+                  class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center mr-3 mt-1"
+                >
+                  <i class="fas fa-user text-teal-600 text-xs"></i>
                 </div>
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-medium mb-2" for="postContent">Isi Postingan</label>
-                    <textarea id="postContent" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500" placeholder="Tulis pengalaman atau pengetahuan Anda..."></textarea>
+                <div class="flex-1">
+                  <h4 class="font-medium text-sm text-gray-800">
+                    Donatur_Siti
+                  </h4>
+                  <p class="text-gray-600 text-sm">
+                    Bagus sekali tindakan kalian! Saya sangat terharu melihat
+                    aksi penyelamatan ini.
+                  </p>
+                  <div class="flex items-center text-xs text-gray-400 mt-1">
+                    <button class="mr-2 hover:text-teal-600">Suka</button>
+                    <button class="hover:text-teal-600">Balas</button>
+                    <span class="ml-auto">1 jam yang lalu</span>
+                  </div>
                 </div>
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-medium mb-2">Unggah Gambar</label>
-                    <div class="flex items-center justify-center w-full">
-                        <label for="postImage" class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
-                            <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                                <i class="fas fa-cloud-upload-alt text-gray-400 text-3xl mb-2"></i>
-                                <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Klik untuk mengunggah</span> atau drag & drop</p>
-                                <p class="text-xs text-gray-500">PNG, JPG (MAX. 2MB)</p>
-                            </div>
-                            <input id="postImage" type="file" class="hidden" accept="image/*">
-                        </label>
-                    </div>
-                </div>
-                <div class="flex justify-end">
-                    <button type="submit" class="px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2">
-                        <i class="fas fa-paper-plane mr-2"></i>Publikasikan
-                    </button>
-                </div>
+              </div>
+            </div>
+            <form class="flex">
+              <input
+                type="text"
+                placeholder="Tulis komentar..."
+                class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-1 focus:ring-teal-500 text-sm"
+              />
+              <button
+                type="submit"
+                class="px-3 py-2 bg-teal-600 text-white rounded-r-md hover:bg-teal-700 text-sm"
+              >
+                <i class="fas fa-paper-plane"></i>
+              </button>
             </form>
+          </div>
         </div>
 
-        <!-- Filter Kategori -->
-        <div class="flex overflow-x-auto mb-6 pb-2 scrollbar-hide" data-aos="fade-up" data-aos-delay="150">
-            <div class="flex space-x-4">
-                <button class="category-filter px-4 py-2 whitespace-nowrap rounded-t-lg category-active" data-category="all">
-                    Semua Kategori
-                </button>
-                <button class="category-filter px-4 py-2 whitespace-nowrap rounded-t-lg" data-category="Cerita Penyelamatan">
-                    Cerita Penyelamatan
-                </button>
-                <button class="category-filter px-4 py-2 whitespace-nowrap rounded-t-lg" data-category="Pendidikan Satwa & Alam">
-                    Pendidikan Satwa & Alam
-                </button>
-                <button class="category-filter px-4 py-2 whitespace-nowrap rounded-t-lg" data-category="Diskusi & Tanya Jawab">
-                    Diskusi & Tanya Jawab
-                </button>
+        <!-- Contoh Postingan 2 -->
+        <div
+          class="post-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-category="Pendidikan Satwa & Alam"
+        >
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-3"
+              >
+                <i class="fas fa-user text-teal-600"></i>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800">Pakar_Rudi</h4>
+                <span class="text-xs text-gray-500">5 hari yang lalu</span>
+              </div>
+              <span
+                class="ml-auto bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                >Pendidikan Satwa & Alam</span
+              >
             </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Cara Menolong Burung yang Terluka
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Jika Anda menemukan burung yang terluka, berikut langkah-langkah
+              yang bisa dilakukan: 1. Jangan panik, 2. Gunakan sarung tangan
+              untuk menghindari infeksi, 3. Siapkan kotak karduk dengan
+              ventilasi, 4. Berikan air tapi jangan dipaksa minum, 5. Hubungi
+              pusat penyelamatan satwa terdekat...
+            </p>
+            <div class="flex items-center justify-between text-gray-500">
+              <div class="flex space-x-4">
+                <button class="post-like flex items-center hover:text-teal-600">
+                  <i class="far fa-heart mr-1"></i> <span>42</span>
+                </button>
+                <button
+                  class="post-comment flex items-center hover:text-teal-600"
+                >
+                  <i class="far fa-comment mr-1"></i> <span>15</span>
+                </button>
+                <button
+                  class="post-share flex items-center hover:text-teal-600"
+                >
+                  <i class="fas fa-share mr-1"></i>
+                </button>
+              </div>
+              <div class="flex items-center text-teal-600">
+                <i class="fas fa-star mr-1"></i>
+                <span>+10 Poin</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Daftar Postingan -->
-        <div id="postsContainer" class="grid grid-cols-1 gap-6 mb-12">
-            <!-- Contoh Postingan 1 -->
-            <div class="post-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300" data-aos="fade-up" data-category="Cerita Penyelamatan">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-3">
-                            <i class="fas fa-user text-teal-600"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-medium text-gray-800">Relawan_Joko</h4>
-                            <span class="text-xs text-gray-500">2 hari yang lalu</span>
-                        </div>
-                        <span class="ml-auto bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full">Cerita Penyelamatan</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Penyelamatan Kucing Terjebak di Pohon Tinggi</h3>
-                    <p class="text-gray-600 mb-4">Hari ini kami berhasil menyelamatkan seekor kucing yang terjebak di pohon selama 3 hari. Dengan peralatan sederhana dan kerja tim, akhirnya kucing tersebut bisa turun dengan selamat dan kembali ke pemiliknya...</p>
-                    <img src="https://source.unsplash.com/random/600x400/?cat,rescue" alt="Gambar penyelamatan" class="w-full h-64 object-cover rounded-lg mb-4">
-                    <div class="flex items-center justify-between text-gray-500">
-                        <div class="flex space-x-4">
-                            <button class="post-like flex items-center hover:text-teal-600">
-                                <i class="far fa-heart mr-1"></i> <span>24</span>
-                            </button>
-                            <button class="post-comment flex items-center hover:text-teal-600">
-                                <i class="far fa-comment mr-1"></i> <span>8</span>
-                            </button>
-                            <button class="post-share flex items-center hover:text-teal-600">
-                                <i class="fas fa-share mr-1"></i>
-                            </button>
-                        </div>
-                        <div class="flex items-center text-teal-600">
-                            <i class="fas fa-star mr-1"></i>
-                            <span>+10 Poin</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Komentar -->
-                <div class="bg-gray-50 px-6 py-4 border-t">
-                    <div class="mb-4">
-                        <div class="flex items-start mb-3">
-                            <div class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center mr-3 mt-1">
-                                <i class="fas fa-user text-teal-600 text-xs"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h4 class="font-medium text-sm text-gray-800">Donatur_Siti</h4>
-                                <p class="text-gray-600 text-sm">Bagus sekali tindakan kalian! Saya sangat terharu melihat aksi penyelamatan ini.</p>
-                                <div class="flex items-center text-xs text-gray-400 mt-1">
-                                    <button class="mr-2 hover:text-teal-600">Suka</button>
-                                    <button class="hover:text-teal-600">Balas</button>
-                                    <span class="ml-auto">1 jam yang lalu</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <form class="flex">
-                        <input type="text" placeholder="Tulis komentar..." class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-1 focus:ring-teal-500 text-sm">
-                        <button type="submit" class="px-3 py-2 bg-teal-600 text-white rounded-r-md hover:bg-teal-700 text-sm">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
+        <!-- Contoh Postingan 3 -->
+        <div
+          class="post-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300"
+          data-aos="fade-up"
+          data-aos-delay="150"
+          data-category="Diskusi & Tanya Jawab"
+        >
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-3"
+              >
+                <i class="fas fa-user text-teal-600"></i>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800">Pertanyaan_Ani</h4>
+                <span class="text-xs text-gray-500">1 minggu yang lalu</span>
+              </div>
+              <span
+                class="ml-auto bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
+                >Diskusi & Tanya Jawab</span
+              >
             </div>
-
-            <!-- Contoh Postingan 2 -->
-            <div class="post-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300" data-aos="fade-up" data-aos-delay="100" data-category="Pendidikan Satwa & Alam">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-3">
-                            <i class="fas fa-user text-teal-600"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-medium text-gray-800">Pakar_Rudi</h4>
-                            <span class="text-xs text-gray-500">5 hari yang lalu</span>
-                        </div>
-                        <span class="ml-auto bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Pendidikan Satwa & Alam</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Cara Menolong Burung yang Terluka</h3>
-                    <p class="text-gray-600 mb-4">Jika Anda menemukan burung yang terluka, berikut langkah-langkah yang bisa dilakukan: 1. Jangan panik, 2. Gunakan sarung tangan untuk menghindari infeksi, 3. Siapkan kotak karduk dengan ventilasi, 4. Berikan air tapi jangan dipaksa minum, 5. Hubungi pusat penyelamatan satwa terdekat...</p>
-                    <div class="flex items-center justify-between text-gray-500">
-                        <div class="flex space-x-4">
-                            <button class="post-like flex items-center hover:text-teal-600">
-                                <i class="far fa-heart mr-1"></i> <span>42</span>
-                            </button>
-                            <button class="post-comment flex items-center hover:text-teal-600">
-                                <i class="far fa-comment mr-1"></i> <span>15</span>
-                            </button>
-                            <button class="post-share flex items-center hover:text-teal-600">
-                                <i class="fas fa-share mr-1"></i>
-                            </button>
-                        </div>
-                        <div class="flex items-center text-teal-600">
-                            <i class="fas fa-star mr-1"></i>
-                            <span>+10 Poin</span>
-                        </div>
-                    </div>
-                </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Bagaimana cara melindungi kucing liar di musim hujan?
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Saya melihat banyak kucing liar di sekitar komplek yang kedinginan
+              saat hujan. Apa yang bisa saya lakukan untuk membantu mereka tanpa
+              mengganggu ekosistem setempat?
+            </p>
+            <div class="flex items-center justify-between text-gray-500">
+              <div class="flex space-x-4">
+                <button class="post-like flex items-center hover:text-teal-600">
+                  <i class="far fa-heart mr-1"></i> <span>7</span>
+                </button>
+                <button
+                  class="post-comment flex items-center hover:text-teal-600"
+                >
+                  <i class="far fa-comment mr-1"></i> <span>12</span>
+                </button>
+                <button
+                  class="post-share flex items-center hover:text-teal-600"
+                >
+                  <i class="fas fa-share mr-1"></i>
+                </button>
+              </div>
+              <div class="flex items-center text-teal-600">
+                <i class="fas fa-star mr-1"></i>
+                <span>+5 Poin</span>
+              </div>
             </div>
-
-            <!-- Contoh Postingan 3 -->
-            <div class="post-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300" data-aos="fade-up" data-aos-delay="150" data-category="Diskusi & Tanya Jawab">
-                <div class="p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-3">
-                            <i class="fas fa-user text-teal-600"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-medium text-gray-800">Pertanyaan_Ani</h4>
-                            <span class="text-xs text-gray-500">1 minggu yang lalu</span>
-                        </div>
-                        <span class="ml-auto bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Diskusi & Tanya Jawab</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Bagaimana cara melindungi kucing liar di musim hujan?</h3>
-                    <p class="text-gray-600 mb-4">Saya melihat banyak kucing liar di sekitar komplek yang kedinginan saat hujan. Apa yang bisa saya lakukan untuk membantu mereka tanpa mengganggu ekosistem setempat?</p>
-                    <div class="flex items-center justify-between text-gray-500">
-                        <div class="flex space-x-4">
-                            <button class="post-like flex items-center hover:text-teal-600">
-                                <i class="far fa-heart mr-1"></i> <span>7</span>
-                            </button>
-                            <button class="post-comment flex items-center hover:text-teal-600">
-                                <i class="far fa-comment mr-1"></i> <span>12</span>
-                            </button>
-                            <button class="post-share flex items-center hover:text-teal-600">
-                                <i class="fas fa-share mr-1"></i>
-                            </button>
-                        </div>
-                        <div class="flex items-center text-teal-600">
-                            <i class="fas fa-star mr-1"></i>
-                            <span>+5 Poin</span>
-                        </div>
-                    </div>
+          </div>
+          <!-- Komentar -->
+          <div class="bg-gray-50 px-6 py-4 border-t">
+            <div class="mb-4">
+              <div class="flex items-start mb-3">
+                <div
+                  class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center mr-3 mt-1"
+                >
+                  <i class="fas fa-user text-teal-600 text-xs"></i>
                 </div>
-                <!-- Komentar -->
-                <div class="bg-gray-50 px-6 py-4 border-t">
-                    <div class="mb-4">
-                        <div class="flex items-start mb-3">
-                            <div class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center mr-3 mt-1">
-                                <i class="fas fa-user text-teal-600 text-xs"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h4 class="font-medium text-sm text-gray-800">Relawan_Budi</h4>
-                                <p class="text-gray-600 text-sm">Anda bisa membuat shelter sederhana dari kotak styrofoam yang dilapisi plastik. Letakkan di tempat yang tidak terlalu terbuka tapi mudah diakses kucing. Berikan makanan kering agar tidak cepat basah.</p>
-                                <div class="flex items-center text-xs text-gray-400 mt-1">
-                                    <button class="mr-2 hover:text-teal-600">Suka</button>
-                                    <button class="hover:text-teal-600">Balas</button>
-                                    <span class="ml-auto">6 hari yang lalu</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center mr-3 mt-1">
-                                <i class="fas fa-user text-teal-600 text-xs"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h4 class="font-medium text-sm text-gray-800">Vet_Dr.Lina</h4>
-                                <p class="text-gray-600 text-sm">Selain shelter, Anda bisa menyediakan air bersih dalam wadah yang tidak mudah tumpah. Hindari memberikan susu karena bisa menyebabkan diare pada kucing dewasa.</p>
-                                <div class="flex items-center text-xs text-gray-400 mt-1">
-                                    <button class="mr-2 hover:text-teal-600">Suka</button>
-                                    <button class="hover:text-teal-600">Balas</button>
-                                    <span class="ml-auto">5 hari yang lalu</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <form class="flex">
-                        <input type="text" placeholder="Tulis komentar..." class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-1 focus:ring-teal-500 text-sm">
-                        <button type="submit" class="px-3 py-2 bg-teal-600 text-white rounded-r-md hover:bg-teal-700 text-sm">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
+                <div class="flex-1">
+                  <h4 class="font-medium text-sm text-gray-800">
+                    Relawan_Budi
+                  </h4>
+                  <p class="text-gray-600 text-sm">
+                    Anda bisa membuat shelter sederhana dari kotak styrofoam
+                    yang dilapisi plastik. Letakkan di tempat yang tidak terlalu
+                    terbuka tapi mudah diakses kucing. Berikan makanan kering
+                    agar tidak cepat basah.
+                  </p>
+                  <div class="flex items-center text-xs text-gray-400 mt-1">
+                    <button class="mr-2 hover:text-teal-600">Suka</button>
+                    <button class="hover:text-teal-600">Balas</button>
+                    <span class="ml-auto">6 hari yang lalu</span>
+                  </div>
                 </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center mr-3 mt-1"
+                >
+                  <i class="fas fa-user text-teal-600 text-xs"></i>
+                </div>
+                <div class="flex-1">
+                  <h4 class="font-medium text-sm text-gray-800">Vet_Dr.Lina</h4>
+                  <p class="text-gray-600 text-sm">
+                    Selain shelter, Anda bisa menyediakan air bersih dalam wadah
+                    yang tidak mudah tumpah. Hindari memberikan susu karena bisa
+                    menyebabkan diare pada kucing dewasa.
+                  </p>
+                  <div class="flex items-center text-xs text-gray-400 mt-1">
+                    <button class="mr-2 hover:text-teal-600">Suka</button>
+                    <button class="hover:text-teal-600">Balas</button>
+                    <span class="ml-auto">5 hari yang lalu</span>
+                  </div>
+                </div>
+              </div>
             </div>
+            <form class="flex">
+              <input
+                type="text"
+                placeholder="Tulis komentar..."
+                class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-1 focus:ring-teal-500 text-sm"
+              />
+              <button
+                type="submit"
+                class="px-3 py-2 bg-teal-600 text-white rounded-r-md hover:bg-teal-700 text-sm"
+              >
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
         </div>
-        
+      </div>
     </div>
 
     <!-- AOS Animation JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/script.js"></script>
     <script>
-        // Inisialisasi AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: false
+      // Inisialisasi AOS
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+        once: false,
+      });
+
+      // Filter Kategori
+      $(document).ready(function () {
+        $(".category-filter").click(function () {
+          $(".category-filter").removeClass("category-active text-teal-700");
+          $(this).addClass("category-active text-teal-700");
+
+          const category = $(this).data("category");
+          if (category === "all") {
+            $(".post-card").show();
+          } else {
+            $(".post-card").hide();
+            $(`.post-card[data-category="${category}"]`).show();
+          }
         });
 
-        // Filter Kategori
-        $(document).ready(function() {
-            $('.category-filter').click(function() {
-                $('.category-filter').removeClass('category-active text-teal-700');
-                $(this).addClass('category-active text-teal-700');
-                
-                const category = $(this).data('category');
-                if (category === 'all') {
-                    $('.post-card').show();
-                } else {
-                    $('.post-card').hide();
-                    $(`.post-card[data-category="${category}"]`).show();
-                }
-            });
+        // Form Postingan
+        $("#postForm").submit(function (e) {
+          e.preventDefault();
 
-            // Form Postingan
-            $('#postForm').submit(function(e) {
-                e.preventDefault();
-                
-                const category = $('#postCategory').val();
-                const title = $('#postTitle').val();
-                const content = $('#postContent').val();
-                
-                if (!category || !title || !content) {
-                    alert('Harap lengkapi semua field!');
-                    return;
-                }
-                
-                // Simulasi penambahan postingan baru
-                const newPost = `
+          const category = $("#postCategory").val();
+          const title = $("#postTitle").val();
+          const content = $("#postContent").val();
+
+          if (!category || !title || !content) {
+            alert("Harap lengkapi semua field!");
+            return;
+          }
+
+          // Simulasi penambahan postingan baru
+          const newPost = `
                     <div class="post-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300" data-aos="fade-up" data-category="${category}">
                         <div class="p-6">
                             <div class="flex items-center mb-4">
@@ -574,11 +777,21 @@
                                     <h4 class="font-medium text-gray-800">Anda</h4>
                                     <span class="text-xs text-gray-500">Baru saja</span>
                                 </div>
-                                <span class="ml-auto ${getCategoryClass(category)}">${category}</span>
+                                <span class="ml-auto ${getCategoryClass(
+                                  category
+                                )}">${category}</span>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-800 mb-2">${title}</h3>
                             <p class="text-gray-600 mb-4">${content}</p>
-                            ${$('#postImage')[0].files.length > 0 ? '<img src="' + URL.createObjectURL($('#postImage')[0].files[0]) + '" alt="Gambar postingan" class="w-full h-64 object-cover rounded-lg mb-4">' : ''}
+                            ${
+                              $("#postImage")[0].files.length > 0
+                                ? '<img src="' +
+                                  URL.createObjectURL(
+                                    $("#postImage")[0].files[0]
+                                  ) +
+                                  '" alt="Gambar postingan" class="w-full h-64 object-cover rounded-lg mb-4">'
+                                : ""
+                            }
                             <div class="flex items-center justify-between text-gray-500">
                                 <div class="flex space-x-4">
                                     <button class="post-like flex items-center hover:text-teal-600">
@@ -593,57 +806,70 @@
                                 </div>
                                 <div class="flex items-center text-teal-600">
                                     <i class="fas fa-star mr-1"></i>
-                                    <span>+${getPointsForPost(category)} Poin</span>
+                                    <span>+${getPointsForPost(
+                                      category
+                                    )} Poin</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 `;
-                
-                $('#postsContainer').prepend(newPost);
-                
-                // Reset form
-                $('#postForm')[0].reset();
-                $('.progress-ring__circle:last').css('stroke-dashoffset', 'calc(100 - 10)');
-                $('.progress-ring span').text('10');
-                
-                // Animasi
-                AOS.refresh();
-            });
 
-            // Fungsi bantuan
-            function getCategoryClass(category) {
-                switch(category) {
-                    case 'Cerita Penyelamatan': return 'bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full';
-                    case 'Pendidikan Satwa & Alam': return 'bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full';
-                    case 'Diskusi & Tanya Jawab': return 'bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full';
-                    default: return 'bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full';
-                }
-            }
+          $("#postsContainer").prepend(newPost);
 
-            function getPointsForPost(category) {
-                switch(category) {
-                    case 'Cerita Penyelamatan': return 10;
-                    case 'Pendidikan Satwa & Alam': return 10;
-                    case 'Diskusi & Tanya Jawab': return 5;
-                    default: return 5;
-                }
-            }
+          // Reset form
+          $("#postForm")[0].reset();
+          $(".progress-ring__circle:last").css(
+            "stroke-dashoffset",
+            "calc(100 - 10)"
+          );
+          $(".progress-ring span").text("10");
 
-            // Interaksi Like
-            $(document).on('click', '.post-like', function() {
-                const likeCount = $(this).find('span');
-                const icon = $(this).find('i');
-                
-                if (icon.hasClass('far')) {
-                    icon.removeClass('far').addClass('fas text-red-500');
-                    likeCount.text(parseInt(likeCount.text()) + 1);
-                } else {
-                    icon.removeClass('fas text-red-500').addClass('far');
-                    likeCount.text(parseInt(likeCount.text()) - 1);
-                }
-            });
+          // Animasi
+          AOS.refresh();
         });
+
+        // Fungsi bantuan
+        function getCategoryClass(category) {
+          switch (category) {
+            case "Cerita Penyelamatan":
+              return "bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full";
+            case "Pendidikan Satwa & Alam":
+              return "bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full";
+            case "Diskusi & Tanya Jawab":
+              return "bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full";
+            default:
+              return "bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full";
+          }
+        }
+
+        function getPointsForPost(category) {
+          switch (category) {
+            case "Cerita Penyelamatan":
+              return 10;
+            case "Pendidikan Satwa & Alam":
+              return 10;
+            case "Diskusi & Tanya Jawab":
+              return 5;
+            default:
+              return 5;
+          }
+        }
+
+        // Interaksi Like
+        $(document).on("click", ".post-like", function () {
+          const likeCount = $(this).find("span");
+          const icon = $(this).find("i");
+
+          if (icon.hasClass("far")) {
+            icon.removeClass("far").addClass("fas text-red-500");
+            likeCount.text(parseInt(likeCount.text()) + 1);
+          } else {
+            icon.removeClass("fas text-red-500").addClass("far");
+            likeCount.text(parseInt(likeCount.text()) - 1);
+          }
+        });
+      });
     </script>
-</body>
+  </body>
 </html>

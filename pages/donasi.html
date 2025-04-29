@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donasi untuk Lingkungan & Hewan | Selamatkan Bumi Kita</title>
     <!-- Tailwind CSS -->
-    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="../src/output.css" />
     <!-- Swiper JS -->
     <link
       rel="stylesheet"
@@ -44,258 +44,280 @@
   </head>
   <body class="font-sans bg-gray-50">
     <nav
-    class="bg-gradient-to-r from-[#022c22] to-[#174903] shadow-xl sticky top-0 z-50 transition-all duration-300"
-  >
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex justify-between items-center h-16">
-        <!-- Enhanced Logo -->
-        <div class="flex-shrink-0 flex items-center">
-          <a href="../index.html" class="flex items-center group">
-            <div
-              class="bg-white/10 p-2 rounded-full mr-2 group-hover:bg-white/20 transition-all duration-300"
-            >
-              <i
-                class="fas fa-leaf text-emerald-300 text-2xl group-hover:scale-110 transition-transform"
-              ></i>
+      class="bg-gradient-to-r from-[#022c22] to-[#174903] shadow-xl sticky top-0 z-50 transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <!-- Enhanced Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <a href="../index.html" class="flex items-center group">
+              <div
+                class="bg-white/10 p-2 rounded-full mr-2 group-hover:bg-white/20 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-leaf text-emerald-300 text-2xl group-hover:scale-110 transition-transform"
+                ></i>
+              </div>
+              <span class="text-white font-bold text-xl tracking-wide"
+                >Natu<span class="text-emerald-300">Raya</span></span
+              >
+            </a>
+          </div>
+
+          <!-- Enhanced Menu Desktop -->
+          <div class="hidden md:flex items-center space-x-2">
+            <div class="relative group">
+              <a
+                href="./donasi.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+              >
+                <i
+                  class="fas fa-hand-holding-heart menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Donasi
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
             </div>
-            <span class="text-white font-bold text-xl tracking-wide"
-              >Natu<span class="text-emerald-300">Raya</span></span
+
+            <div class="relative group">
+              <a
+                href="./natubot.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+              >
+                <i
+                  class="fas fa-robot menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                NatuBot
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="pohon.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+              >
+                <i
+                  class="fas fa-tree menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Pohon Virtual
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="./komunitas.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+              >
+                <i
+                  class="fas fa-users menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Komunitas
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="./event.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+              >
+                <i
+                  class="fas fa-calendar-alt menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Event
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+            </div>
+
+            <div class="relative group">
+              <a
+                href="./crowdfunding.html"
+                class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
+              >
+                <i
+                  class="fas fa-piggy-bank menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
+                ></i>
+                Crowdfunding
+              </a>
+              <div
+                class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              ></div>
+            </div>
+
+            <div class="ml-4">
+              <a
+                href="./login.html"
+                class="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              >
+                <i class="fas fa-user-plus mr-2"></i> Daftar
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="text-white hover:text-emerald-300 focus:outline-none transition-colors duration-300"
             >
-          </a>
+              <svg
+                id="hamburger-icon"
+                class="h-6 w-6 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
         </div>
-  
-        <!-- Enhanced Menu Desktop -->
-        <div class="hidden md:flex items-center space-x-2">
-          <div class="relative group">
-            <a
-              href="./donasi.html"
-              class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
-            >
-              <i
-                class="fas fa-hand-holding-heart menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
-              ></i>
-              Donasi
-            </a>
-            <div
-              class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
-            ></div>
-          </div>
-  
-          <div class="relative group">
-            <a
-              href="./natubot.html"
-              class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
-            >
-              <i
-                class="fas fa-robot menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
-              ></i>
-              NatuBot
-            </a>
-            <div
-              class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
-            ></div>
-          </div>
-  
-          <div class="relative group">
-            <a
-              href="pohon.html"
-              class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
-            >
-              <i
-                class="fas fa-tree menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
-              ></i>
-              Pohon Virtual
-            </a>
-            <div
-              class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
-            ></div>
-          </div>
-  
-          <div class="relative group">
-            <a
-              href="./komunitas.html"
-              class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
-            >
-              <i
-                class="fas fa-users menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
-              ></i>
-              Komunitas
-            </a>
-            <div
-              class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
-            ></div>
-          </div>
-  
-          <div class="relative group">
-            <a
-              href="./event.html"
-              class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
-            >
-              <i
-                class="fas fa-calendar-alt menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
-              ></i>
-              Event
-            </a>
-            <div
-              class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
-            ></div>
-          </div>
-  
-          <div class="relative group">
-            <a
-              href="./crowdfunding.html"
-              class="menu-item text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/10 transition-all duration-300 flex items-center"
-            >
-              <i
-                class="fas fa-piggy-bank menu-icon mr-2 group-hover:text-emerald-300 transition-colors"
-              ></i>
-              Crowdfunding
-            </a>
-            <div
-              class="absolute h-0.5 bg-emerald-300 left-1/2 right-1/2 bottom-0 group-hover:left-3 group-hover:right-3 transition-all duration-300 opacity-0 group-hover:opacity-100"
-            ></div>
-          </div>
-  
-          <div class="ml-4">
+      </div>
+
+      <!-- Enhanced Mobile menu with animation -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-gradient-to-b from-[#3A9B9C] to-[#2A8B8C] pb-4 px-4 rounded-b-2xl shadow-lg overflow-hidden max-h-0 transition-all duration-500 ease-in-out"
+      >
+        <div
+          class="space-y-2 py-2 opacity-0 translate-y-4 transition-all duration-500 ease-in-out"
+          id="mobile-menu-items"
+        >
+          <a
+            href="./donasi.html"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+          >
+            <i class="fas fa-hand-holding-heart mr-3 text-emerald-300"></i>
+            Donasi
+          </a>
+
+          <a
+            href="./natubot.html"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+          >
+            <i class="fas fa-robot mr-3 text-emerald-300"></i> NatuBot
+          </a>
+
+          <a
+            href="pohon.html"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+          >
+            <i class="fas fa-tree mr-3 text-emerald-300"></i> Pohon Virtual
+          </a>
+
+          <a
+            href="./komunitas.html"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+          >
+            <i class="fas fa-users mr-3 text-emerald-300"></i> Komunitas
+          </a>
+
+          <a
+            href="./event.html"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+          >
+            <i class="fas fa-calendar-alt mr-3 text-emerald-300"></i> Event
+          </a>
+
+          <a
+            href="./crowdfunding.html"
+            class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+          >
+            <i class="fas fa-piggy-bank mr-3 text-emerald-300"></i> Crowdfunding
+          </a>
+
+          <div class="pt-2 mt-3 border-t border-white/10">
             <a
               href="./login.html"
-              class="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              class="block px-4 py-3 rounded-xl text-base font-medium bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:from-emerald-400 hover:to-emerald-500 flex items-center justify-center shadow-md"
             >
               <i class="fas fa-user-plus mr-2"></i> Daftar
             </a>
           </div>
         </div>
-  
-        <!-- Mobile menu button -->
-        <div class="md:hidden flex items-center">
-          <button
-            id="mobile-menu-button"
-            class="text-white hover:text-emerald-300 focus:outline-none transition-colors duration-300"
-          >
-            <svg
-              id="hamburger-icon"
-              class="h-6 w-6 transition-transform duration-300"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
-        </div>
       </div>
-    </div>
-  
-    <!-- Enhanced Mobile menu with animation -->
-    <div
-      id="mobile-menu"
-      class="md:hidden hidden bg-gradient-to-b from-[#3A9B9C] to-[#2A8B8C] pb-4 px-4 rounded-b-2xl shadow-lg overflow-hidden max-h-0 transition-all duration-500 ease-in-out"
+    </nav>
+    <!-- Header Section (Simplified) -->
+    <header
+      class="modern-bg text-white relative overflow-hidden transition-all duration-500 hover:bg-green-800"
     >
-      <div class="space-y-2 py-2 opacity-0 translate-y-4 transition-all duration-500 ease-in-out" id="mobile-menu-items">
-        <a
-          href="./donasi.html"
-          class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+      <!-- Animated background elements -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div
+          class="animate-float absolute top-10 left-10 w-24 h-24 bg-white opacity-10 rounded-full shadow-xl"
+        ></div>
+        <div
+          class="animate-float-delayed absolute bottom-10 right-10 w-20 h-20 bg-green-300 opacity-20 rounded-full shadow-lg"
+        ></div>
+        <div
+          class="animate-float absolute top-1/2 left-1/4 w-16 h-16 bg-green-100 opacity-20 rounded-full"
+        ></div>
+      </div>
+
+      <div
+        class="container mx-auto px-4 py-16 text-center relative z-10 flex flex-col items-center"
+      >
+        <h1
+          class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight drop-shadow-lg"
+          data-aos="fade-down"
+          data-aos-duration="1000"
         >
-          <i class="fas fa-hand-holding-heart mr-3 text-emerald-300"></i>
-          Donasi
-        </a>
-  
-        <a
-        href="./natubot.html"
-          class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+          <span class="block">Ayo Berdonasi untuk Alam & Satwa Indonesia!</span>
+        </h1>
+        <p
+          class="text-lg md:text-xl max-w-2xl mx-auto mb-6 opacity-90"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
         >
-          <i class="fas fa-robot mr-3 text-emerald-300"></i> NatuBot
-        </a>
-  
-        <a
-          href="pohon.html"
-          class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
+          Setiap donasi Anda membantu menjaga kelestarian hutan, sungai, dan
+          satwa langka Indonesia. Jadilah bagian dari perubahan nyata untuk bumi
+          kita!
+        </p>
+
+        <!-- DonasiMU Promotion Card -->
+        <div
+          class="bg-white/90 text-green-900 rounded-xl shadow-lg px-6 py-4 mb-8 flex flex-col md:flex-row items-center justify-center gap-4 border-2 border-green-200 hover:scale-105 transition-transform duration-300"
+          data-aos="zoom-in"
+          data-aos-delay="400"
         >
-          <i class="fas fa-tree mr-3 text-emerald-300"></i> Pohon Virtual
-        </a>
-  
-        <a
-          href="./komunitas.html"
-          class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
-        >
-          <i class="fas fa-users mr-3 text-emerald-300"></i> Komunitas
-        </a>
-  
-        <a
-          href="./event.html"
-          class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
-        >
-          <i class="fas fa-calendar-alt mr-3 text-emerald-300"></i> Event
-        </a>
-  
-        <a
-          href="./crowdfunding.html"
-          class="block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10 flex items-center transition-all duration-300"
-        >
-          <i class="fas fa-piggy-bank mr-3 text-emerald-300"></i> Crowdfunding
-        </a>
-  
-        <div class="pt-2 mt-3 border-t border-white/10">
+          <div class="flex items-center gap-3">
+            <i
+              class="fas fa-bullhorn text-green-600 text-2xl animate-pulse"
+            ></i>
+            <span class="font-semibold text-lg"
+              >Punya ide donasi untuk alam atau hewan?</span
+            >
+          </div>
+          <span class="hidden md:inline-block mx-2 text-gray-400">|</span>
           <a
-            href="./login.html"
-            class="block px-4 py-3 rounded-xl text-base font-medium bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:from-emerald-400 hover:to-emerald-500 flex items-center justify-center shadow-md"
+            href="#createDonationForm"
+            class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold px-5 py-2 rounded-full shadow transition duration-300 animate-bounce"
           >
-            <i class="fas fa-user-plus mr-2"></i> Daftar
+            Ajukan DonasiMU
           </a>
         </div>
-      </div>
-    </div>
-  </nav>
-    <!-- Header Section (Simplified) -->
-    <header class="modern-bg text-white relative overflow-hidden transition-all duration-500 hover:bg-green-800">
-        <!-- Animated background elements -->
-        <div class="absolute inset-0 pointer-events-none">
-          <div class="animate-float absolute top-10 left-10 w-24 h-24 bg-white opacity-10 rounded-full shadow-xl"></div>
-          <div class="animate-float-delayed absolute bottom-10 right-10 w-20 h-20 bg-green-300 opacity-20 rounded-full shadow-lg"></div>
-          <div class="animate-float absolute top-1/2 left-1/4 w-16 h-16 bg-green-100 opacity-20 rounded-full"></div>
-        </div>
-  
-        <div class="container mx-auto px-4 py-16 text-center relative z-10 flex flex-col items-center">
-          <h1 
-            class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight drop-shadow-lg"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-          >
-            <span class="block">Ayo Berdonasi untuk Alam & Satwa Indonesia!</span>
-          </h1>
-          <p 
-            class="text-lg md:text-xl max-w-2xl mx-auto mb-6 opacity-90"
-            data-aos="fade-up"
-            data-aos-delay="200"
-            data-aos-duration="1000"
-          >
-            Setiap donasi Anda membantu menjaga kelestarian hutan, sungai, dan satwa langka Indonesia. Jadilah bagian dari perubahan nyata untuk bumi kita!
-          </p>
-  
-          <!-- DonasiMU Promotion Card -->
-          <div 
-            class="bg-white/90 text-green-900 rounded-xl shadow-lg px-6 py-4 mb-8 flex flex-col md:flex-row items-center justify-center gap-4 border-2 border-green-200 hover:scale-105 transition-transform duration-300"
-            data-aos="zoom-in"
-            data-aos-delay="400"
-          >
-            <div class="flex items-center gap-3">
-              <i class="fas fa-bullhorn text-green-600 text-2xl animate-pulse"></i>
-              <span class="font-semibold text-lg">Punya ide donasi untuk alam atau hewan?</span>
-            </div>
-            <span class="hidden md:inline-block mx-2 text-gray-400">|</span>
-            <a href="#createDonationForm" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold px-5 py-2 rounded-full shadow transition duration-300 animate-bounce">
-              Ajukan DonasiMU
-            </a>
-          </div>
-  
-          <!-- Main CTA Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+
+        <!-- Main CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
             href="#donasiAlamHewan"
             class="px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full font-semibold text-lg shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
             data-aos="fade-up"
@@ -303,35 +325,45 @@
           >
             Mulai Berdonasi Sekarang
           </a>
-          <a 
-          href="#createDonationForm"
-          class="px-8 py-3 bg-white text-green-700 border-2 border-green-600 rounded-full font-semibold text-lg shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50"
-          data-aos="fade-up"
-          data-aos-delay="700"
-        >
-          Ajukan DonasiMU
-        </a>
-          </div>
+          <a
+            href="#createDonationForm"
+            class="px-8 py-3 bg-white text-green-700 border-2 border-green-600 rounded-full font-semibold text-lg shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50"
+            data-aos="fade-up"
+            data-aos-delay="700"
+          >
+            Ajukan DonasiMU
+          </a>
         </div>
-  
-        <style>
-          @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+      </div>
+
+      <style>
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0);
           }
-          @keyframes float-delayed {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+          50% {
+            transform: translateY(-20px);
           }
-          .animate-float {
-            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float-delayed {
+          0%,
+          100% {
+            transform: translateY(0);
           }
-          .animate-float-delayed {
-            animation: float-delayed 5s ease-in-out infinite;
-            animation-delay: 2s;
+          50% {
+            transform: translateY(-15px);
           }
-        </style>
-      </header>
+        }
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+          animation: float-delayed 5s ease-in-out infinite;
+          animation-delay: 2s;
+        }
+      </style>
+    </header>
 
     <!-- Donation Categories -->
     <section class="py-12 bg-gray-50" id="donasiAlamHewan">
@@ -385,14 +417,14 @@
                 />
                 <div class="p-6">
                   <h3 class="font-bold text-lg mb-2">
-                   Pembersihan Sungai Sulawesi
+                    Pembersihan Sungai Sulawesi
                   </h3>
                   <div class="flex items-center text-sm text-gray-500 mb-3">
                     <i class="fas fa-paw mr-2"></i> Lingkungan
                   </div>
                   <p class="text-sm text-gray-600 mb-4">
-                    Bantu Kami membersihan sungai di daerah yang
-                    terdeforestasi di Sulawesi.
+                    Bantu Kami membersihan sungai di daerah yang terdeforestasi
+                    di Sulawesi.
                   </p>
                   <div class="text-green-600 font-medium flex items-center">
                     Donasi Sekarang <i class="fas fa-chevron-right ml-2"></i>
@@ -447,8 +479,10 @@
                     <i class="fas fa-paw mr-2"></i> Lingkungan
                   </div>
                   <p class="text-sm text-gray-600 mb-4">
-                    Dana untuk pembersihan sampah di daerah yang
-                    terdeforestasi di Cirebon.
+                    Dana untuk pembersihan sampah di daerah yang terdeforestasi
+                    di Cirebon.
+                  </p>
+
                   <div class="text-green-600 font-medium flex items-center">
                     Donasi Sekarang <i class="fas fa-chevron-right ml-2"></i>
                   </div>
@@ -465,14 +499,13 @@
           Pilih Program Donasi Hewan
         </h2>
 
-        
         <div class="swiper donationSwiper mb-10" data-aos="fade-up">
           <div class="swiper-wrapper pb-8">
             <!-- Donation Card 1 -->
             <div class="swiper-slide">
               <div
                 class="donation-card bg-white rounded-xl shadow-sm overflow-hidden h-full transition-all duration-300 cursor-pointer"
-                onclick="selectDonation('Hewan', 'hewan')"
+                onclick="selectDonation('Perawatan Harimau di Sumatera', 'hewan')"
               >
                 <img
                   src="../img/Perawatan Harimau di Sumatera.jpeg"
@@ -487,8 +520,8 @@
                     <i class="fas fa-tree mr-2"></i> Hewan
                   </div>
                   <p class="text-sm text-gray-600 mb-4">
-                    Bantu kami merawat 50 harimau di Sumatera yang
-                    menjadi habitat penting bagi satwa langka.
+                    Bantu kami merawat 50 harimau di Sumatera yang menjadi
+                    habitat penting bagi satwa langka.
                   </p>
                   <div class="text-green-600 font-medium flex items-center">
                     Donasi Sekarang <i class="fas fa-chevron-right ml-2"></i>
@@ -501,7 +534,7 @@
             <div class="swiper-slide">
               <div
                 class="donation-card bg-white rounded-xl shadow-sm overflow-hidden h-full transition-all duration-300 cursor-pointer"
-                onclick="selectDonation('Hewan2', 'hewan')"
+                onclick="selectDonation('Makanan untuk Satwa Liar', 'hewan')"
               >
                 <img
                   src="https://images.unsplash.com/photo-1452570053594-1b985d6ea890?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
@@ -530,7 +563,7 @@
             <div class="swiper-slide">
               <div
                 class="donation-card bg-white rounded-xl shadow-sm overflow-hidden h-full transition-all duration-300 cursor-pointer"
-                onclick="selectDonation('Hewan', 'hewan')"
+                onclick="selectDonation('Donasi Kucing Terlantar', 'hewan')"
               >
                 <img
                   src="../img/Donasi Kucing Terlantar.jpeg"
@@ -538,7 +571,9 @@
                   class="w-full h-48 object-cover"
                 />
                 <div class="p-6">
-                  <h3 class="font-bold text-lg mb-2">Donasi Kucing Terlantar</h3>
+                  <h3 class="font-bold text-lg mb-2">
+                    Donasi Kucing Terlantar
+                  </h3>
                   <div class="flex items-center text-sm text-gray-500 mb-3">
                     <i class="fas fa-tree mr-2"></i> Hewan
                   </div>
@@ -557,7 +592,7 @@
             <div class="swiper-slide">
               <div
                 class="donation-card bg-white rounded-xl shadow-sm overflow-hidden h-full transition-all duration-300 cursor-pointer"
-                onclick="selectDonation('Hewan2', 'hewan')"
+                onclick="selectDonation('Penyelamatan Badak Sumatra', 'hewan')"
               >
                 <img
                   src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
@@ -660,36 +695,28 @@
                     class="border rounded-lg p-3 flex items-center justify-center cursor-pointer hover:border-green-500 payment-method"
                   >
                     <img
-                      src="https://via.placeholder.com/60x30"
+                      src="../img/bank.png"
                       alt="Bank Transfer"
-                      class="h-6"
+                      class="h-12"
                     />
                   </div>
                   <div
                     class="border rounded-lg p-3 flex items-center justify-center cursor-pointer hover:border-green-500 payment-method"
                   >
-                    <img
-                      src="https://via.placeholder.com/60x30"
-                      alt="OVO"
-                      class="h-6"
-                    />
+                    <img src="../img/ovo.png" alt="OVO" class="h-6" />
+                  </div>
+                  <div
+                    class="border rounded-lg p-3 flex items-center justify-center cursor-pointer hover:border-green-500 payment-method"
+                  >
+                    <img src="../img/dana.png" alt="Dana" class="h-6" />
                   </div>
                   <div
                     class="border rounded-lg p-3 flex items-center justify-center cursor-pointer hover:border-green-500 payment-method"
                   >
                     <img
-                      src="https://via.placeholder.com/60x30"
-                      alt="Dana"
-                      class="h-6"
-                    />
-                  </div>
-                  <div
-                    class="border rounded-lg p-3 flex items-center justify-center cursor-pointer hover:border-green-500 payment-method"
-                  >
-                    <img
-                      src="https://via.placeholder.com/60x30"
+                      src="../img/ShopeePay Logo (PNG-720p) - Vector69Com.png"
                       alt="ShopeePay"
-                      class="h-6"
+                      class="h-12"
                     />
                   </div>
                 </div>
@@ -720,13 +747,13 @@
                   <h4 class="font-semibold mb-2">Diselenggarakan oleh:</h4>
                   <div class="flex items-center">
                     <img
-                      src="https://via.placeholder.com/50"
+                      src="../img/Yayasan.jpeg"
                       alt="Organizer"
                       class="w-10 h-10 rounded-full mr-3"
                     />
                     <div>
                       <p class="font-medium">
-                        Yayasan Pelestarian Alam Indonesia
+                        Yayasan Pelestarian Alam & Hewan Indonesia
                       </p>
                       <p class="text-sm text-gray-600">Berdiri sejak 2010</p>
                     </div>
@@ -736,7 +763,7 @@
                 <div class="transparency-item p-4 rounded-lg">
                   <h4 class="font-semibold mb-2">Update Terakhir:</h4>
                   <p class="text-sm mb-2">
-                    12 Juni 2023 - Pembelian makanan satwa
+                    12 Maret 2025 - Pembelian makanan satwa
                   </p>
                   <div class="flex space-x-2">
                     <img
@@ -898,256 +925,529 @@
       </div>
     </div>
 
-    
-
-    <div class="container mx-auto px-4 py-8 max-w-4xl" data-aos="fade-up" data-aos-delay="600">
-        <!-- Header -->
-        <div class="text-center mb-8">
-            <h1 class="text-3xl font-bold text-green-700 mb-2">Buat Halaman Donasi Baru</h1>
-            <p class="text-gray-600">Isi form berikut dengan lengkap untuk mengajukan donasi</p>
-            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-3 mt-4 text-left max-w-2xl mx-auto">
-                <p class="text-yellow-700"><i class="fas fa-exclamation-circle mr-2"></i> Semua data akan diverifikasi oleh tim kami dalam 1x24 jam</p>
-            </div>
+    <div
+      class="container mx-auto px-4 py-8 max-w-4xl md:mt-72"
+      data-aos="fade-up"
+      data-aos-delay="600"
+      id="#createDonationForm"
+    >
+      <!-- Header -->
+      <div
+        class="text-center mb-8 transform hover:scale-105 transition-all duration-300"
+      >
+        <h1
+          class="text-4xl font-bold text-green-700 mb-2 animate-fade-in"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          Buat Halaman Donasi Baru
+        </h1>
+        <p
+          class="text-gray-600 animate-slide-up"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="800"
+        >
+          Isi form berikut dengan lengkap untuk mengajukan donasi
+        </p>
+        <div
+          class="bg-yellow-50 border-l-4 border-yellow-400 p-3 mt-4 text-left max-w-2xl mx-auto shadow-md hover:shadow-lg transition-shadow duration-300"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <p class="text-yellow-700">
+            <i class="fas fa-exclamation-circle mr-2 animate-pulse"></i>
+            Semua data akan diverifikasi oleh tim kami dalam 1x24 jam
+          </p>
         </div>
+      </div>
+      <!-- Form Container -->
+      <form
+        id="createDonationForm"
+        class="bg-white rounded-xl shadow-md overflow-hidden"
+      >
+        <div class="p-6">
+          <!-- Bagian 1: Informasi Organisasi -->
+          <div class="mb-8 border-b pb-6">
+            <h2 class="text-xl font-semibold mb-4 flex items-center">
+              <span
+                class="bg-green-600 text-white w-6 h-6 rounded-full flex items-center justify-center mr-2 text-sm"
+                >1</span
+              >
+              Informasi Organisasi
+            </h2>
 
-        <!-- Form Container -->
-        <form id="createDonationForm" class="bg-white rounded-xl shadow-md overflow-hidden">
-            <div class="p-6">
-                <!-- Bagian 1: Informasi Organisasi -->
-                <div class="mb-8 border-b pb-6">
-                    <h2 class="text-xl font-semibold mb-4 flex items-center">
-                        <span class="bg-green-600 text-white w-6 h-6 rounded-full flex items-center justify-center mr-2 text-sm">1</span>
-                        Informasi Organisasi
-                    </h2>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1 required-field">Nama Organisasi</label>
-                            <input type="text" name="org_name" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1 required-field">Tahun Berdiri</label>
-                            <input type="number" name="org_year" min="1900" max="2023" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
-                        </div>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-1 required-field">Alamat Lengkap</label>
-                        <textarea name="org_address" rows="2" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"></textarea>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1 required-field">Nomor Telepon</label>
-                            <input type="tel" name="org_phone" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1 required-field">Email Organisasi</label>
-                            <input type="email" name="org_email" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bagian 2: Dokumen Legal -->
-                <div class="mb-8 border-b pb-6">
-                    <h2 class="text-xl font-semibold mb-4 flex items-center">
-                        <span class="bg-green-600 text-white w-6 h-6 rounded-full flex items-center justify-center mr-2 text-sm">2</span>
-                        Dokumen Legal Organisasi
-                    </h2>
-                    
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-1 required-field">Upload Akta Notaris/SK Kemensos</label>
-                        <div class="file-upload p-4 text-center">
-                            <input type="file" id="legal_doc" name="legal_doc" accept=".pdf,.jpg,.jpeg,.png" required class="hidden">
-                            <label for="legal_doc" class="cursor-pointer">
-                                <i class="fas fa-file-upload text-4xl text-gray-400 mb-2"></i>
-                                <p class="text-sm text-gray-600">Klik untuk upload dokumen legal (PDF/JPG/PNG)</p>
-                                <p class="text-xs text-gray-500 mt-1">Maks. 5MB</p>
-                            </label>
-                        </div>
-                        <div id="legalDocPreview" class="mt-2 hidden">
-                            <p class="text-sm text-green-600"><i class="fas fa-check-circle mr-1"></i> Dokumen terupload</p>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-1 required-field">Upload NPWP Organisasi</label>
-                        <div class="file-upload p-4 text-center">
-                            <input type="file" id="npwp_doc" name="npwp_doc" accept=".pdf,.jpg,.jpeg,.png" required class="hidden">
-                            <label for="npwp_doc" class="cursor-pointer">
-                                <i class="fas fa-file-upload text-4xl text-gray-400 mb-2"></i>
-                                <p class="text-sm text-gray-600">Klik untuk upload NPWP (PDF/JPG/PNG)</p>
-                                <p class="text-xs text-gray-500 mt-1">Maks. 5MB</p>
-                            </label>
-                        </div>
-                        <div id="npwpDocPreview" class="mt-2 hidden">
-                            <p class="text-sm text-green-600"><i class="fas fa-check-circle mr-1"></i> Dokumen terupload</p>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1 required-field">Upload Surat Keterangan Domisili</label>
-                        <div class="file-upload p-4 text-center">
-                            <input type="file" id="domisili_doc" name="domisili_doc" accept=".pdf,.jpg,.jpeg,.png" required class="hidden">
-                            <label for="domisili_doc" class="cursor-pointer">
-                                <i class="fas fa-file-upload text-4xl text-gray-400 mb-2"></i>
-                                <p class="text-sm text-gray-600">Klik untuk upload SK Domisili (PDF/JPG/PNG)</p>
-                                <p class="text-xs text-gray-500 mt-1">Maks. 5MB</p>
-                            </label>
-                        </div>
-                        <div id="domisiliDocPreview" class="mt-2 hidden">
-                            <p class="text-sm text-green-600"><i class="fas fa-check-circle mr-1"></i> Dokumen terupload</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bagian 3: Informasi Donasi -->
-                <div class="mb-8 border-b pb-6">
-                    <h2 class="text-xl font-semibold mb-4 flex items-center">
-                        <span class="bg-green-600 text-white w-6 h-6 rounded-full flex items-center justify-center mr-2 text-sm">3</span>
-                        Informasi Donasi
-                    </h2>
-                    
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-1 required-field">Judul Kampanye Donasi</label>
-                        <input type="text" name="campaign_title" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="Contoh: Selamatkan Hutan Sumatra">
-                    </div>
-                    
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-1 required-field">Kategori Donasi</label>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            <label class="flex items-center p-3 border rounded-lg cursor-pointer">
-                                <input type="radio" name="category" value="lingkungan" required class="h-4 w-4 text-green-600 focus:ring-green-500">
-                                <span class="ml-2">
-                                    <i class="fas fa-tree mr-1 text-green-600"></i> Lingkungan/Alam
-                                </span>
-                            </label>
-                            <label class="flex items-center p-3 border rounded-lg cursor-pointer">
-                                <input type="radio" name="category" value="hewan" required class="h-4 w-4 text-green-600 focus:ring-green-500">
-                                <span class="ml-2">
-                                    <i class="fas fa-paw mr-1 text-green-600"></i> Hewan
-                                </span>
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1 required-field">Target Donasi (Rp)</label>
-                            <input type="number" name="target_amount" min="100000" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="Contoh: 50000000">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1 required-field">Batas Waktu Donasi</label>
-                            <input type="date" name="end_date" min="" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500">
-                        </div>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-1 required-field">Deskripsi Lengkap</label>
-                        <textarea name="description" rows="5" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="Jelaskan secara detail tujuan donasi, alasan dibutuhkan, dan rencana penggunaan dana"></textarea>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-1 required-field">Upload Proposal Donasi</label>
-                        <div class="file-upload p-4 text-center">
-                            <input type="file" id="proposal_doc" name="proposal_doc" accept=".pdf" required class="hidden">
-                            <label for="proposal_doc" class="cursor-pointer">
-                                <i class="fas fa-file-pdf text-4xl text-red-400 mb-2"></i>
-                                <p class="text-sm text-gray-600">Klik untuk upload Proposal (PDF)</p>
-                                <p class="text-xs text-gray-500 mt-1">Maks. 10MB</p>
-                            </label>
-                        </div>
-                        <div id="proposalDocPreview" class="mt-2 hidden">
-                            <p class="text-sm text-green-600"><i class="fas fa-check-circle mr-1"></i> Dokumen terupload</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bagian 4: Bukti dan Dokumentasi -->
-                <div class="mb-8">
-                    <h2 class="text-xl font-semibold mb-4 flex items-center">
-                        <span class="bg-green-600 text-white w-6 h-6 rounded-full flex items-center justify-center mr-2 text-sm">4</span>
-                        Bukti dan Dokumentasi
-                    </h2>
-                    
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-1 required-field">Foto Utama Kampanye</label>
-                        <p class="text-xs text-gray-500 mb-2">Gunakan foto yang menarik dan relevan (Rasio 16:9)</p>
-                        <div class="file-upload p-4 text-center">
-                            <input type="file" id="main_photo" name="main_photo" accept=".jpg,.jpeg,.png" required class="hidden">
-                            <label for="main_photo" class="cursor-pointer">
-                                <i class="fas fa-camera text-4xl text-gray-400 mb-2"></i>
-                                <p class="text-sm text-gray-600">Klik untuk upload Foto Utama (JPG/PNG)</p>
-                                <p class="text-xs text-gray-500 mt-1">Maks. 5MB</p>
-                            </label>
-                        </div>
-                        <div id="mainPhotoPreview" class="mt-2 hidden">
-                            <img id="mainPhotoPreviewImg" src="#" alt="Preview Foto Utama" class="max-w-full h-auto max-h-40 rounded-lg">
-                        </div>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-1 required-field">Foto Pendukung (Minimal 3)</label>
-                        <p class="text-xs text-gray-500 mb-2">Upload foto kondisi terkini yang menjadi alasan donasi</p>
-                        <div class="file-upload p-4 text-center">
-                            <input type="file" id="support_photos" name="support_photos" accept=".jpg,.jpeg,.png" multiple required class="hidden">
-                            <label for="support_photos" class="cursor-pointer">
-                                <i class="fas fa-images text-4xl text-gray-400 mb-2"></i>
-                                <p class="text-sm text-gray-600">Klik untuk upload Foto Pendukung (JPG/PNG)</p>
-                                <p class="text-xs text-gray-500 mt-1">Maks. 5MB per foto</p>
-                            </label>
-                        </div>
-                        <div id="supportPhotosPreview" class="mt-2 hidden grid grid-cols-3 gap-2">
-                            <!-- Foto pendukung akan muncul di sini -->
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Video Pendukung (Opsional)</label>
-                        <p class="text-xs text-gray-500 mb-2">Link YouTube/Vimeo yang menjelaskan kampanye</p>
-                        <input type="url" name="video_url" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="https://youtube.com/...">
-                    </div>
-                </div>
-
-                <!-- Bagian 5: Verifikasi -->
-                <div class="bg-gray-50 p-4 rounded-lg mb-6">
-                    <div class="flex items-start">
-                        <input id="agree_terms" name="agree_terms" type="checkbox" required class="mt-1 h-4 w-4 text-green-600 focus:ring-green-500">
-                        <label for="agree_terms" class="ml-2 block text-sm text-gray-700">
-                            Saya menyatakan bahwa semua informasi yang diberikan adalah benar dan akurat. Saya bersedia bertanggung jawab penuh atas kebenaran data dan akan memberikan update berkala tentang penggunaan dana donasi.
-                        </label>
-                    </div>
-                    
-                    <div class="flex items-start mt-3">
-                        <input id="agree_public" name="agree_public" type="checkbox" required class="mt-1 h-4 w-4 text-green-600 focus:ring-green-500">
-                        <label for="agree_public" class="ml-2 block text-sm text-gray-700">
-                            Saya setuju untuk mempublikasikan laporan penggunaan dana secara transparan kepada para donatur.
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Tombol Submit -->
-                <div class="flex justify-end">
-                    <button type="submit" class="bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg text-lg font-medium transition duration-300 flex items-center">
-                        <i class="fas fa-paper-plane mr-2"></i> Ajukan Donasi
-                    </button>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700 mb-1 required-field"
+                  >Nama Organisasi</label
+                >
+                <input
+                  type="text"
+                  name="org_name"
+                  required
+                  class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700 mb-1 required-field"
+                  >Tahun Berdiri</label
+                >
+                <input
+                  type="number"
+                  name="org_year"
+                  min="1900"
+                  max="2023"
+                  required
+                  class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                />
+              </div>
             </div>
-        </form>
+
+            <div class="mb-4">
+              <label
+                class="block text-sm font-medium text-gray-700 mb-1 required-field"
+                >Alamat Lengkap</label
+              >
+              <textarea
+                name="org_address"
+                rows="2"
+                required
+                class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
+              ></textarea>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700 mb-1 required-field"
+                  >Nomor Telepon</label
+                >
+                <input
+                  type="tel"
+                  name="org_phone"
+                  required
+                  class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700 mb-1 required-field"
+                  >Email Organisasi</label
+                >
+                <input
+                  type="email"
+                  name="org_email"
+                  required
+                  class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Bagian 2: Dokumen Legal -->
+          <div class="mb-8 border-b pb-6">
+            <h2 class="text-xl font-semibold mb-4 flex items-center">
+              <span
+                class="bg-green-600 text-white w-6 h-6 rounded-full flex items-center justify-center mr-2 text-sm"
+                >2</span
+              >
+              Dokumen Legal Organisasi
+            </h2>
+
+            <div class="mb-4">
+              <label
+                class="block text-sm font-medium text-gray-700 mb-1 required-field"
+                >Upload Akta Notaris/SK Kemensos</label
+              >
+              <div class="file-upload p-4 text-center">
+                <input
+                  type="file"
+                  id="legal_doc"
+                  name="legal_doc"
+                  accept=".pdf,.jpg,.jpeg,.png"
+                  required
+                  class="hidden"
+                />
+                <label for="legal_doc" class="cursor-pointer">
+                  <i class="fas fa-file-upload text-4xl text-gray-400 mb-2"></i>
+                  <p class="text-sm text-gray-600">
+                    Klik untuk upload dokumen legal (PDF/JPG/PNG)
+                  </p>
+                  <p class="text-xs text-gray-500 mt-1">Maks. 5MB</p>
+                </label>
+              </div>
+              <div id="legalDocPreview" class="mt-2 hidden">
+                <p class="text-sm text-green-600">
+                  <i class="fas fa-check-circle mr-1"></i> Dokumen terupload
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label
+                class="block text-sm font-medium text-gray-700 mb-1 required-field"
+                >Upload NPWP Organisasi</label
+              >
+              <div class="file-upload p-4 text-center">
+                <input
+                  type="file"
+                  id="npwp_doc"
+                  name="npwp_doc"
+                  accept=".pdf,.jpg,.jpeg,.png"
+                  required
+                  class="hidden"
+                />
+                <label for="npwp_doc" class="cursor-pointer">
+                  <i class="fas fa-file-upload text-4xl text-gray-400 mb-2"></i>
+                  <p class="text-sm text-gray-600">
+                    Klik untuk upload NPWP (PDF/JPG/PNG)
+                  </p>
+                  <p class="text-xs text-gray-500 mt-1">Maks. 5MB</p>
+                </label>
+              </div>
+              <div id="npwpDocPreview" class="mt-2 hidden">
+                <p class="text-sm text-green-600">
+                  <i class="fas fa-check-circle mr-1"></i> Dokumen terupload
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <label
+                class="block text-sm font-medium text-gray-700 mb-1 required-field"
+                >Upload Surat Keterangan Domisili</label
+              >
+              <div class="file-upload p-4 text-center">
+                <input
+                  type="file"
+                  id="domisili_doc"
+                  name="domisili_doc"
+                  accept=".pdf,.jpg,.jpeg,.png"
+                  required
+                  class="hidden"
+                />
+                <label for="domisili_doc" class="cursor-pointer">
+                  <i class="fas fa-file-upload text-4xl text-gray-400 mb-2"></i>
+                  <p class="text-sm text-gray-600">
+                    Klik untuk upload SK Domisili (PDF/JPG/PNG)
+                  </p>
+                  <p class="text-xs text-gray-500 mt-1">Maks. 5MB</p>
+                </label>
+              </div>
+              <div id="domisiliDocPreview" class="mt-2 hidden">
+                <p class="text-sm text-green-600">
+                  <i class="fas fa-check-circle mr-1"></i> Dokumen terupload
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bagian 3: Informasi Donasi -->
+          <div class="mb-8 border-b pb-6">
+            <h2 class="text-xl font-semibold mb-4 flex items-center">
+              <span
+                class="bg-green-600 text-white w-6 h-6 rounded-full flex items-center justify-center mr-2 text-sm"
+                >3</span
+              >
+              Informasi Donasi
+            </h2>
+
+            <div class="mb-4">
+              <label
+                class="block text-sm font-medium text-gray-700 mb-1 required-field"
+                >Judul Kampanye Donasi</label
+              >
+              <input
+                type="text"
+                name="campaign_title"
+                required
+                class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                placeholder="Contoh: Selamatkan Hutan Sumatra"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label
+                class="block text-sm font-medium text-gray-700 mb-1 required-field"
+                >Kategori Donasi</label
+              >
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <label
+                  class="flex items-center p-3 border rounded-lg cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="category"
+                    value="lingkungan"
+                    required
+                    class="h-4 w-4 text-green-600 focus:ring-green-500"
+                  />
+                  <span class="ml-2">
+                    <i class="fas fa-tree mr-1 text-green-600"></i>Alam
+                  </span>
+                </label>
+                <label
+                  class="flex items-center p-3 border rounded-lg cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="category"
+                    value="hewan"
+                    required
+                    class="h-4 w-4 text-green-600 focus:ring-green-500"
+                  />
+                  <span class="ml-2">
+                    <i class="fas fa-paw mr-1 text-green-600"></i> Hewan
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700 mb-1 required-field"
+                  >Target Donasi (Rp)</label
+                >
+                <input
+                  type="number"
+                  name="target_amount"
+                  min="100000"
+                  required
+                  class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                  placeholder="Contoh: 50000000"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700 mb-1 required-field"
+                  >Batas Waktu Donasi</label
+                >
+                <input
+                  type="date"
+                  name="end_date"
+                  min=""
+                  required
+                  class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                />
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label
+                class="block text-sm font-medium text-gray-700 mb-1 required-field"
+                >Deskripsi Lengkap</label
+              >
+              <textarea
+                name="description"
+                rows="5"
+                required
+                class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                placeholder="Jelaskan secara detail tujuan donasi, alasan dibutuhkan, dan rencana penggunaan dana"
+              ></textarea>
+            </div>
+
+            <div class="mb-4">
+              <label
+                class="block text-sm font-medium text-gray-700 mb-1 required-field"
+                >Upload Proposal Donasi</label
+              >
+              <div class="file-upload p-4 text-center">
+                <input
+                  type="file"
+                  id="proposal_doc"
+                  name="proposal_doc"
+                  accept=".pdf"
+                  required
+                  class="hidden"
+                />
+                <label for="proposal_doc" class="cursor-pointer">
+                  <i class="fas fa-file-pdf text-4xl text-red-400 mb-2"></i>
+                  <p class="text-sm text-gray-600">
+                    Klik untuk upload Proposal (PDF)
+                  </p>
+                  <p class="text-xs text-gray-500 mt-1">Maks. 10MB</p>
+                </label>
+              </div>
+              <div id="proposalDocPreview" class="mt-2 hidden">
+                <p class="text-sm text-green-600">
+                  <i class="fas fa-check-circle mr-1"></i> Dokumen terupload
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bagian 4: Bukti dan Dokumentasi -->
+          <div class="mb-8">
+            <h2 class="text-xl font-semibold mb-4 flex items-center">
+              <span
+                class="bg-green-600 text-white w-6 h-6 rounded-full flex items-center justify-center mr-2 text-sm"
+                >4</span
+              >
+              Bukti dan Dokumentasi
+            </h2>
+
+            <div class="mb-4">
+              <label
+                class="block text-sm font-medium text-gray-700 mb-1 required-field"
+                >Foto Utama Kampanye</label
+              >
+              <p class="text-xs text-gray-500 mb-2">
+                Gunakan foto yang menarik dan relevan (Rasio 16:9)
+              </p>
+              <div class="file-upload p-4 text-center">
+                <input
+                  type="file"
+                  id="main_photo"
+                  name="main_photo"
+                  accept=".jpg,.jpeg,.png"
+                  required
+                  class="hidden"
+                />
+                <label for="main_photo" class="cursor-pointer">
+                  <i class="fas fa-camera text-4xl text-gray-400 mb-2"></i>
+                  <p class="text-sm text-gray-600">
+                    Klik untuk upload Foto Utama (JPG/PNG)
+                  </p>
+                  <p class="text-xs text-gray-500 mt-1">Maks. 5MB</p>
+                </label>
+              </div>
+              <div id="mainPhotoPreview" class="mt-2 hidden">
+                <img
+                  id="mainPhotoPreviewImg"
+                  src="#"
+                  alt="Preview Foto Utama"
+                  class="max-w-full h-auto max-h-40 rounded-lg"
+                />
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label
+                class="block text-sm font-medium text-gray-700 mb-1 required-field"
+                >Foto Pendukung (Minimal 3)</label
+              >
+              <p class="text-xs text-gray-500 mb-2">
+                Upload foto kondisi terkini yang menjadi alasan donasi
+              </p>
+              <div class="file-upload p-4 text-center">
+                <input
+                  type="file"
+                  id="support_photos"
+                  name="support_photos"
+                  accept=".jpg,.jpeg,.png"
+                  multiple
+                  required
+                  class="hidden"
+                />
+                <label for="support_photos" class="cursor-pointer">
+                  <i class="fas fa-images text-4xl text-gray-400 mb-2"></i>
+                  <p class="text-sm text-gray-600">
+                    Klik untuk upload Foto Pendukung (JPG/PNG)
+                  </p>
+                  <p class="text-xs text-gray-500 mt-1">Maks. 5MB per foto</p>
+                </label>
+              </div>
+              <div
+                id="supportPhotosPreview"
+                class="mt-2 hidden grid grid-cols-3 gap-2"
+              >
+                <!-- Foto pendukung akan muncul di sini -->
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Video Pendukung (Opsional)</label
+              >
+              <p class="text-xs text-gray-500 mb-2">
+                Link YouTube/Vimeo yang menjelaskan kampanye
+              </p>
+              <input
+                type="url"
+                name="video_url"
+                class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                placeholder="https://youtube.com/..."
+              />
+            </div>
+          </div>
+
+          <!-- Bagian 5: Verifikasi -->
+          <div class="bg-gray-50 p-4 rounded-lg mb-6">
+            <div class="flex items-start">
+              <input
+                id="agree_terms"
+                name="agree_terms"
+                type="checkbox"
+                required
+                class="mt-1 h-4 w-4 text-green-600 focus:ring-green-500"
+              />
+              <label for="agree_terms" class="ml-2 block text-sm text-gray-700">
+                Saya menyatakan bahwa semua informasi yang diberikan adalah
+                benar dan akurat. Saya bersedia bertanggung jawab penuh atas
+                kebenaran data dan akan memberikan update berkala tentang
+                penggunaan dana donasi.
+              </label>
+            </div>
+
+            <div class="flex items-start mt-3">
+              <input
+                id="agree_public"
+                name="agree_public"
+                type="checkbox"
+                required
+                class="mt-1 h-4 w-4 text-green-600 focus:ring-green-500"
+              />
+              <label
+                for="agree_public"
+                class="ml-2 block text-sm text-gray-700"
+              >
+                Saya setuju untuk mempublikasikan laporan penggunaan dana secara
+                transparan kepada para donatur.
+              </label>
+            </div>
+          </div>
+
+          <!-- Tombol Submit -->
+          <div class="flex justify-end">
+            <button
+              type="submit"
+              class="bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg text-lg font-medium transition duration-300 flex items-center"
+            >
+              <i class="fas fa-paper-plane mr-2"></i> Ajukan Donasi
+            </button>
+          </div>
+        </div>
+      </form>
     </div>
 
     <!-- Modal Success -->
-    <div class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden" id="successModal">
-        <div class="bg-white rounded-xl max-w-md w-full p-6 text-center">
-            <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i class="fas fa-check text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Pengajuan Donasi Berhasil!</h3>
-            <p class="text-gray-600 mb-6">Terima kasih telah mengajukan kampanye donasi. Tim kami akan memverifikasi data dalam 1x24 jam. Kami akan menghubungi Anda via email.</p>
-            <button id="closeSuccessModal" class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition duration-300">
-                Tutup
-            </button>
+    <div
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden"
+      id="successModal"
+    >
+      <div class="bg-white rounded-xl max-w-md w-full p-6 text-center">
+        <div
+          class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+        >
+          <i class="fas fa-check text-2xl"></i>
         </div>
+        <h3 class="text-xl font-bold mb-2">Pengajuan Donasi Berhasil!</h3>
+        <p class="text-gray-600 mb-6">
+          Terima kasih telah mengajukan kampanye donasi. Tim kami akan
+          memverifikasi data dalam 1x24 jam. Kami akan menghubungi Anda via
+          email.
+        </p>
+        <button
+          id="closeSuccessModal"
+          class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition duration-300"
+        >
+          Tutup
+        </button>
+      </div>
     </div>
 
     <!-- Scripts -->
@@ -1155,18 +1455,22 @@
     <script src="../js/script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-         document.addEventListener('DOMContentLoaded', function() {
-          document.querySelectorAll('header a[href^="#"]').forEach(function(anchor) {
-            anchor.addEventListener('click', function(e) {
-              const targetId = this.getAttribute('href').slice(1);
-              const target = document.getElementById(targetId) || document.querySelector(`[name="${targetId}"]`);
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .querySelectorAll('header a[href^="#"]')
+          .forEach(function (anchor) {
+            anchor.addEventListener("click", function (e) {
+              const targetId = this.getAttribute("href").slice(1);
+              const target =
+                document.getElementById(targetId) ||
+                document.querySelector(`[name="${targetId}"]`);
               if (target) {
                 e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth' });
+                target.scrollIntoView({ behavior: "smooth" });
               }
             });
           });
-        });
+      });
       // Initialize AOS
       AOS.init({
         duration: 800,
@@ -1215,7 +1519,7 @@
           description:
             "Program ini bertujuan merawat 100 hektar hutan tropis di Sumatera yang menjadi habitat penting bagi satwa langka seperti harimau sumatra, gajah, dan orangutan.",
         },
-        "Hewan": {
+        "Penyelamatan Badak Sumatra": {
           category: "hewan",
           impact: `
                     <ul class="space-y-3">
@@ -1236,7 +1540,7 @@
           description:
             "Program ini bertujuan merawat Hewan Hewan yang membutuhkan perawatan khusus seperti yang membutuhkan perawatan khusus seperti yang membutuhkan perawatan khusus seperti perawatan gigi, perawatan mata, dan perawatan kulit.",
         },
-        "Hewan2": {
+        "Makanan untuk Satwa Liar": {
           category: "hewan",
           impact: `
                     <ul class="space-y-3">
@@ -1319,27 +1623,6 @@
                 `,
           description:
             "Program ini fokus pada pembersihan sampah di Kabupaten Cirebon.",
-        },
-        "Pembersihan Sampah di Kabupaten Cirebon": {
-          category: "lingkungan",
-          impact: `
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle mt-1 mr-2"></i>
-                            <span>Rp 300.000 = Alat Alat Kebersihan</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle mt-1 mr-2"></i>
-                            <span>Rp 750.000 = Biaya Operasional 1 minggu</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle mt-1 mr-2"></i>
-                            <span>Rp 2.500.000 = Biaya Operasional 1 Bulan</span>
-                        </li>
-                    </ul>
-                `,
-          description:
-            "Program ini fokus pada penyelamatan badak sumatra yang terancam punah, termasuk perawatan medis, rehabilitasi, dan pengawasan habitat.",
         },
       };
 
@@ -1425,118 +1708,155 @@
           document.getElementById("imageModal").classList.add("hidden");
           document.body.style.overflow = "auto";
         });
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set min date untuk batas waktu donasi (hari ini + 7 hari)
-            const today = new Date();
-            const nextWeek = new Date(today);
-            nextWeek.setDate(today.getDate() + 7);
-            
-            const minDate = nextWeek.toISOString().split('T')[0];
-            document.querySelector('input[name="end_date"]').min = minDate;
-            
-            // Preview untuk file upload
-            document.getElementById('legal_doc').addEventListener('change', function(e) {
-                if (e.target.files.length > 0) {
-                    document.getElementById('legalDocPreview').classList.remove('hidden');
-                }
-            });
-            
-            document.getElementById('npwp_doc').addEventListener('change', function(e) {
-                if (e.target.files.length > 0) {
-                    document.getElementById('npwpDocPreview').classList.remove('hidden');
-                }
-            });
-            
-            document.getElementById('domisili_doc').addEventListener('change', function(e) {
-                if (e.target.files.length > 0) {
-                    document.getElementById('domisiliDocPreview').classList.remove('hidden');
-                }
-            });
-            
-            document.getElementById('proposal_doc').addEventListener('change', function(e) {
-                if (e.target.files.length > 0) {
-                    document.getElementById('proposalDocPreview').classList.remove('hidden');
-                }
-            });
-            
-            // Preview foto utama
-            document.getElementById('main_photo').addEventListener('change', function(e) {
-                if (e.target.files.length > 0) {
-                    const preview = document.getElementById('mainPhotoPreview');
-                    const previewImg = document.getElementById('mainPhotoPreviewImg');
-                    
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        previewImg.src = e.target.result;
-                    };
-                    reader.readAsDataURL(e.target.files[0]);
-                    
-                    preview.classList.remove('hidden');
-                }
-            });
-            
-            // Preview foto pendukung
-            document.getElementById('support_photos').addEventListener('change', function(e) {
-                if (e.target.files.length > 0) {
-                    const previewContainer = document.getElementById('supportPhotosPreview');
-                    previewContainer.innerHTML = '';
-                    
-                    // Validasi minimal 3 foto
-                    if (e.target.files.length < 3) {
-                        previewContainer.innerHTML = `
+      document.addEventListener("DOMContentLoaded", function () {
+        // Set min date untuk batas waktu donasi (hari ini + 7 hari)
+        const today = new Date();
+        const nextWeek = new Date(today);
+        nextWeek.setDate(today.getDate() + 7);
+
+        const minDate = nextWeek.toISOString().split("T")[0];
+        document.querySelector('input[name="end_date"]').min = minDate;
+
+        // Preview untuk file upload
+        document
+          .getElementById("legal_doc")
+          .addEventListener("change", function (e) {
+            if (e.target.files.length > 0) {
+              document
+                .getElementById("legalDocPreview")
+                .classList.remove("hidden");
+            }
+          });
+
+        document
+          .getElementById("npwp_doc")
+          .addEventListener("change", function (e) {
+            if (e.target.files.length > 0) {
+              document
+                .getElementById("npwpDocPreview")
+                .classList.remove("hidden");
+            }
+          });
+
+        document
+          .getElementById("domisili_doc")
+          .addEventListener("change", function (e) {
+            if (e.target.files.length > 0) {
+              document
+                .getElementById("domisiliDocPreview")
+                .classList.remove("hidden");
+            }
+          });
+
+        document
+          .getElementById("proposal_doc")
+          .addEventListener("change", function (e) {
+            if (e.target.files.length > 0) {
+              document
+                .getElementById("proposalDocPreview")
+                .classList.remove("hidden");
+            }
+          });
+
+        // Preview foto utama
+        document
+          .getElementById("main_photo")
+          .addEventListener("change", function (e) {
+            if (e.target.files.length > 0) {
+              const preview = document.getElementById("mainPhotoPreview");
+              const previewImg = document.getElementById("mainPhotoPreviewImg");
+
+              const reader = new FileReader();
+              reader.onload = function (e) {
+                previewImg.src = e.target.result;
+              };
+              reader.readAsDataURL(e.target.files[0]);
+
+              preview.classList.remove("hidden");
+            }
+          });
+
+        // Preview foto pendukung
+        document
+          .getElementById("support_photos")
+          .addEventListener("change", function (e) {
+            if (e.target.files.length > 0) {
+              const previewContainer = document.getElementById(
+                "supportPhotosPreview"
+              );
+              previewContainer.innerHTML = "";
+
+              // Validasi minimal 3 foto
+              if (e.target.files.length < 3) {
+                previewContainer.innerHTML = `
                             <div class="col-span-3 p-2 bg-red-50 text-red-600 rounded text-sm">
                                 <i class="fas fa-exclamation-circle mr-1"></i> Minimal 3 foto pendukung
                             </div>
                         `;
-                        return;
-                    }
-                    
-                    // Tampilkan preview foto
-                    Array.from(e.target.files).slice(0, 6).forEach(file => {
-                        const reader = new FileReader();
-                        reader.onload = function(e) {
-                            const img = document.createElement('img');
-                            img.src = e.target.result;
-                            img.classList.add('preview-image', 'w-full', 'h-24', 'object-cover', 'rounded', 'cursor-pointer');
-                            img.onclick = function() {
-                                openImageModal(e.target.result);
-                            };
-                            previewContainer.appendChild(img);
-                        };
-                        reader.readAsDataURL(file);
-                    });
-                    
-                    previewContainer.classList.remove('hidden');
-                }
-            });
-            
-            // Form submission
-            document.getElementById('createDonationForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Validasi tambahan
-                const supportPhotos = document.getElementById('support_photos').files;
-                if (supportPhotos.length < 3) {
-                    alert('Harap upload minimal 3 foto pendukung');
-                    return;
-                }
-                
-                // Jika validasi berhasil, tampilkan modal
-                document.getElementById('successModal').classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            });
-            
-            // Tutup modal
-            document.getElementById('closeSuccessModal').addEventListener('click', function() {
-                document.getElementById('successModal').classList.add('hidden');
-                document.body.style.overflow = 'auto';
-            });
-            
-            // Fungsi untuk melihat gambar lebih besar
-            function openImageModal(src) {
-                const modal = document.createElement('div');
-                modal.className = 'fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4';
-                modal.innerHTML = `
+                return;
+              }
+
+              // Tampilkan preview foto
+              Array.from(e.target.files)
+                .slice(0, 6)
+                .forEach((file) => {
+                  const reader = new FileReader();
+                  reader.onload = function (e) {
+                    const img = document.createElement("img");
+                    img.src = e.target.result;
+                    img.classList.add(
+                      "preview-image",
+                      "w-full",
+                      "h-24",
+                      "object-cover",
+                      "rounded",
+                      "cursor-pointer"
+                    );
+                    img.onclick = function () {
+                      openImageModal(e.target.result);
+                    };
+                    previewContainer.appendChild(img);
+                  };
+                  reader.readAsDataURL(file);
+                });
+
+              previewContainer.classList.remove("hidden");
+            }
+          });
+
+        // Form submission
+        document
+          .getElementById("createDonationForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Validasi tambahan
+            const supportPhotos =
+              document.getElementById("support_photos").files;
+            if (supportPhotos.length < 3) {
+              alert("Harap upload minimal 3 foto pendukung");
+              return;
+            }
+
+            // Jika validasi berhasil, tampilkan modal
+            document.getElementById("successModal").classList.remove("hidden");
+            document.body.style.overflow = "hidden";
+          });
+
+        // Tutup modal
+        document
+          .getElementById("closeSuccessModal")
+          .addEventListener("click", function () {
+            document.getElementById("successModal").classList.add("hidden");
+            document.body.style.overflow = "auto";
+          });
+
+        // Fungsi untuk melihat gambar lebih besar
+        function openImageModal(src) {
+          const modal = document.createElement("div");
+          modal.className =
+            "fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4";
+          modal.innerHTML = `
                     <div class="relative max-w-4xl w-full">
                         <button class="absolute top-4 right-4 text-white text-2xl z-10">
                             <i class="fas fa-times"></i>
@@ -1544,16 +1864,16 @@
                         <img src="${src}" alt="Preview" class="max-h-[90vh] mx-auto">
                     </div>
                 `;
-                
-                modal.querySelector('button').addEventListener('click', function() {
-                    modal.remove();
-                    document.body.style.overflow = 'auto';
-                });
-                
-                document.body.appendChild(modal);
-                document.body.style.overflow = 'hidden';
-            }
-        });
+
+          modal.querySelector("button").addEventListener("click", function () {
+            modal.remove();
+            document.body.style.overflow = "auto";
+          });
+
+          document.body.appendChild(modal);
+          document.body.style.overflow = "hidden";
+        }
+      });
     </script>
   </body>
 </html>
